@@ -1,0 +1,141 @@
+@import 'resets';
+
+.about-intro-section {
+	padding-top: 5em;
+	overflow-x: hidden;
+	margin-bottom: 5em;
+
+	@media screen and (min-width: 62em) {
+		margin-bottom: 7em;
+	}
+
+	.container {
+		@include width-mixin();
+		display: grid;
+		gap: 5em;
+		margin-bottom: 5em;
+
+		.text-area {
+			.eyebrow {
+				text-transform: uppercase;
+				color: $accent-color;
+				margin-bottom: 0.7em;
+			}
+
+			.heading {
+				font-size: 1.8rem;
+				margin-bottom: 0.7em;
+				color: $dark;
+				font-weight: 700;
+				font-size: 3rem;
+			}
+
+			.text {
+				line-height: $lineheight;
+				margin-bottom: 1.5em;
+				color: $text-color-primary;
+			}
+
+			.highlights {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 2em;
+				margin-bottom: 2em;
+
+				.wrap {
+					display: flex;
+					gap: 0.8em;
+					align-items: center;
+
+					.icon {
+						@include icon-wrap-mixin();
+					}
+				}
+			}
+
+			.buttons-wrap {
+				.btn {
+					@include btn-mixin();
+				}
+			}
+		}
+
+		.about-section-img {
+			width: 100%;
+			position: relative;
+
+			&::before {
+				content: '';
+				position: absolute;
+				height: 200px;
+				width: 200px;
+				background: #00ffe0;
+				bottom: -5%;
+				left: -10%;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				height: 200px;
+				width: 200px;
+				background: $color;
+				top: -5%;
+				right: -10%;
+			}
+
+			.about-section-bg {
+				width: 100%;
+				position: relative;
+				z-index: 1;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			display: flex;
+			width: 85%;
+			justify-content: space-between;
+			gap: 0em;
+
+			.text-area {
+				width: 45%;
+			}
+
+			.about-section-img {
+				width: 40%;
+				height: 450px;
+
+				&::before {
+					bottom: -5%;
+					left: -5%;
+				}
+
+				&::after {
+					top: -5%;
+					right: -5%;
+				}
+			}
+		}
+	}
+
+	.slogan-wrap {
+		background: $dark;
+		position: relative;
+		min-height: 200px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.heading {
+			color: $light;
+			text-align: center;
+			font-size: clamp(2vw, 3rem, 6vw);
+
+			@media screen and (min-width: 62em) {
+				padding: 0 6em;
+			}
+		}
+	}
+}

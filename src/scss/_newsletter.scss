@@ -1,0 +1,83 @@
+@import 'resets';
+
+.newsletter-section {
+	background: #0d97aa;
+
+	.container {
+		@include width-mixin();
+		padding: 3em 0;
+
+		.text-area {
+			color: $light;
+			margin-bottom: 2em;
+
+			.text {
+				font-weight: 600;
+				margin-bottom: 1em;
+			}
+
+			.heading {
+				font-size: 1.5rem;
+			}
+		}
+
+		.form-wrap {
+			form {
+				input {
+					width: 100%;
+					border: none;
+					padding: 1em 1.5em;
+					margin-bottom: 1em;
+					border-radius: 10px;
+				}
+
+				button {
+					@include btn-mixin();
+					background: $dark;
+					border: none;
+					cursor: pointer;
+				}
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			width: 70%;
+
+			.form-wrap {
+				form {
+					input {
+						width: 70%;
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			width: 90%;
+			display: flex;
+
+			align-items: center;
+			justify-content: space-between;
+
+			.text-area {
+				width: 40%;
+			}
+
+			.form-wrap {
+				width: 50%;
+
+				form {
+					input {
+						width: 70%;
+					}
+
+					button {
+						display: inline-block;
+						margin-left: -1.5em;
+						padding: 1.3em 1.7em;
+					}
+				}
+			}
+		}
+	}
+}

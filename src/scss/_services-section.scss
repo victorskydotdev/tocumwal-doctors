@@ -1,0 +1,130 @@
+@import 'resets';
+
+.services-section {
+	position: relative;
+	margin-bottom: 5em;
+	overflow-x: hidden;
+
+	@media screen and (min-width: 62em) {
+		margin-bottom: 7em;
+	}
+
+	.positioned-svg {
+		border: solid 30px $color;
+		position: absolute;
+		height: 300px;
+		width: 300px;
+		border-radius: 100%;
+		right: -30%;
+		z-index: -1;
+		top: 10%;
+
+		@media screen and (min-width: 62em) {
+			height: 400px;
+			width: 400px;
+			border: solid 50px $color;
+			right: -15%;
+			top: 5%;
+		}
+	}
+
+	.container {
+		@include width-mixin();
+
+		.text-area {
+			margin-bottom: 3em;
+			.eyebrow {
+				text-transform: uppercase;
+				color: $accent-color;
+				margin-bottom: 0.7em;
+			}
+
+			.heading {
+				@include heading-mixin();
+			}
+
+			.buttons-wrap {
+				button {
+					height: 40px;
+					width: 40px;
+					border: none;
+					border-radius: 100%;
+					background: $different-color;
+					cursor: pointer;
+				}
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 75%;
+		}
+	}
+
+	.services-card-wrap {
+		display: grid;
+		gap: 1em;
+		grid-auto-columns: 80%;
+		grid-auto-flow: column;
+		padding-left: 1.4em;
+		scroll-snap-type: x mandatory;
+		padding-bottom: 3em;
+
+		overflow-x: auto;
+
+		// box-shadow: 0 0 100vmax orange;
+
+		.service-card {
+			scroll-snap-align: start;
+			height: 300px;
+			background: $light;
+			box-shadow: $shadow;
+			padding: 1em;
+			border-radius: 20px;
+
+			&:nth-child(2) {
+				background: #f5fcfb;
+			}
+			&:nth-child(3) {
+				background: #f5fcfb;
+			}
+			&:nth-child(4) {
+				background: #f5fcfb;
+			}
+			&:nth-child(5) {
+				background: #f5fcfb;
+			}
+			&:nth-child(6) {
+				background: #f5fcfb;
+			}
+			&:nth-child(7) {
+				background: #f5fcfb;
+			}
+
+			.icon {
+				@include icon-wrap-mixin();
+				margin-bottom: 1em;
+			}
+
+			.title {
+				margin-bottom: 1.2em;
+			}
+
+			.text {
+				line-height: $lineheight;
+				color: $text-color-primary;
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			padding-left: 7em;
+			grid-auto-columns: 30%;
+			gap: 2em;
+
+			.service-card {
+				padding-top: 3em;
+				padding-left: 1.5em;
+				scroll-snap-align: center;
+			}
+		}
+	}
+}

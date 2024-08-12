@@ -1,0 +1,51 @@
+@import 'resets';
+
+.our-doctors-section {
+	padding: 6em 0;
+
+	.container {
+		@include width-mixin();
+
+		.text-area {
+			.eyebrow {
+				text-transform: uppercase;
+				margin-bottom: 0.8em;
+				color: $accent-color;
+			}
+
+			.heading {
+				@include heading-mixin();
+				margin-bottom: 1em;
+			}
+		}
+
+		.doctors-img-container {
+			display: grid;
+			gap: 1.3em;
+
+			.doc-card {
+				height: 400px;
+				// width: 300px;
+				background: $color;
+
+				.img-wrap {
+					height: 100%;
+
+					img {
+						height: 100%;
+						width: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+
+			@media screen and (min-width: 43em) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@media screen and (min-width: 62em) {
+				grid-template-columns: repeat(4, 1fr);
+			}
+		}
+	}
+}

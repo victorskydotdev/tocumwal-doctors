@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	font-size: 0.9rem;
+}
+
+// vairables
+$dark: #1a2d41;
+$light: #fff;
+$accent-color: #ba7242;
+$different-color: #00ffe0;
+$text-color-primary: #969ca2;
+$color: #1ee0fb;
+$width: 90%;
+$shadow: 0px 13px 30px rgba(0, 0, 0, 0.07999999821186066);
+$lineheight: 1.7;
+
+@mixin width-mixin() {
+	width: $width;
+	margin: 0 auto;
+}
+
+@mixin btn-mixin() {
+	background: $accent-color;
+	padding: 1em 2em;
+	border-radius: 10px;
+	color: $light;
+	display: inline-block;
+	text-transform: capitalize;
+	font-weight: 500;
+}
+
+@mixin icon-wrap-mixin() {
+	height: 40px;
+	width: 40px;
+	border: 3px $accent-color dotted;
+	border-radius: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin heading-mixin() {
+	font-size: 1.8rem;
+	margin-bottom: 0.4em;
+	color: $dark;
+	font-weight: 700;
+	font-size: 3rem;
+	max-width: 500px;
+}

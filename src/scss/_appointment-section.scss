@@ -1,0 +1,77 @@
+@import 'resets';
+
+.appointments-section {
+	background: #f5fcfb;
+	min-height: 80vh;
+	padding-top: 5em;
+	padding-bottom: 6em;
+	margin-bottom: 5em;
+
+	.container {
+		@include width-mixin();
+
+		.text-area {
+			.eyebrow {
+				text-transform: uppercase;
+				margin-bottom: 0.8em;
+			}
+
+			.heading {
+				@include heading-mixin();
+				margin-bottom: 1em;
+			}
+
+			@media screen and (min-width: 42em) {
+				text-align: center;
+
+				.heading {
+					margin: 0 auto 1em auto;
+					white-space: nowrap;
+				}
+			}
+		}
+
+		.appointments-card-wrap {
+			display: grid;
+			gap: 2em;
+
+			@media screen and (min-width: 62em) {
+				width: 80%;
+				margin: 0 auto;
+			}
+
+			.appointment-card {
+				min-height: 150px;
+				background: $color;
+				border-radius: 20px;
+				color: $light;
+				padding: 2em;
+				text-align: center;
+
+				.icon {
+					@include icon-wrap-mixin();
+					margin: 0 auto 1em auto;
+				}
+
+				.heading {
+					margin-bottom: 0.9em;
+					text-transform: uppercase;
+				}
+
+				.text {
+					line-height: $lineheight;
+				}
+			}
+
+			@media screen and (min-width: 43em) {
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1em;
+			}
+
+			@media screen and (min-width: 62em) {
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1em;
+			}
+		}
+	}
+}

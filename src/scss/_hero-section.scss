@@ -1,0 +1,59 @@
+@import 'resets';
+
+.main-section {
+	height: 100vh;
+	background: $dark;
+	margin-bottom: 5em;
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: rgb(0, 0, 0, 0.6);
+	}
+
+	.container {
+		@include width-mixin();
+		height: 100%;
+		position: relative;
+		z-index: 1;
+
+		.wrap {
+			position: absolute;
+			max-width: 650px;
+			top: 50%;
+			transform: translateY(-50%);
+			color: $light;
+
+			.eyebrow {
+				text-transform: uppercase;
+				margin-bottom: 0.8em;
+			}
+
+			.masthead {
+				margin-bottom: 1em;
+				font-size: 50px;
+				line-height: 1.2;
+			}
+
+			.btn {
+				@include btn-mixin();
+			}
+		}
+	}
+
+	.hero-img-wrap {
+		position: absolute;
+		top: 0;
+		background: teal;
+		width: 100%;
+		height: 100%;
+
+		.hero-bg {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
