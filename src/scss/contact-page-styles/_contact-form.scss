@@ -1,0 +1,103 @@
+@import '../resets';
+
+.contact-form {
+	height: 100vh;
+	position: relative;
+
+	.bg-img-wrap {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100%;
+
+		&::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			top: 0;
+			left: 0;
+			background: rgba(0, 0, 0, 0.575);
+			height: 100%;
+			width: 100%;
+			z-index: 0;
+			backdrop-filter: blur(10px);
+		}
+
+		.contact-bg {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.contact-wrap {
+		position: absolute;
+		z-index: 1;
+		@include width-mixin();
+		background: $light;
+		height: 70vh;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 2em 0 4em 0;
+		border-radius: 20px;
+
+		.heading {
+			@include width-mixin();
+			margin-bottom: 1em;
+			font-size: 2.2rem;
+			color: $dark;
+		}
+
+		.contact-us-form {
+			.wrap {
+				display: grid;
+				gap: 1em;
+				@include width-mixin();
+
+				input {
+					width: 100%;
+					padding: 1em;
+					border-radius: 10px;
+					border: 1.5px solid $dark;
+					outline: none;
+				}
+
+				textarea {
+					height: 150px;
+					border-radius: 10px;
+					outline: none;
+					border: 1.5px solid $dark;
+					padding: 0.5em 1em;
+				}
+
+				.btn {
+					@include btn-mixin();
+					border: none;
+					font-size: 1rem;
+					cursor: pointer;
+				}
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			width: 60%;
+			height: 75vh;
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 50%;
+			height: 75vh;
+
+			.contact-us-form {
+				.wrap {
+					.btn {
+						display: inline-block;
+						width: 30%;
+					}
+				}
+			}
+		}
+	}
+}

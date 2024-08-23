@@ -1,0 +1,125 @@
+@import '../resets';
+
+.section2 {
+	min-height: 80vh;
+	margin-bottom: 5em;
+
+	// fix the huge desktop breakpoint margin bottom
+	@media screen and (min-width: 62em) {
+		margin-bottom: 0;
+	}
+
+	.container {
+		min-height: 100vh;
+		display: grid;
+		gap: 4;
+
+		.section2-img-wrap {
+			position: relative;
+			height: 400px;
+
+			.section2-img1 {
+				height: 300px;
+				width: 100%;
+				position: absolute;
+				top: 5%;
+				left: 0;
+
+				img {
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
+				}
+			}
+
+			.section2-img2 {
+				height: 200px;
+				width: 200px;
+				background: orange;
+				position: absolute;
+				left: 10%;
+				top: 50%;
+				border: $dark solid 5px;
+				border-radius: 30px;
+				overflow: hidden;
+
+				img {
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+
+		.text-area {
+			width: 90%;
+			margin: 5em auto 0 auto;
+
+			.heading-title {
+				@include heading-mixin();
+				text-align: center;
+			}
+
+			.text {
+				@include text-mixin();
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			.section2-img-wrap {
+				.section2-img1 {
+					height: 400px;
+				}
+			}
+
+			.text-area {
+				width: 60%;
+
+				// width: 100%;
+
+				.heading-title {
+					margin: 0 auto 0.6em auto;
+				}
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			display: flex;
+			width: 80%;
+			margin: 0 auto;
+
+			.section2-img-wrap {
+				width: 100%;
+
+				.section2-img1 {
+					height: 350px;
+					width: 400px;
+					position: unset;
+
+					img {
+						border-radius: 30px;
+					}
+				}
+
+				.section2-img2 {
+					left: unset;
+					right: 15%;
+				}
+			}
+
+			.text-area {
+				width: 100%;
+				height: fit-content;
+
+				.heading-title {
+					margin: 0 auto 0.6em 0;
+					text-align: left;
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 62em) {
+		height: 400px;
+	}
+}

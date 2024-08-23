@@ -5,6 +5,9 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+html {
+	scroll-behavior: smooth;
+}
 
 li {
 	list-style: none;
@@ -58,4 +61,10 @@ $lineheight: 1.7;
 	font-weight: 700;
 	font-size: 3rem;
 	max-width: 500px;
+}
+
+@mixin text-mixin() {
+	line-height: $lineheight;
+	margin-bottom: 1.5em;
+	color: $text-color-primary;
 }

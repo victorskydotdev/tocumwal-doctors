@@ -31,9 +31,7 @@
 			}
 
 			.text {
-				line-height: $lineheight;
-				margin-bottom: 1.5em;
-				color: $text-color-primary;
+				@include text-mixin();
 			}
 
 			.highlights {

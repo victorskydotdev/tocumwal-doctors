@@ -20,6 +20,13 @@ module.exports = {
 		}),
 
 		new HtmlWebpackPlugin({
+			template: './src/html/about.html',
+			chunks: ['main'],
+			filename: 'about.html',
+			inject: 'head',
+		}),
+
+		new HtmlWebpackPlugin({
 			template: './src/html/contact.html',
 			chunks: ['main'],
 			filename: 'contact.html',

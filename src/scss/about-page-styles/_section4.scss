@@ -1,0 +1,34 @@
+@import '../resets';
+
+.section4 {
+	position: relative;
+	margin-bottom: 7em;
+	background: #f5f5f5;
+	padding: 6em 0;
+
+	.section4-bg {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		display: none;
+
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			opacity: 0.5;
+			filter: grayscale(100%);
+			object-position: top;
+			// display: none;
+		}
+	}
+
+	.container {
+		@include width-mixin();
+		@include text-mixin();
+
+		max-width: 500px;
+	}
+}

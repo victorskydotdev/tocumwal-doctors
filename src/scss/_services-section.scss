@@ -4,6 +4,8 @@
 	position: relative;
 	margin-bottom: 5em;
 	overflow-x: hidden;
+	// background: teal;
+	padding-top: 6em;
 
 	@media screen and (min-width: 62em) {
 		margin-bottom: 7em;
@@ -33,6 +35,7 @@
 
 		.text-area {
 			margin-bottom: 3em;
+			padding-top: 1em;
 			.eyebrow {
 				text-transform: uppercase;
 				color: $accent-color;

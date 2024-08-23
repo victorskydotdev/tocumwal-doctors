@@ -58,6 +58,13 @@
 			.list-wrap {
 				display: grid;
 				gap: 1.3em;
+
+				.list {
+					a {
+						color: $light;
+						font-size: 1rem;
+					}
+				}
 			}
 
 			.text {
