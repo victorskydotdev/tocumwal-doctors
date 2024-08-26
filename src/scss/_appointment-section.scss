@@ -53,13 +53,15 @@
 					margin: 0 auto 1em auto;
 				}
 
-				.heading {
-					margin-bottom: 0.9em;
-					text-transform: uppercase;
-				}
+				// .heading {
+				// 	margin-bottom: 0.9em;
+				// 	text-transform: uppercase;
+				// }
 
 				.text {
 					line-height: $lineheight;
+					text-transform: capitalize;
+					font-weight: 600;
 				}
 			}
 
