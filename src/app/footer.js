@@ -11,13 +11,13 @@ const loadFooterImgs = () => {
 					</div>
 
 					<div class="email-wrap">
-						<div class="icon"></div>
+						<div class="icon"><i class="fi fi-br-envelope"></i></div>
 						<p class="text">info@tocumwaldoctors.com</p>
 					</div>
 
 					<div class="location-wrap">
-						<div class="icon"></div>
-						<p class="text">Tocumwal doctors HQ</p>
+						<div class="icon"><i class="fi fi-bs-marker"></i></div>
+						<p class="text">55A Deniliquin St, Tocumwal NSW 2714, Australia</p>
 					</div>
 				</div>
 
@@ -30,6 +30,9 @@ const loadFooterImgs = () => {
 						<li class="list">
 							<a href="/contact.html">Contact us</a>
 						</li>
+						<li class="list">
+							<a href="/terms.html">Terms & Policy</a>
+						</li>
 					</ul>
 				</div>
 
@@ -41,9 +44,9 @@ const loadFooterImgs = () => {
 					</p>
 
 					<button class="call-btn">
-						<a href="tel:+8100784622">
+						<a href="tel:+61458231987">
 							<i class="fa-solid fa-phone"></i>
-							<span>0810-078-4622</span>
+							<span>+61 458 231 987</span>
 						</a>
 					</button>
 				</div>

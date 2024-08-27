@@ -21,14 +21,23 @@
 			opacity: 0.5;
 			filter: grayscale(100%);
 			object-position: top;
-			// display: none;
 		}
 	}
 
 	.container {
 		@include width-mixin();
 		@include text-mixin();
-
 		max-width: 500px;
+
+		@media screen and (min-width: 62em) {
+			max-width: 700px;
+			.text-area {
+				.text {
+					font-size: 1.5rem;
+					color: $dark;
+					text-align: center;
+				}
+			}
+		}
 	}
 }

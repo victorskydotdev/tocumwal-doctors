@@ -55,9 +55,17 @@
 			width: 90%;
 			margin: 5em auto 0 auto;
 
-			.heading-title {
-				@include heading-mixin();
-				text-align: center;
+			.wrap {
+				.eyebrow {
+					text-transform: uppercase;
+					color: $accent-color;
+					margin-bottom: 0.7em;
+				}
+
+				.heading-title {
+					@include heading-mixin();
+					// text-align: center;
+				}
 			}
 
 			.text {
@@ -92,7 +100,7 @@
 				width: 100%;
 
 				.section2-img1 {
-					height: 350px;
+					height: 400px;
 					width: 400px;
 					position: unset;
 
@@ -104,6 +112,7 @@
 				.section2-img2 {
 					left: unset;
 					right: 15%;
+					top: 65%;
 				}
 			}
 

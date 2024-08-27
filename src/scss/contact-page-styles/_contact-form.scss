@@ -36,7 +36,7 @@
 		z-index: 1;
 		@include width-mixin();
 		background: $light;
-		height: 70vh;
+		min-height: 70vh;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
@@ -72,6 +72,23 @@
 					padding: 0.5em 1em;
 				}
 
+				.disclaimer-wrap {
+					// background: $dark;
+					// padding: 1em;
+					// color: $light;
+
+					.title {
+						margin-bottom: 1em;
+						color: red;
+					}
+
+					.disclaimer {
+						font-size: 0.8rem;
+						max-width: 500px;
+						line-height: 1.8;
+					}
+				}
+
 				.btn {
 					@include btn-mixin();
 					border: none;
@@ -83,12 +100,12 @@
 
 		@media screen and (min-width: 43em) {
 			width: 60%;
-			height: 75vh;
+			// height: 75vh;
 		}
 
 		@media screen and (min-width: 62em) {
 			width: 50%;
-			height: 75vh;
+			// height: 75vh;
 
 			.contact-us-form {
 				.wrap {
