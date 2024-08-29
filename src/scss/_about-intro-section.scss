@@ -52,8 +52,25 @@
 			}
 
 			.buttons-wrap {
+				display: flex;
+				align-items: center;
+				gap: 1.5em;
+
 				.btn {
 					@include btn-mixin();
+				}
+
+				.about-link {
+					color: $accent-color;
+
+					display: flex;
+					align-items: center;
+
+					i {
+						font-size: 1.2rem;
+						display: inline-block;
+						height: 24px;
+					}
 				}
 			}
 		}
