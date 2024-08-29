@@ -1,6 +1,6 @@
 import heroBg from '../assets/tocumwal-hero-bg.jpg';
 import aboutIntroImg from '../assets/toc-about-aside.jpg';
-import docImg1 from '../assets/team-img1.png';
+import docImg1 from '../assets/team-img1.jpg';
 import docImg2 from '../assets/team-img2.jpg';
 
 // about page img imports

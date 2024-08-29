@@ -40,7 +40,7 @@
 
 				.img-wrap {
 					height: 400px;
-					margin-bottom: 0.5em;
+					margin-bottom: 0.8em;
 
 					img {
 						height: 100%;
@@ -51,6 +51,34 @@
 
 				.text-card {
 					// background: teal;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+
+					.staff-name {
+						color: $dark;
+					}
+
+					.view-bio-btn {
+						border: none;
+						@include btn-mixin();
+						display: flex;
+						gap: 1em;
+						align-items: center;
+						cursor: pointer;
+						padding: 0.5em;
+
+						span {
+							display: inline-block;
+						}
+
+						i {
+							display: inline-block;
+
+							padding: 0;
+							height: 16px;
+						}
+					}
 				}
 			}
 

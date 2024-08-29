@@ -13,11 +13,17 @@ html {
 
 li {
 	list-style: none;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 a {
 	text-decoration: none;
 	font-size: 0.9rem;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	font-style: normal;
 }
 
 // vairables
@@ -25,7 +31,7 @@ $dark: #1a2d41;
 $light: #fff;
 $accent-color: #ba7242;
 $different-color: #00ffe0;
-$text-color-primary: #969ca2;
+$text-color-primary: rgb(43, 43, 43);
 $color: #1ee0fb;
 $width: 90%;
 $shadow: 0px 13px 30px rgba(0, 0, 0, 0.07999999821186066);
