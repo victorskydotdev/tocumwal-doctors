@@ -25,8 +25,12 @@ const loadFooterImgs = () => {
 					<h4 class="heading">Quick links</h4>
 
 					<ul class="list-wrap">
-						<li class="list">Home</li>
-						<li class="list">Our services</li>
+						<li class="list">
+							<a href="/">Home</a>
+						</li>
+						<li class="list">
+							<a href="/#services">Our services</a>
+						</li>
 						<li class="list">
 							<a href="/contact.html">Contact us</a>
 						</li>

@@ -5,6 +5,7 @@ const staffBioBtn = document.querySelectorAll('.view-bio-btn');
 const mainModalContainer = document.querySelector('.bio-modal-container');
 const modalContainer = document.querySelector('.modal-container');
 const closeBtn = document.querySelector('.modal-close-btn');
+const domBody = document.querySelector('.dom-body');
 
 const showStaffBio = () => {
 	staffBioBtn.forEach((btn) => {
@@ -70,10 +71,12 @@ const showStaffBio = () => {
 				modalContainer.innerHTML += staffTemplate;
 
 				mainModalContainer.classList.add('display');
+				domBody.classList.add('body-overflow');
 
 				closeBtn.addEventListener('click', () => {
 					mainModalContainer.classList.remove('display');
 					modalContainer.innerHTML = '';
+					domBody.classList.remove('body-overflow');
 				});
 			} else if (btnIdTwo === 'btn-2') {
 				const staffTemplate = `
@@ -96,10 +99,13 @@ const showStaffBio = () => {
 				modalContainer.innerHTML += staffTemplate;
 
 				mainModalContainer.classList.add('display');
+				domBody.classList.add('body-overflow');
 
 				closeBtn.addEventListener('click', () => {
 					mainModalContainer.classList.remove('display');
 					modalContainer.innerHTML = '';
+
+					domBody.classList.remove('body-overflow');
 				});
 			} else console.log('No');
 		});

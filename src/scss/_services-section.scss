@@ -81,6 +81,9 @@
 			padding: 1em;
 			border-radius: 20px;
 
+			&:nth-child(1) {
+				background: #f5fcfb;
+			}
 			&:nth-child(2) {
 				background: #f5fcfb;
 			}

@@ -1,0 +1,110 @@
+@import '../resets';
+
+.terms-main {
+	min-height: 80vh;
+	padding-top: 20vh;
+
+	.container {
+		height: 100%;
+		@include width-mixin();
+
+		.terms-masthead-area {
+			// color: $light;
+			margin-bottom: 2.5em;
+
+			.title {
+				@include heading-mixin();
+			}
+		}
+
+		.textarea {
+			margin-bottom: 4em;
+
+			.main-heading {
+				font-size: 1.4rem;
+				margin-bottom: 1em;
+			}
+
+			.heading {
+				margin-bottom: 1em;
+				font-size: 1.2rem;
+			}
+
+			ul {
+				padding-left: 2em;
+				display: grid;
+				gap: 0.6em;
+				margin-bottom: 2em;
+
+				li {
+					list-style: square;
+					font-size: 0.9rem;
+				}
+			}
+
+			.price-area {
+				min-height: 300px;
+				width: 100%;
+				margin-bottom: 2em;
+				display: grid;
+				gap: 2em;
+
+				.price-card {
+					display: grid;
+					gap: 1.5em;
+					background: $dark;
+					color: $light;
+					padding: 1.5em;
+					border-radius: 20px;
+
+					.title {
+						font-weight: 700;
+					}
+
+					.wrap {
+						p {
+							&:nth-child(1) {
+								font-weight: 500;
+							}
+						}
+					}
+				}
+
+				// .card1 {
+				// 	background: $accent-color;
+				// }
+
+				@media screen and (min-width: 43em) {
+					grid-template-columns: repeat(2, 1fr);
+				}
+				@media screen and (min-width: 62em) {
+					grid-template-columns: repeat(4, 1fr);
+					gap: 1em;
+				}
+			}
+
+			.text {
+				margin-bottom: 1.5em;
+				font-size: 0.9rem;
+				max-width: 700px;
+				line-height: 1.9;
+			}
+
+			.list-wrap {
+				margin-bottom: 2em;
+				max-width: 700px;
+
+				ul {
+					padding-left: 2em;
+					display: grid;
+					gap: 0.6em;
+
+					li {
+						list-style: square;
+						font-size: 0.9rem;
+					}
+				}
+			}
+		}
+	}
+}
