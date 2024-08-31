@@ -18,9 +18,16 @@
 
 		.text {
 			text-align: center;
+			@include width-mixin();
 
 			a {
 				color: $accent-color;
+			}
+
+			@media screen and (min-width: 62em) {
+				// background: teal;
+				width: 32%;
+				// padding: 0 3em;
 			}
 		}
 	}
