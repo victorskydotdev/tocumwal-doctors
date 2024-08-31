@@ -42,47 +42,6 @@
 				}
 			}
 
-			.price-area {
-				min-height: 300px;
-				width: 100%;
-				margin-bottom: 2em;
-				display: grid;
-				gap: 2em;
-
-				.price-card {
-					display: grid;
-					gap: 1.5em;
-					background: $dark;
-					color: $light;
-					padding: 1.5em;
-					border-radius: 20px;
-
-					.title {
-						font-weight: 700;
-					}
-
-					.wrap {
-						p {
-							&:nth-child(1) {
-								font-weight: 500;
-							}
-						}
-					}
-				}
-
-				// .card1 {
-				// 	background: $accent-color;
-				// }
-
-				@media screen and (min-width: 43em) {
-					grid-template-columns: repeat(2, 1fr);
-				}
-				@media screen and (min-width: 62em) {
-					grid-template-columns: repeat(4, 1fr);
-					gap: 1em;
-				}
-			}
-
 			.text {
 				margin-bottom: 1.5em;
 				font-size: 0.9rem;

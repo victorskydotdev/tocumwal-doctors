@@ -46,6 +46,13 @@ module.exports = {
 			filename: 'privacy-policy.html',
 			inject: 'head',
 		}),
+
+		new HtmlWebpackPlugin({
+			template: './src/html/pricing.html',
+			chunks: ['main'],
+			filename: 'pricing.html',
+			inject: 'head',
+		}),
 	],
 
 	module: {

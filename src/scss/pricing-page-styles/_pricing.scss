@@ -1,0 +1,124 @@
+@import '../resets';
+
+.pricing-section {
+	padding-top: 5em;
+	min-height: 100vh;
+	padding-bottom: 7em;
+
+	.text-container {
+		margin-bottom: 3em;
+
+		.heading {
+			@include heading-mixin();
+			text-align: center;
+			// background: teal;
+			margin: 0 auto;
+		}
+	}
+
+	.container {
+		@include width-mixin();
+
+		.price-area {
+			min-height: 300px;
+			width: 100%;
+			margin-bottom: 2em;
+			display: grid;
+			gap: 2em;
+
+			.price-card {
+				display: grid;
+				gap: 1.5em;
+				background: $dark;
+				color: $light;
+				padding: 1.5em;
+				border-radius: 20px;
+
+				.title {
+					font-weight: 700;
+					font-size: 1.5rem;
+					line-height: 1;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					text-transform: capitalize;
+					margin-bottom: 1em;
+					position: relative;
+
+					&::after {
+						content: '';
+						position: absolute;
+						height: 1px;
+						width: 100%;
+						background: $light;
+						top: 170%;
+						left: 0;
+					}
+
+					// .text {
+					// 	text-transform: capitalize;
+					// }
+
+					.highlight {
+						background: $accent-color;
+						display: inline-block;
+						font-size: 0.8rem;
+						padding: 0.7em;
+						border-radius: 20px;
+						white-space: nowrap;
+					}
+				}
+
+				.wrap {
+					p {
+						display: flex;
+						gap: 0.4em;
+						align-items: center;
+
+						i {
+							color: $accent-color;
+						}
+					}
+
+					.price {
+						font-weight: 700;
+						// color
+					}
+				}
+
+				.wrapper {
+					display: flex;
+					justify-content: space-between;
+				}
+
+				.btn {
+					@include btn-mixin();
+					display: block;
+					margin-top: 1.5em;
+					border: none;
+					cursor: pointer;
+					background: $light;
+					color: $accent-color;
+				}
+			}
+
+			// .card1 {
+			// 	background: $accent-color;
+			// }
+
+			@media screen and (min-width: 43em) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			@media screen and (min-width: 62em) {
+				grid-template-columns: repeat(4, 1fr);
+				gap: 1em;
+			}
+		}
+
+		.ast-text {
+			max-width: 500px;
+			margin: 0 auto;
+			color: $accent-color;
+		}
+	}
+}
