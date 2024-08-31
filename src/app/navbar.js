@@ -19,6 +19,7 @@ const loadNavbar = () => {
 						<li class="link"><a href="/about.html">About</a></li>
 						<li class="link"><a href="/#services">Services</a></li>
 						<li class="link"><a href="/#doctors">Doctors</a></li>
+						<li class="link"><a href="/pricing.html">Pricing</a></li>
 						<li class="link"><a href="/contact.html">Contact</a></li>
 					</ul>
 
