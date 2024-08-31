@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const loader = require('sass-loader');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	mode: 'none',
@@ -53,6 +54,12 @@ module.exports = {
 			filename: 'pricing.html',
 			inject: 'head',
 		}),
+
+		/* new CopyWebpackPlugin({
+			patterns: [
+				{ from: '../assets/favicon.png', to: 'favicon.png' }, // Copy the favicon to the output directory
+			],
+		}), */
 	],
 
 	module: {

@@ -6,13 +6,22 @@
 	padding-bottom: 7em;
 
 	.text-container {
-		margin-bottom: 3em;
+		margin-bottom: 4em;
 
 		.heading {
 			@include heading-mixin();
 			text-align: center;
-			// background: teal;
+
 			margin: 0 auto;
+			margin-bottom: 0.3em;
+		}
+
+		.text {
+			text-align: center;
+
+			a {
+				color: $accent-color;
+			}
 		}
 	}
 
