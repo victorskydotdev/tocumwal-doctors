@@ -55,11 +55,11 @@ module.exports = {
 			inject: 'head',
 		}),
 
-		/* new CopyWebpackPlugin({
-			patterns: [
-				{ from: '../assets/favicon.png', to: 'favicon.png' }, // Copy the favicon to the output directory
-			],
-		}), */
+		// new CopyWebpackPlugin({
+		// 	patterns: [
+		// 		{ from: '../assets/favicon.png', to: 'favicon.png' }, // Copy the favicon to the output directory
+		// 	],
+		// }),
 	],
 
 	module: {
