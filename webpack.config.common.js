@@ -25,14 +25,14 @@ module.exports = {
 			template: './src/html/about.html',
 			chunks: ['main'],
 			filename: 'about.html',
-			// favicon: '../assets/favicon.png',
+			favicon: 'src/assets/favicon.png',
 		}),
 
 		new HtmlWebpackPlugin({
 			template: './src/html/contact.html',
 			chunks: ['main'],
 			filename: 'contact.html',
-			// favicon: '../assets/favicon.png',
+			favicon: 'src/assets/favicon.png',
 		}),
 
 		new HtmlWebpackPlugin({
@@ -40,7 +40,7 @@ module.exports = {
 			chunks: ['main'],
 			filename: 'terms.html',
 			inject: 'head',
-			// favicon: '../assets/favicon.png',
+			favicon: 'src/assets/favicon.png',
 		}),
 
 		new HtmlWebpackPlugin({
@@ -48,7 +48,7 @@ module.exports = {
 			chunks: ['main'],
 			filename: 'privacy-policy.html',
 			inject: 'head',
-			// favicon: '../assets/favicon.png',
+			favicon: 'src/assets/favicon.png',
 		}),
 
 		new HtmlWebpackPlugin({
@@ -56,7 +56,7 @@ module.exports = {
 			chunks: ['main'],
 			filename: 'pricing.html',
 			inject: 'head',
-			// favicon: '../assets/favicon.png',
+			favicon: 'src/assets/favicon.png',
 		}),
 
 		new CopyWebpackPlugin({
