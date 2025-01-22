@@ -1,4 +1,5 @@
-import footerLogo from '../assets/brand.png';
+// import footerLogo from '../assets/brand.png';
+import footerLogo from '../assets/updated-logo.png';
 
 const footerContainer = document.querySelector('.footer');
 
@@ -58,7 +59,7 @@ const loadFooterImgs = () => {
 
 			<div class="copyright-wrap">
 				<p class="copyright-text">
-					&copy; copyright, Tocumwal Doctors. All rights reserved.
+					&copy; copyright 2025, Doctors@Tocumwal. All rights reserved.
 				</p>
 
 				<div class="social-media-icons">

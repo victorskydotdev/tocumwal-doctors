@@ -1,4 +1,5 @@
-import logo from '../assets/brand.png';
+// import logo from '../assets/updated-logo.png';
+import logo from '../assets/updated-logo.png';
 // end of img asset import
 
 // dom variables
