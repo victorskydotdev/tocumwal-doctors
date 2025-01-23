@@ -9,6 +9,7 @@
 	top: 0;
 	width: 100%;
 	z-index: 2;
+	transition: 0.5s ease-in-out;
 
 	.nav-container {
 		@include width-mixin();
@@ -18,8 +19,18 @@
 
 		.brand-logo {
 			// width: 100px;
+
 			.logo {
-				width: 200px;
+				width: 220px;
+				transition: all 0.5s ease-in-out;
+			}
+
+			.logo-scroll {
+				width: 150px;
+			}
+
+			.logo-scroll ~ .header-nav {
+				background: orange;
 			}
 		}
 
@@ -129,4 +140,8 @@
 			}
 		}
 	}
+}
+
+.height {
+	height: 15vh;
 }

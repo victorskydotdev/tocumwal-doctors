@@ -10,7 +10,7 @@ const loadNavbar = () => {
 		<nav class="nav-container">
 				<div class="brand-logo">
 					<a href="/">
-						<img class="logo" src="${logo}" alt="" />
+						<img class="logo logo-element" src="${logo}" alt="Tocumwal doctors brand logo" />
 					</a>
 				</div>
 
@@ -59,6 +59,19 @@ const loadNavbar = () => {
 				mobileMenu.classList.remove('show-mobile-menu');
 			});
 		}
+
+		const logoElement = document.querySelector('.logo-element');
+		console.log(logoElement);
+
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 100) {
+				navContainer.classList.add('height');
+				logoElement.classList.add('logo-scroll');
+			} else {
+				logoElement.classList.remove('logo-scroll');
+				navContainer.classList.remove('height');
+			}
+		});
 	}
 };
 

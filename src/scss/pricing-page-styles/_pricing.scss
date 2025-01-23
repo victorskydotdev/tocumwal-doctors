@@ -119,15 +119,25 @@
 			}
 
 			// .card1 {
+			// 	display: none;
+			// }
+
+			// .card1 {
 			// 	background: $accent-color;
 			// }
 
 			@media screen and (min-width: 43em) {
 				grid-template-columns: repeat(2, 1fr);
 			}
+
 			@media screen and (min-width: 62em) {
-				grid-template-columns: repeat(4, 1fr);
+				display: flex;
 				gap: 1em;
+				justify-content: center;
+
+				.price-card {
+					width: 30%;
+				}
 			}
 		}
 
