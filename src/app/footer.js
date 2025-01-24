@@ -45,7 +45,7 @@ const loadFooterImgs = () => {
 					<h4 class="heading">Book an appointment</h4>
 
 					<p class="text">
-						Our well-trained doctors are on standby to speak with you.
+						Our dedicated and compassionate doctors are here to provide you with the care and support you need.
 					</p>
 
 					<button class="call-btn">
