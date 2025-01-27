@@ -27,7 +27,7 @@
 				margin-bottom: 0.4em;
 				color: $dark;
 				font-weight: 700;
-				font-size: 3rem;
+				font-size: clamp(2rem, 3.5vw, 4rem);
 				line-height: 1.3;
 			}
 

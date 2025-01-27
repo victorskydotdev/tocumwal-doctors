@@ -15,7 +15,7 @@
 			.heading-title {
 				@include heading-mixin();
 				text-align: center;
-
+				font-size: clamp(2rem, 3.5vw, 4rem);
 				margin: 0 auto 0.4em auto;
 			}
 

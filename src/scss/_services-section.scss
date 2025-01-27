@@ -43,9 +43,12 @@
 
 			.heading {
 				@include heading-mixin();
+				font-size: clamp(2rem, 3.5vw, 4rem);
 			}
 
 			.buttons-wrap {
+				display: none;
+
 				button {
 					height: 40px;
 					width: 40px;

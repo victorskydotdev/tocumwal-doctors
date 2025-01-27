@@ -19,6 +19,7 @@
 
 			.heading {
 				@include heading-mixin();
+				font-size: clamp(2rem, 3.5vw, 4rem);
 				margin-bottom: 1em;
 			}
 
