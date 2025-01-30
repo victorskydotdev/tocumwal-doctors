@@ -29,7 +29,7 @@ const waveBgWrap = document.querySelector('.section4-bg');
 
 const loadImgAssets = () => {
 	const heroImgTemplate = `
-    <img class="hero-bg" src="${heroBg}" alt="" />
+    <img class="hero-bg" src="${heroBg}" alt="Doctors, nurses, and receptionists at Doctors@Tocumwal providing trusted and reliable healthcare to the Tocumwal community" />
   `;
 
 	const aboutSectionImgTemplate = `
