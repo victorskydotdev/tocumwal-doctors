@@ -12,9 +12,9 @@
 
 	.close-btn {
 		position: absolute;
-		bottom: 7%;
-		left: 50%;
-		transform: translateX(-50%);
+		top: 20%;
+		right: 10%;
+		// transform: translateX(-50%);
 		background: red;
 		z-index: 11;
 		border: none;
@@ -28,14 +28,14 @@
 			top: 10%;
 			bottom: unset;
 			left: unset;
-			right: 15%;
+			right: 25%;
 		}
 
 		@media screen and (min-width: 62em) {
 			top: 10%;
 			bottom: unset;
 			left: unset;
-			right: 20%;
+			right: 27%;
 		}
 	}
 
