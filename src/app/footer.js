@@ -69,17 +69,17 @@ const loadFooterImgs = () => {
 						<i class="fa-brands fa-facebook-f"></i>
 					</a>
 
-					<!-- <a href="#" target="_blank">
+					<a href="https://instagram.com/tocumwaldoctors" target="_blank">
 						<i class="fa-brands fa-instagram"></i>
-					</a> -->
+					</a>
 
-					<!-- <a href="#" target="_blank">
+					<a href="http://linkedin.com/company/tocumwaldoctors" target="_blank">
 						<i class="fa-brands fa-linkedin-in"></i>
-					</a> -->
+					</a>
 
-					<!-- <a href="#" target="_blank">
+					<a href="https://x.com/tocumwaldoctors" target="_blank">
 						<i class="fa-brands fa-x-twitter"></i>
-					</a> -->
+					</a>
 				</div>
 			</div>
 	`;
