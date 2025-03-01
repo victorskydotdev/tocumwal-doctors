@@ -1,0 +1,54 @@
+@import './resets';
+
+.patient-info-sheet-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.521);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px); /* For Safari */
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	transform: translateY(100%);
+	transition: all 0.8s ease;
+
+	.container {
+		opacity: 0;
+		transition: all 1s ease;
+		display: flex;
+		align-items: center;
+		height: 100%;
+
+		.text-wrap {
+			@include width-mixin();
+			text-align: center;
+			padding-top: 4em;
+
+			.heading {
+				@include heading-mixin();
+				font-size: 2rem;
+				text-align: center;
+				background: $accent-color;
+				margin: 0 auto 0.8em auto;
+				color: $light;
+				border-radius: 10px;
+			}
+
+			.text {
+				color: $light;
+				max-width: 700px;
+				margin: 0 auto;
+				margin-bottom: 1.5em;
+			}
+		}
+	}
+
+	.opacity {
+		opacity: 1;
+	}
+}
+
+.display-patInfo-modal {
+	transform: translateY(0);
+}

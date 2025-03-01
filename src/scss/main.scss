@@ -6,10 +6,17 @@
 @import 'appointment-section';
 @import 'our-doctors-section';
 @import 'accordion-section';
-@import 'newsletter';
+@import 'patient-feedback';
+@import '../scss/landing/patient-feedback';
 @import 'footer';
 
+// page transition and animation styles
+@import './page-transition';
+
+// modals
 @import 'bio-modal';
+@import './patient-info';
+// end of modals
 
 @import '../scss/contact-page-styles/contact-form';
 
@@ -21,3 +28,11 @@
 @import '../scss/terms-page-styles/terms';
 
 @import '../scss//pricing-page-styles/pricing';
+
+// fees and billings styles
+@import '../scss/fees-biling/fb-main';
+@import '../scss/fees-biling/article';
+
+// appointments page
+@import '../scss/appointments-page-styles/app-main';
+@import '../scss/appointments-page-styles/article';

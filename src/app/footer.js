@@ -49,9 +49,9 @@ const loadFooterImgs = () => {
 					</p>
 
 					<button class="call-btn">
-						<a href="tel:+61458231987">
+						<a href="tel:0348115007">
 							<i class="fa-solid fa-phone"></i>
-							<span>+61 348 115 007</span>
+							<span>0 348 115 007</span>
 						</a>
 					</button>
 				</div>

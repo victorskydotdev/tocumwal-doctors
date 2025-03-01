@@ -1,14 +1,14 @@
 @import '../resets';
 
 .contact-form {
-	height: 100vh;
+	height: 150vh;
 	position: relative;
 
 	.bg-img-wrap {
 		position: absolute;
 		top: 0;
 		left: 0;
-		height: 100vh;
+		height: 100%;
 		width: 100%;
 
 		&::after {
@@ -36,7 +36,6 @@
 		z-index: 1;
 		@include width-mixin();
 		background: $light;
-		min-height: 70vh;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
@@ -117,4 +116,9 @@
 			}
 		}
 	}
+}
+
+.contact-area {
+	height: 400px;
+	// background: red;
 }

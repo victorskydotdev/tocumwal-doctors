@@ -1,0 +1,43 @@
+@import '../resets';
+
+.app-article {
+	margin-bottom: 8em;
+
+	.text-wrap {
+		@include width-mixin();
+
+		@media screen and (min-width: 43em) {
+			width: 60%;
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 60%;
+		}
+
+		.text {
+			margin-bottom: 1.5em;
+		}
+
+		.heading {
+			font-size: 2rem;
+			margin-bottom: 0.7em;
+		}
+
+		.sub-heading {
+			margin-bottom: 1em;
+		}
+
+		.list-wrap {
+			margin-bottom: 1.5em;
+			// background: teal;
+			padding-left: 2em;
+			display: grid;
+			gap: 0.6em;
+
+			.list {
+				list-style: square;
+				font-size: 0.9rem;
+			}
+		}
+	}
+}

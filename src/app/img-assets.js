@@ -11,6 +11,32 @@ import medProfImg from '../assets/med-professional.jpg';
 import wavebg from '../assets/wave.jpg';
 // end of img assets import
 
+// fees and billing image imports
+import fbBg from '../assets/fee-billing-bg.jpg';
+const fbBgWrap = document.querySelector('.fb-bg-wrap');
+const loadfeeBillImg = () => {
+	return `
+		<img class="img-element" src="${fbBg}" alt="" />
+	`;
+};
+
+if (fbBgWrap) {
+	fbBgWrap.innerHTML = loadfeeBillImg();
+}
+
+// feedback
+import feedbackImg from '../assets/feedbackImg.jpg';
+const feedbackImgWrap = document.querySelector('.feedback-img');
+const loadFeebackImg = () => {
+	return `
+		<img class="img" src="${feedbackImg}" alt="" />
+	`;
+};
+
+if (feedbackImgWrap) {
+	feedbackImgWrap.innerHTML = loadFeebackImg();
+}
+
 // dom variables
 const heroImgWrap = document.querySelector('.hero-img-wrap');
 const aboutSectionImgWrap = document.querySelector('.about-section-img');

@@ -55,6 +55,8 @@
 				gap: 3em;
 
 				.link {
+					position: relative;
+
 					a {
 						color: $light;
 						display: inline-block;
@@ -81,6 +83,79 @@
 							transform: scaleX(1);
 						}
 					}
+
+					// patient info dropdown styles starts here
+					.dropdown-link {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						gap: 0.3em;
+						cursor: pointer;
+
+						.link-text,
+						.fi {
+							display: inline-block;
+						}
+
+						.fi {
+							padding: 0;
+							line-height: 0;
+							margin-top: 0.2em;
+							font-size: 1.2rem;
+							transition: transform 0.5s ease;
+						}
+
+						.icon-rotate {
+							transform: rotate(180deg);
+						}
+					}
+
+					.patient-info-dropdown {
+						background: $accent-color;
+						position: absolute;
+						width: 300px;
+						left: 50%;
+						top: -1000%;
+						transform: translateX(-50%);
+						padding: 2em 0;
+						z-index: 3;
+
+						gap: 1em;
+						border-radius: 20px;
+						color: $light;
+						transition: all 0.9s ease;
+						opacity: 0;
+						// display: none;
+
+						.dd-link2 {
+							.patient-info-btn {
+								background: transparent;
+								border: none;
+								cursor: pointer;
+								color: $light;
+								font-family: 'Poppins', sans-serif;
+								font-weight: 500;
+								font-style: normal;
+							}
+						}
+					}
+
+					.dropdown {
+						top: 100%;
+						display: grid;
+
+						@media screen and (min-width: 62em) {
+							top: 150%;
+						}
+					}
+
+					.opacity {
+						opacity: 1;
+					}
+				}
+
+				.isActive {
+					display: inline-block;
 				}
 			}
 

@@ -52,9 +52,25 @@ module.exports = {
 		}),
 
 		new HtmlWebpackPlugin({
+			template: './src/html/fees-billing.html',
+			chunks: ['main'],
+			filename: 'fees-billing.html',
+			inject: 'head',
+			favicon: 'src/assets/favicon.png',
+		}),
+
+		new HtmlWebpackPlugin({
 			template: './src/html/pricing.html',
 			chunks: ['main'],
 			filename: 'pricing.html',
+			inject: 'head',
+			favicon: 'src/assets/favicon.png',
+		}),
+
+		new HtmlWebpackPlugin({
+			template: './src/html/appointments.html',
+			chunks: ['main'],
+			filename: 'appointments.html',
 			inject: 'head',
 			favicon: 'src/assets/favicon.png',
 		}),
@@ -92,6 +108,14 @@ module.exports = {
 					},
 				},
 			},
+
+			// {
+			// 	test: /\.(svg | png | jpe?g | gif$)/,
+			// 	type: 'asset/resource',
+			// 	generator: {
+			// 		filename: 'assets/[hash][ext]',
+			// 	},
+			// },
 		],
 	},
 };
