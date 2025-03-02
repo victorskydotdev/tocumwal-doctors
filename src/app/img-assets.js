@@ -4,7 +4,7 @@ import docImg1 from '../assets/team-img1.jpg';
 import docImg2 from '../assets/team-img2.jpg';
 
 // about page img imports
-import aboutHeroBg from '../assets/about-bg.png';
+import aboutHeroBg from '../assets/about-bg.jpg';
 import sectionImgOneJpg from '../assets/about-img1.jpg';
 import sectionImgTwoJpg from '../assets/about-img1.jpg';
 import medProfImg from '../assets/med-professional.jpg';

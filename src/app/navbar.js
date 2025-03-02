@@ -116,11 +116,11 @@ export const loadNavbar = () => {
 							<h3 class="heading">Patient Information Sheet</h3>
 
 							<p class="text">
-								At Doctors@Tocumwal, we are dedicated to providing high-quality, patient-centered care to our community. Our team of experienced healthcare professionals is committed to treating every patient with respect, compassion, and excellence.
+								Every patient deserves high-quality, compassionate care from professionals who prioritize their well-being. Our dedicated team provides comprehensive healthcare services, welcoming individuals of all ages, backgrounds, and medical needs.s
 							</p>
 
 							<p class="text">
-								We aim to deliver comprehensive healthcare services that support your well-being, and we welcome patients of all ages, backgrounds, and health needs.
+								With a commitment to respect, excellence, and patient-focused care, we strive to support your health at every stage of life
 							</p>
 						</div>
 					</div>
