@@ -7,7 +7,8 @@
 @import 'our-doctors-section';
 @import 'accordion-section';
 @import 'patient-feedback';
-@import '../scss/landing/patient-feedback';
+// @import '../scss/landing/patient-feedback';
+@import '../scss/landing/indi-flags-section';
 @import 'footer';
 
 // page transition and animation styles
@@ -16,6 +17,7 @@
 // modals
 @import 'bio-modal';
 @import './patient-info';
+@import '../scss/landing/feedback-form-modal';
 // end of modals
 
 @import '../scss/contact-page-styles/contact-form';

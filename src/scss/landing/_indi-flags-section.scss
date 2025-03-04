@@ -1,0 +1,38 @@
+@import '../resets';
+
+.indi-flag-section {
+	width: 100%;
+
+	.container {
+		display: flex;
+
+		.img {
+			width: 100%;
+		}
+	}
+
+	@media screen and (min-width: 43em) {
+		margin-bottom: 4em;
+
+		.container {
+			width: 90%;
+			margin: 0 auto;
+			justify-content: center;
+		}
+	}
+
+	@media screen and (min-width: 62em) {
+		margin-bottom: 4em;
+
+		.container {
+			width: 60%;
+			margin: 0 auto;
+			justify-content: center;
+			gap: 2em;
+
+			.img {
+				border-radius: 1em;
+			}
+		}
+	}
+}

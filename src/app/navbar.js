@@ -116,11 +116,11 @@ export const loadNavbar = () => {
 							<h3 class="heading">Patient Information Sheet</h3>
 
 							<p class="text">
-								Every patient deserves high-quality, compassionate care from professionals who prioritize their well-being. Our dedicated team provides comprehensive healthcare services, welcoming individuals of all ages, backgrounds, and medical needs.s
+								Every patient deserves high-quality, compassionate care from professionals who prioritize their well-being. Our dedicated team provides comprehensive healthcare services, welcoming individuals of all ages, backgrounds, and medical needs.
 							</p>
 
 							<p class="text">
-								With a commitment to respect, excellence, and patient-focused care, we strive to support your health at every stage of life
+								With a commitment to respect, excellence, and patient-focused care, we strive to support your health at every stage of life.
 							</p>
 						</div>
 					</div>
