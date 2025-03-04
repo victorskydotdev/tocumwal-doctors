@@ -17,7 +17,7 @@ const feedbackTemp = () => {
 							type="text"
 							name="name"
 							id="name"
-							placeholder="Your Name" required />
+							placeholder="*Your Name" required />
 						</div>
 
 						<div class="wrap">
@@ -25,7 +25,7 @@ const feedbackTemp = () => {
 							type="text"
 							name="phone"
 							id="phone"
-							placeholder="Your Phone Number" required />
+							placeholder="*Your Phone Number" required />
 						</div>
 
 						<div class="wrap">
@@ -33,7 +33,7 @@ const feedbackTemp = () => {
 							type="email"
 							name="subscriber-email"
 							id="subscriber-email"
-							placeholder="myemail@domain.com" required />
+							placeholder="*myemail@domain.com" required />
 						</div>
 						
 						<div class="wrap">
@@ -55,11 +55,25 @@ const feedbackTemp = () => {
 						</div>
 
 						<div class="wrap">
-							<textarea id="feedback" name="feedback" placeholder="Enter your feedback here..." required></textarea>
+							<textarea id="feedback" name="feedback" placeholder="*Please provide a summary of your experience. Add as much detail as you would like.
+							" required></textarea>
+						</div>
+
+						<div class="consent-wrap">
+							<input type="checkbox" name="consent" id="consent" required>
+
+							<label for="consent">
+								I consent to my feedback being used for quality improvement purposes.
+							</label>
 						</div>
 
 						<div class="btn-wrap">
 							<button type="submit">Submit Feedback</button>
+						</div>
+
+						<div class="close-btn" id="close-btn">
+							<i class="fa-solid fa-xmark"></i>
+							<span>Close</span>
 						</div>
 					</div>
 				</form>
@@ -75,6 +89,19 @@ export const submitFBackForm = () => {
 			feedbackFormModal.innerHTML = feedbackTemp();
 
 			const feedbackWrap = document.querySelector('.feedback-form-wrap');
+			const closeBtn = document.querySelector('#close-btn');
+
+			if (!closeBtn) {
+				console.log('No close button in the DOM!');
+			} else {
+				closeBtn.addEventListener('click', () => {
+					setTimeout(() => {
+						feedbackFormModal.classList.remove('display-feedback-modal');
+					}, 800);
+
+					feedbackWrap.classList.remove('opacity');
+				});
+			}
 
 			setTimeout(() => {
 				feedbackWrap.classList.add('opacity');

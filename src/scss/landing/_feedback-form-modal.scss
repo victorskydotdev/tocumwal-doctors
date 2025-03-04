@@ -31,6 +31,7 @@
 			border-radius: 20px;
 			padding: 40px 20px;
 			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+			position: relative;
 
 			.heading-wrap {
 				margin-bottom: 20px;
@@ -52,46 +53,97 @@
 
 				.wrap {
 					margin-bottom: 10px;
+
+					input,
+					textarea {
+						width: 100%;
+						padding: 10px;
+						border: 1px solid #ccc;
+						border-radius: 10px;
+						color: #333232;
+						font-family: 'Poppins', sans-serif;
+						font-weight: 400;
+						font-size: 0.9rem;
+					}
+
+					select {
+						width: 100%;
+						padding: 10px;
+						background: $light;
+						color: $dark;
+						border-radius: 10px;
+						border: 1px solid #ccc;
+						color: #333232;
+						font-family: 'Poppins', sans-serif;
+						font-weight: 400;
+						font-size: 0.9rem;
+					}
 				}
 
-				input,
-				textarea {
-					width: 100%;
-					padding: 10px;
-					border: 1px solid #ccc;
-					border-radius: 10px;
-					color: #333232;
-					font-family: 'Poppins', sans-serif;
-					font-weight: 400;
-					font-size: 0.9rem;
+				.consent-wrap {
+					display: flex;
+					padding: 0 1em;
+					margin: 1em 0;
+					gap: 0.5em;
+					align-items: center;
+
+					input {
+						padding: 0;
+						width: unset;
+						background: teal;
+						cursor: pointer;
+					}
+
+					label {
+						font-size: 0.8rem;
+						color: $dark;
+						cursor: pointer;
+					}
 				}
 
-				select {
-					width: 100%;
-					padding: 10px;
-					background: $light;
-					color: $dark;
-					border-radius: 10px;
-					border: 1px solid #ccc;
-					color: #333232;
-					font-family: 'Poppins', sans-serif;
-					font-weight: 400;
-					font-size: 0.9rem;
+				.btn-wrap {
+					button {
+						margin-top: 10px;
+						padding: 0.9em;
+						background-color: $accent-color;
+						color: #fff;
+						border: none;
+						border-radius: 10px;
+						font-size: 0.9rem;
+						font-weight: 500;
+						cursor: pointer;
+
+						&:hover {
+							background-color: darken($accent-color, 10%);
+						}
+					}
 				}
 
-				button {
-					margin-top: 10px;
-					padding: 0.9em;
-					background-color: $accent-color;
-					color: #fff;
-					border: none;
-					border-radius: 10px;
-					font-size: 0.9rem;
-					font-weight: 500;
+				.close-btn {
+					position: absolute;
+					top: 5%;
+					right: -4%;
+					background: red;
+					height: 40px;
+					width: fit-content;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					gap: 0.5em;
 					cursor: pointer;
+					border-radius: 20px;
+					padding: 0 0.9em;
 
-					&:hover {
-						background-color: darken($accent-color, 10%);
+					i {
+						color: $light;
+					}
+
+					span {
+						color: $light;
+						font-family: 'Poppins', sans-serif;
+						font-weight: 500;
+
+						font-size: 0.9rem;
 					}
 				}
 			}

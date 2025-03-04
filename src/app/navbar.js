@@ -45,7 +45,7 @@ export const loadNavbar = () => {
 					</ul>
 
 					<div class="btn-wrap">
-						<a class="btn" href="http://">Book an appointment</a>
+						<a class="btn" href="https://onlineappts3.medi2apps.com/Appointments/Doctors%20@%20Tocumwal?app=1" target="_blank">Book an appointment</a>
 					</div>
 
 					<div class="close-btn">
