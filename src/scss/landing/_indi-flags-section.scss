@@ -1,13 +1,23 @@
 @import '../resets';
 
 .indi-flag-section {
-	width: 100%;
+	// width: 100%;
 
 	.container {
+		width: 90%;
+		margin: 0 auto;
 		display: flex;
+		gap: 10px;
 
-		.img {
+		.wrap {
 			width: 100%;
+
+			.img {
+				// height: 100%;
+				width: 100%;
+
+				border-radius: 15px;
+			}
 		}
 	}
 
@@ -25,14 +35,10 @@
 		margin-bottom: 4em;
 
 		.container {
-			width: 60%;
+			width: 50%;
 			margin: 0 auto;
 			justify-content: center;
 			gap: 2em;
-
-			.img {
-				border-radius: 1em;
-			}
 		}
 	}
 }

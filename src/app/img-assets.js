@@ -33,23 +33,6 @@ const loadFeebackImg = () => {
 	`;
 };
 
-// indigene flag images
-import indiFlag1 from '../assets/indigene-flag1.jpg';
-import indiFlag2 from '../assets/indigene-flag2.jpg';
-const indiImgsWrap = document.querySelector('.indi-imgs-container');
-
-const loadIndiFlags = () => {
-	return `
-		<img class="img animate-element" src="${indiFlag1}" alt="Australian Aboriginal Flag" />
-
-		<img class="img animate-element" src="${indiFlag2}" alt="flag of Torres Strait Islanders" />
-	`;
-};
-if (indiImgsWrap) {
-	indiImgsWrap.innerHTML = loadIndiFlags();
-}
-// indigene flag images logic
-
 if (feedbackImgWrap) {
 	feedbackImgWrap.innerHTML = loadFeebackImg();
 }

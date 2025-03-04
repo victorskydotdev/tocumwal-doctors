@@ -56,11 +56,13 @@
 
 				.link {
 					position: relative;
+					// background: red;
 
 					a {
 						color: $light;
 						display: inline-block;
 						position: relative;
+						// background: orange;
 
 						&::before {
 							content: '';
@@ -115,17 +117,15 @@
 						position: absolute;
 						width: 300px;
 						left: 50%;
-						top: -1000%;
+						top: -1800%;
 						transform: translateX(-50%);
 						padding: 2em 0;
 						z-index: 3;
-
 						gap: 1em;
 						border-radius: 20px;
 						color: $light;
 						transition: all 0.9s ease;
 						opacity: 0;
-						// display: none;
 
 						.dd-link2 {
 							.patient-info-btn {

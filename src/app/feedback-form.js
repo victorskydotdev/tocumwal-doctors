@@ -63,7 +63,7 @@ const feedbackTemp = () => {
 							<input type="checkbox" name="consent" id="consent" required>
 
 							<label for="consent">
-								I consent to my feedback being used for quality improvement purposes.
+								I consent to my feedback being used for quality improvement purposes. <button class="consent-btn" type="button">Learn More</button>
 							</label>
 						</div>
 

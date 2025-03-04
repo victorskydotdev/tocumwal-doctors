@@ -1,5 +1,8 @@
 // import footerLogo from '../assets/brand.png';
 import footerLogo from '../assets/updated-logo.png';
+// indigene flag images
+import indiFlag1 from '../assets/indigene-flag1.jpg';
+import indiFlag2 from '../assets/indigene-flag2.jpg';
 
 const footerContainer = document.querySelector('.footer');
 
@@ -19,6 +22,11 @@ const loadFooterImgs = () => {
 					<div class="location-wrap">
 						<div class="icon"><i class="fi fi-bs-marker"></i></div>
 						<p class="text">55A Deniliquin St, Tocumwal NSW 2714, Australia</p>
+					</div>
+
+					<div class="flag-wrap">
+						<img class="flag" src="${indiFlag1}" alt="" />
+						<img class="flag" src="${indiFlag2}" alt="" />
 					</div>
 				</div>
 

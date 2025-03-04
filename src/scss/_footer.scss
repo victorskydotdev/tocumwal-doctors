@@ -12,7 +12,7 @@
 		margin-bottom: 3em;
 
 		.wrap {
-			display: grid;
+			// display: grid;
 
 			.footer-brand-logo {
 				margin-bottom: 1.5em;
@@ -39,8 +39,8 @@
 			.location-wrap {
 				display: flex;
 				align-items: center;
-
 				gap: 0.6em;
+				margin-bottom: 1em;
 
 				.icon {
 					@include icon-wrap-mixin();
@@ -48,6 +48,15 @@
 
 				.text {
 					padding-top: 1em;
+				}
+			}
+
+			.flag-wrap {
+				display: flex;
+				gap: 0.8em;
+
+				img {
+					width: 100px;
 				}
 			}
 
