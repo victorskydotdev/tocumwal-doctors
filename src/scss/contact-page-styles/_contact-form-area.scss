@@ -117,30 +117,51 @@
 				}
 
 				.consent-wrap {
-					display: flex;
-					padding: 0 1em;
+					// display: flex;
+					// padding: 0 1em;
 					margin: 1em 0;
 					gap: 0.5em;
 					align-items: center;
 
-					input {
-						padding: 0;
-						width: unset;
-						background: teal;
-						cursor: pointer;
+					.text-wrap {
+						margin-bottom: 1em;
+						font-weight: 700;
+						color: $dark;
 					}
 
-					label {
-						font-size: 0.8rem;
-						color: $dark;
-						cursor: pointer;
+					.text {
+						color: #616161;
+						font-size: 0.9rem;
+						margin-bottom: 0.4em;
+					}
 
-						button {
-							background: transparent;
-							border: none;
-							color: $accent-color;
-							font-size: 0.8rem;
-							cursor: pointer;
+					.wrapper {
+						display: grid;
+						gap: 0.3em;
+
+						.wrap {
+							display: flex;
+							gap: 0.7em;
+							input {
+								padding: 0;
+								width: unset;
+								background: teal;
+								cursor: pointer;
+							}
+
+							label {
+								font-size: 0.8rem;
+								color: $dark;
+								cursor: pointer;
+
+								button {
+									background: transparent;
+									border: none;
+									color: $accent-color;
+									font-size: 0.8rem;
+									cursor: pointer;
+								}
+							}
 						}
 					}
 				}
