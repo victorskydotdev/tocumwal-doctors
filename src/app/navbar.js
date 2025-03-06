@@ -1,9 +1,12 @@
 // import logo from '../assets/updated-logo.png';
 import logo from '../assets/updated-logo.png';
+import { infoTemplate } from '../app/info-sheet-template';
+
 // end of img asset import
 
 // dom variables
 const navContainer = document.querySelector('.header-nav');
+const domBody = document.querySelector('body');
 
 export const loadNavbar = () => {
 	const navTemplate = `
@@ -109,28 +112,11 @@ export const loadNavbar = () => {
 				'.patient-info-sheet-modal'
 			);
 
-			const infoTemplate = () => {
-				return `
-					<div class="container" id="patient-info-wrap">
-						<div class="text-wrap">
-							<h3 class="heading">Patient Information Sheet</h3>
-
-							<p class="text">
-								Every patient deserves high-quality, compassionate care from professionals who prioritize their well-being. Our dedicated team provides comprehensive healthcare services, welcoming individuals of all ages, backgrounds, and medical needs.
-							</p>
-
-							<p class="text">
-								With a commitment to respect, excellence, and patient-focused care, we strive to support your health at every stage of life.
-							</p>
-						</div>
-					</div>
-				`;
-			};
-
 			if (!patientInfoBtn && patientInfoModal) {
 				console.log('elements not in the DOM');
 			} else {
 				patientInfoBtn.addEventListener('click', () => {
+					domBody.style.overflow = 'hidden';
 					patientInfoModal.classList.add('display-patInfo-modal');
 
 					patientInfoModal.innerHTML += infoTemplate();
@@ -143,7 +129,7 @@ export const loadNavbar = () => {
 			}
 		};
 
-		displayPatientInfoModal();
+		displayPatientInfoModal(); // call the patientInfoModal function
 
 		if (hamburgerBtn) {
 			hamburgerBtn.addEventListener('click', () => {

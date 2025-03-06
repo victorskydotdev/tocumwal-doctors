@@ -71,7 +71,7 @@ const loadImgAssets = () => {
   `;
 
 	const contactBgTemplate = `
-    <img class="contact-bg" src="${heroBg}" alt="" />
+    <img class="contact-bg" src="${feedbackImg}" alt="" />
   `;
 
 	if (heroImgWrap) {

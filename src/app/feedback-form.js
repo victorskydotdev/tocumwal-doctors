@@ -82,7 +82,7 @@ const feedbackTemp = () => {
 	`;
 };
 
-export const submitFBackForm = () => {
+const submitFBackForm = () => {
 	if (feedbackBtn && feedbackTemp) {
 		feedbackBtn.addEventListener('click', () => {
 			feedbackFormModal.classList.add('display-feedback-modal');

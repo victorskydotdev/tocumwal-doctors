@@ -17,11 +17,19 @@
 // modals
 @import 'bio-modal';
 @import './patient-info';
+@import '../scss/patient-info-styles/section-wrap';
+@import '../scss/patient-info-styles/section3';
+@import '../scss/patient-info-styles/faq-section';
+@import '../scss/patient-info-styles/transfer-notice';
 @import '../scss/landing/feedback-form-modal';
 // end of modals
 
+// contact page styles
 @import '../scss/contact-page-styles/contact-form';
+@import '../scss/contact-page-styles/contact-form-area';
+// end of contact page styles
 
+// about page styles
 @import '../scss/about-page-styles/about-hero';
 @import '../scss/about-page-styles/section2';
 @import '../scss/about-page-styles/section3';

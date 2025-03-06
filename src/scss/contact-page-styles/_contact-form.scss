@@ -1,9 +1,11 @@
 @import '../resets';
 
-.contact-form {
-	height: 150vh;
+.feedback-section {
+	height: 100vh;
 	position: relative;
+	padding-top: 5em;
 
+	// bg image styles
 	.bg-img-wrap {
 		position: absolute;
 		top: 0;
@@ -17,7 +19,7 @@
 			inset: 0;
 			top: 0;
 			left: 0;
-			background: rgba(0, 0, 0, 0.575);
+			background: rgba(0, 0, 0, 0.308);
 			height: 100%;
 			width: 100%;
 			z-index: 0;
@@ -29,96 +31,41 @@
 			width: 100%;
 			object-fit: cover;
 		}
-	}
+	} // end of bg image styles
 
-	.contact-wrap {
-		position: absolute;
+	.text-area {
+		color: $light;
+		text-align: center;
+		max-width: 600px;
+		margin: 0 auto;
+		position: relative;
 		z-index: 1;
-		@include width-mixin();
-		background: $light;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		padding: 2em 0 4em 0;
-		border-radius: 20px;
+		width: 90%;
 
 		.heading {
-			@include width-mixin();
-			margin-bottom: 1em;
-			font-size: 2.2rem;
-			color: $dark;
+			// @include heading-mixin();
+			font-size: clamp(2rem, 2.9vw, 4rem);
+			margin-bottom: 0.5em;
+			color: $light;
+			line-height: 1.3;
+			text-align: center;
 		}
 
-		.contact-us-form {
-			.wrap {
-				display: grid;
-				gap: 1em;
-				@include width-mixin();
-
-				input {
-					width: 100%;
-					padding: 1em;
-					border-radius: 10px;
-					border: 1.5px solid $dark;
-					outline: none;
-				}
-
-				textarea {
-					height: 150px;
-					border-radius: 10px;
-					outline: none;
-					border: 1.5px solid $dark;
-					padding: 0.5em 1em;
-				}
-
-				.disclaimer-wrap {
-					// background: $dark;
-					// padding: 1em;
-					// color: $light;
-
-					.title {
-						margin-bottom: 1em;
-						color: red;
-					}
-
-					.disclaimer {
-						font-size: 0.8rem;
-						max-width: 500px;
-						line-height: 1.8;
-					}
-				}
-
-				.btn {
-					@include btn-mixin();
-					border: none;
-					font-size: 1rem;
-					cursor: pointer;
-				}
-			}
+		.sub-heading {
+			margin-bottom: 1.6em;
 		}
 
-		@media screen and (min-width: 43em) {
-			width: 60%;
-			// height: 75vh;
-		}
-
-		@media screen and (min-width: 62em) {
-			width: 50%;
-			// height: 75vh;
-
-			.contact-us-form {
-				.wrap {
-					.btn {
-						display: inline-block;
-						width: 30%;
-					}
-				}
-			}
+		.feedback-btn {
+			@include btn-mixin();
+			border: none;
+			// background: $dark;
+			padding: 1.4em 3em;
+			cursor: pointer;
 		}
 	}
 }
 
-.contact-area {
-	height: 400px;
-	// background: red;
-}
+// .contact-area {
+// 	height: 400px;
+// 	background: red;
+// }

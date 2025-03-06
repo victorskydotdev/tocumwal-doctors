@@ -42,46 +42,263 @@
 		<!-- title -->
 		<title>Doctors@Tocumwal | Contact Us</title>
 	</head>
-	<body>
+	<body class="body">
 		<header class="header-nav"></header>
 
-		<div class="contact-form">
+		<div class="feedback-section">
 			<div class="bg-img-wrap"></div>
 
-			<div class="contact-wrap">
-				<h3 class="heading">Send us a message</h3>
+			<div class="text-area">
+				<h3 class="heading animate-element">
+					Patient Experience Feedback Form
+				</h3>
 
-				<form action="#" name="contact-form" class="contact-us-form" netlify>
-					<div class="wrap">
-						<input name="username" type="text" placeholder="Name" />
+				<p class="sub-heading animate-element">
+					At Doctors@Tocumwal, we value your feedback and are committed to
+					providing the best possible care. Your experience helps us improve and
+					ensure we meet the needs of our community. Whether you’ve had a
+					positive experience or have suggestions for improvement, we’d love to
+					hear from you.
+				</p>
 
-						<input
-							name="useremail"
-							type="email"
-							placeholder="johndoe@email.com" />
+				<p class="sub-heading animate-element">
+					All feedback can be submitted anonymously or with your details if
+					you’d like a response from our Practice Manager.
+				</p>
 
-						<textarea
-							placeholder="Enter your message"
-							name="message"
-							id=""></textarea>
-
-						<div class="disclaimer-wrap">
-							<h5 class="title">Disclaimer!</h5>
-
-							<p class="disclaimer">
-								Do not email us. Use the contact form for feedback or inquiries,
-								only. If you have any emergency, please call 000 or visit the
-								nearest emergency clinic.
-							</p>
-						</div>
-
-						<button class="btn">Submit</button>
-					</div>
-				</form>
+				<!-- <div class="btn-wrap animate-element">
+					<a href="#contact-form-area" class="feedback-btn">Get started</a>
+				</div> -->
 			</div>
 		</div>
 
-		<div class="contact-area"></div>
+		<div class="contact-area" id="contact-form-area">
+			<div class="container feedback-form-wrap">
+				<div class="form-wrap">
+					<form class="feedback-form" id="feedback-form">
+						<!-- <div class="heading-wrap">
+							<h3 class="heading">Patient feedback</h3>
+							<p class="subheading">
+								We value your feedback, please let us know how we can improve!
+							</p>
+						</div> -->
+
+						<div class="form-fields-wrap">
+							<div class="wrap">
+								<p for="anon-check">
+									Would you like to submit this form anonymously?
+								</p>
+
+								<div class="wrap">
+									<input
+										type="radio"
+										name="anon-check"
+										id="anon-check-yes"
+										value="yes" />
+									<label for="anon-check-yes">Yes</label>
+								</div>
+
+								<div class="wrap">
+									<input
+										type="radio"
+										name="anon-check"
+										id="anon-check-no"
+										value="no" />
+									<label for="anon-check-no"
+										>No (If no, you may be contacted by the Practice Manager to
+										discuss your feedback.)</label
+									>
+								</div>
+							</div>
+
+							<div class="wrap">
+								<p for="feedback-category">What is your feedback regarding?</p>
+
+								<div class="wrap">
+									<input
+										type="checkbox"
+										name="feedback-category"
+										id="feedback-category-doctor"
+										value="doctor" />
+									<label for="feedback-category-doctor">Doctor</label>
+								</div>
+
+								<div class="wrap">
+									<input
+										type="checkbox"
+										name="feedback-category"
+										id="feedback-category-nurse"
+										value="nurse" />
+									<label for="feedback-category-nurse">Nurse</label>
+								</div>
+
+								<div class="wrap">
+									<input
+										type="checkbox"
+										name="feedback-category"
+										id="feedback-category-reception"
+										value="reception/admin" />
+									<label for="feedback-category-reception"
+										>Reception/Admin</label
+									>
+								</div>
+
+								<div class="wrap">
+									<input
+										type="checkbox"
+										name="feedback-category"
+										id="feedback-category-general"
+										value="general clinic feedback" />
+									<label for="feedback-category-general"
+										>General clinic feedback</label
+									>
+								</div>
+							</div>
+
+							<div class="wrap">
+								<label for="staff-name"
+									>Staff member's name (if applicable)</label
+								>
+								<input
+									type="text"
+									name="staff-name"
+									id="staff-name"
+									placeholder="*Staff member's name"
+									required />
+							</div>
+
+							<div class="wrap">
+								<p for="anon-check">
+									Would you like to be contacted by the Practice Manager to
+									discuss your feedback?
+								</p>
+
+								<div class="wrap">
+									<input
+										type="radio"
+										name="anon-check"
+										id="anon-check-yes"
+										value="yes" />
+									<label for="anon-check-yes">Yes</label>
+								</div>
+
+								<div class="wrap">
+									<input
+										type="radio"
+										name="anon-check"
+										id="anon-check-no"
+										value="no" />
+									<label for="anon-check-no"
+										>No (If no, you may be contacted by the Practice Manager to
+										discuss your feedback.)</label
+									>
+								</div>
+							</div>
+
+							<div class="wrap">
+								<p for="anon-check">Who experienced this situation?</p>
+
+								<div class="wrap">
+									<input
+										type="radio"
+										name="anon-check"
+										id="anon-check-yes"
+										value="yes" />
+									<label for="anon-check-yes"
+										>I personally experienced this</label
+									>
+								</div>
+
+								<div class="wrap">
+									<input
+										type="radio"
+										name="anon-check"
+										id="anon-check-no"
+										value="no" />
+									<label for="anon-check-no"
+										>A family member experienced this</label
+									>
+								</div>
+
+								<div class="wrap">
+									<input
+										type="radio"
+										name="anon-check"
+										id="anon-check-no"
+										value="no" />
+									<label for="anon-check-no">A friend experienced this</label>
+								</div>
+							</div>
+
+							<div class="wrap">
+								<input
+									type="text"
+									name="phone"
+									id="phone"
+									placeholder="*Your Phone Number"
+									required />
+							</div>
+
+							<div class="wrap">
+								<input
+									type="email"
+									name="subscriber-email"
+									id="subscriber-email"
+									placeholder="*myemail@domain.com"
+									required />
+							</div>
+
+							<div class="wrap">
+								<select for="submit-mode">
+									<option value="">
+										Would you like to submit this form anonymously?
+									</option>
+									<option value="yes">Yes</option>
+									<option value="no">No!</option>
+								</select>
+							</div>
+
+							<div class="wrap">
+								<select for="submit-category">
+									<option value="">You feedback is regarding:</option>
+									<option value="doctor">Doctor</option>
+									<option value="nurse">Nurse</option>
+									<option value="reception/admin">Reception/Admin</option>
+									<option value="general clinic feedback">
+										General clinic feedback
+									</option>
+								</select>
+							</div>
+
+							<div class="wrap">
+								<textarea
+									id="feedback"
+									name="feedback"
+									placeholder="*Please provide a summary of your experience. Add as much detail as you would like.
+								"
+									required></textarea>
+							</div>
+
+							<div class="consent-wrap">
+								<input type="checkbox" name="consent" id="consent" required />
+
+								<label for="consent">
+									I consent to my feedback being used for quality improvement
+									purposes.
+									<button class="consent-btn" type="button">Learn More</button>
+								</label>
+							</div>
+
+							<div class="btn-wrap">
+								<button type="submit">Submit Feedback</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div class="address-info-wrap"></div>
+			</div>
+		</div>
 
 		<footer class="footer"></footer>
 

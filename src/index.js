@@ -9,7 +9,7 @@ import { showStaffBio } from './app/staff-bio';
 import { submitForm } from './app/form-interaction';
 
 import { enablePageTransition } from './app/page-transition';
-import { submitFBackForm } from './app/feedback-form';
+// import { submitFBackForm } from './app/feedback-form'; // not importing this function as it not being used in the project
 // import { sendEventToNetFunct } from './app/event';
 // sendEventToNetFunct();
 
@@ -22,4 +22,4 @@ showStaffBio();
 
 // submitForm();
 enablePageTransition();
-submitFBackForm();
+// submitFBackForm(); // not importing this function as it not being used in the project
