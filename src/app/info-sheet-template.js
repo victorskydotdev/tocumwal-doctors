@@ -149,7 +149,7 @@ export const infoTemplate = () => {
                 <div class="icon">
                   <img src="${favicon}" alt="icon" />
                 </div>
-								<h4 class="accordion-header">IDo I need to complete the form before my appointment?</h4>
+								<h4 class="accordion-header">Do I need to complete the form before my appointment?</h4>
 						
 							</div>
 
