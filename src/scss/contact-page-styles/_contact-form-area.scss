@@ -11,63 +11,110 @@
 		align-items: center;
 		height: 100%;
 		justify-content: center;
-
 		width: 90%;
 		margin: 0 auto;
 
 		.form-wrap {
 			background: $light;
 			border-radius: 20px;
-			padding: 40px 20px;
+			padding: 40px;
 			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 			position: relative;
 
-			.heading-wrap {
-				margin-bottom: 20px;
-				max-width: 400px;
-				margin-bottom: 1.5em;
-
-				.heading {
-					font-size: 1.9rem;
-					color: $dark;
-					text-transform: capitalize;
-					line-height: 1;
-					margin-bottom: 0.3em;
-				}
-			}
-
 			.feedback-form {
-				display: flex;
-				flex-direction: column;
+				max-width: 500px;
 
-				// .wrap {
-				// 	margin-bottom: 10px;
+				.form-fields-wrap {
+					.main-wrap {
+						// background: teal;
+						margin-bottom: 1.5em;
 
-				// 	input,
-				// 	textarea {
-				// 		width: 100%;
-				// 		padding: 10px;
-				// 		border: 1px solid #ccc;
-				// 		border-radius: 10px;
-				// 		color: #333232;
-				// 		font-family: 'Poppins', sans-serif;
-				// 		font-weight: 400;
-				// 		font-size: 0.9rem;
-				// 	}
+						p {
+							margin-bottom: 1em;
+							font-weight: 700;
+							color: $dark;
+						}
 
-				// 	select {
-				// 		width: 100%;
-				// 		padding: 10px;
-				// 		background: $light;
-				// 		color: $dark;
-				// 		border-radius: 10px;
-				// 		border: 1px solid #ccc;
-				// 		color: #333232;
-				// 		font-family: 'Poppins', sans-serif;
-				// 		font-weight: 400;
-				// 		font-size: 0.9rem;
-				// 	}
-				// }
+						.wrap {
+							margin-bottom: 0.5em;
+							display: flex;
+							gap: 0.5em;
+
+							input {
+								// color: $dark;
+								color: #616161;
+							}
+
+							label {
+								line-height: 1.2;
+								font-size: 0.9rem;
+								max-width: 300px;
+								color: #616161;
+							}
+						}
+					}
+
+					.staff-wrap {
+						margin-top: 2em;
+						margin-bottom: 2em;
+						display: grid;
+						border-top: 1px solid #ccc;
+						border-bottom: 1px solid #ccc;
+						padding: 1.5em 0;
+						// border-radius: 15px;
+
+						label {
+							margin-bottom: 0.7em;
+							font-weight: 700;
+							color: $dark;
+						}
+
+						input {
+							padding: 0.7em;
+							border-radius: 10px;
+							border: 1px solid #ccc;
+							color: #616161;
+						}
+					}
+
+					.personal-info-wrap {
+						background: $dark;
+						padding: 2em;
+						display: grid;
+						gap: 1em;
+						border-radius: 15px;
+						margin-bottom: 2em;
+						box-shadow: 0 10px 20px rgba(0, 0, 0, 0.315);
+
+						.heading {
+							color: $light;
+							text-transform: capitalize;
+						}
+
+						.wrap {
+							input,
+							select {
+								width: 100%;
+								padding: 0.7em;
+								border-radius: 8px;
+								border: 1px solid #ccc;
+								background: $light;
+								color: #616161;
+								font-family: 'Poppins', sans-serif;
+							}
+
+							textarea {
+								height: 200px;
+								width: 100%;
+								border-radius: 15px;
+								border: 1px solid #ccc;
+								font-family: 'Poppins', sans-serif;
+								font-size: 0.9rem;
+								padding: 1em;
+							}
+						}
+					}
+				}
 
 				.consent-wrap {
 					display: flex;
@@ -87,6 +134,14 @@
 						font-size: 0.8rem;
 						color: $dark;
 						cursor: pointer;
+
+						button {
+							background: transparent;
+							border: none;
+							color: $accent-color;
+							font-size: 0.8rem;
+							cursor: pointer;
+						}
 					}
 				}
 
@@ -101,38 +156,11 @@
 						font-size: 0.9rem;
 						font-weight: 500;
 						cursor: pointer;
+						width: 100%;
 
 						&:hover {
 							background-color: darken($accent-color, 10%);
 						}
-					}
-				}
-
-				.close-btn {
-					position: absolute;
-					top: 5%;
-					right: -4%;
-					background: red;
-					height: 40px;
-					width: fit-content;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					gap: 0.5em;
-					cursor: pointer;
-					border-radius: 20px;
-					padding: 0 0.9em;
-
-					i {
-						color: $light;
-					}
-
-					span {
-						color: $light;
-						font-family: 'Poppins', sans-serif;
-						font-weight: 500;
-
-						font-size: 0.9rem;
 					}
 				}
 			}

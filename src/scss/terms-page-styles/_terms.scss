@@ -1,8 +1,49 @@
 @import '../resets';
 
+.terms-heading-wrap {
+	background: teal;
+	height: 350px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 5em;
+
+	.terms-img-wrap {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.623);
+			z-index: 1;
+		}
+	}
+
+	.wrap {
+		position: relative;
+		z-index: 1;
+
+		.heading {
+			@include heading-mixin();
+			color: $light;
+		}
+	}
+}
+
 .terms-main {
 	min-height: 80vh;
-	padding-top: 20vh;
+	// padding-top: 20vh;
 
 	.container {
 		height: 100%;
@@ -10,12 +51,12 @@
 
 		.terms-masthead-area {
 			// color: $light;
-			margin-bottom: 2.5em;
+			margin-bottom: 2em;
 
-			.title {
-				@include heading-mixin();
-				font-size: clamp(2rem, 3.5vw, 4rem);
-			}
+			// .title {
+			// 	@include heading-mixin();
+			// 	font-size: clamp(2rem, 3.5vw, 4rem);
+			// }
 		}
 
 		.textarea {

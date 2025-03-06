@@ -37,6 +37,18 @@ if (feedbackImgWrap) {
 	feedbackImgWrap.innerHTML = loadFeebackImg();
 }
 
+// terms and condition header background image
+import termsBg from '../assets/terms.jpg';
+const termsBgWrap = document.querySelector('.terms-img-wrap');
+const loadTermsBg = () => {
+	return `
+		<img class="terms-bg" src="${termsBg}" alt="" />
+	`;
+};
+if (termsBgWrap) {
+	termsBgWrap.innerHTML = loadTermsBg();
+}
+
 // dom variables
 const heroImgWrap = document.querySelector('.hero-img-wrap');
 const aboutSectionImgWrap = document.querySelector('.about-section-img');

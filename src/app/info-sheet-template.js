@@ -2,6 +2,7 @@ import consentImg from '../assets/consent-form-img.png';
 import favicon from '../assets/favicon.png';
 import transferImg from '../assets/transfer-img.jpg';
 import faqImg from '../assets/faq-img.png';
+import { footerTemplate } from './footer';
 
 export const infoTemplate = () => {
 	return `
@@ -215,6 +216,12 @@ export const infoTemplate = () => {
           </div>
         </v>
       </div>
+
+    </div>
+
+    <div class="footer-btn-wrap">
+      
+      <a href="/" class="footer-btn"><i class="fi fi-rr-house-blank"></i> <span>Go to home</span></a>
     </div>
   `;
 };

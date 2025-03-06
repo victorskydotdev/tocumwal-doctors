@@ -84,8 +84,8 @@
 						</div> -->
 
 						<div class="form-fields-wrap">
-							<div class="wrap">
-								<p for="anon-check">
+							<div class="main-wrap">
+								<p for="anon-check" class="anon-check">
 									Would you like to submit this form anonymously?
 								</p>
 
@@ -105,13 +105,16 @@
 										id="anon-check-no"
 										value="no" />
 									<label for="anon-check-no"
-										>No (If no, you may be contacted by the Practice Manager to
-										discuss your feedback.)</label
-									>
+										>No <br />
+										<!-- <span
+											>(If no, you may be contacted by the Practice Manager to
+											discuss your feedback.)</span
+										> -->
+									</label>
 								</div>
 							</div>
 
-							<div class="wrap">
+							<div class="main-wrap">
 								<p for="feedback-category">What is your feedback regarding?</p>
 
 								<div class="wrap">
@@ -155,7 +158,7 @@
 								</div>
 							</div>
 
-							<div class="wrap">
+							<div class="staff-wrap">
 								<label for="staff-name"
 									>Staff member's name (if applicable)</label
 								>
@@ -167,7 +170,7 @@
 									required />
 							</div>
 
-							<div class="wrap">
+							<div class="main-wrap">
 								<p for="anon-check">
 									Would you like to be contacted by the Practice Manager to
 									discuss your feedback?
@@ -188,14 +191,11 @@
 										name="anon-check"
 										id="anon-check-no"
 										value="no" />
-									<label for="anon-check-no"
-										>No (If no, you may be contacted by the Practice Manager to
-										discuss your feedback.)</label
-									>
+									<label for="anon-check-no">No </label>
 								</div>
 							</div>
 
-							<div class="wrap">
+							<div class="main-wrap">
 								<p for="anon-check">Who experienced this situation?</p>
 
 								<div class="wrap">
@@ -230,53 +230,57 @@
 								</div>
 							</div>
 
-							<div class="wrap">
-								<input
-									type="text"
-									name="phone"
-									id="phone"
-									placeholder="*Your Phone Number"
-									required />
-							</div>
+							<div class="personal-info-wrap">
+								<h3 class="heading">Personal info section</h3>
 
-							<div class="wrap">
-								<input
-									type="email"
-									name="subscriber-email"
-									id="subscriber-email"
-									placeholder="*myemail@domain.com"
-									required />
-							</div>
+								<div class="wrap">
+									<input
+										type="text"
+										name="phone"
+										id="phone"
+										placeholder="*Your Phone Number"
+										required />
+								</div>
 
-							<div class="wrap">
-								<select for="submit-mode">
-									<option value="">
-										Would you like to submit this form anonymously?
-									</option>
-									<option value="yes">Yes</option>
-									<option value="no">No!</option>
-								</select>
-							</div>
+								<div class="wrap">
+									<input
+										type="email"
+										name="subscriber-email"
+										id="subscriber-email"
+										placeholder="*myemail@domain.com"
+										required />
+								</div>
 
-							<div class="wrap">
-								<select for="submit-category">
-									<option value="">You feedback is regarding:</option>
-									<option value="doctor">Doctor</option>
-									<option value="nurse">Nurse</option>
-									<option value="reception/admin">Reception/Admin</option>
-									<option value="general clinic feedback">
-										General clinic feedback
-									</option>
-								</select>
-							</div>
+								<div class="wrap">
+									<select for="submit-mode">
+										<option value="">
+											Would you like to submit this form anonymously?
+										</option>
+										<option value="yes">Yes</option>
+										<option value="no">No!</option>
+									</select>
+								</div>
 
-							<div class="wrap">
-								<textarea
-									id="feedback"
-									name="feedback"
-									placeholder="*Please provide a summary of your experience. Add as much detail as you would like.
-								"
-									required></textarea>
+								<div class="wrap">
+									<select for="submit-category">
+										<option value="">You feedback is regarding:</option>
+										<option value="doctor">Doctor</option>
+										<option value="nurse">Nurse</option>
+										<option value="reception/admin">Reception/Admin</option>
+										<option value="general clinic feedback">
+											General clinic feedback
+										</option>
+									</select>
+								</div>
+
+								<div class="wrap">
+									<textarea
+										id="feedback"
+										name="feedback"
+										placeholder="*Please provide a summary of your experience. Add as much detail as you would like.
+									"
+										required></textarea>
+								</div>
 							</div>
 
 							<div class="consent-wrap">
@@ -285,7 +289,7 @@
 								<label for="consent">
 									I consent to my feedback being used for quality improvement
 									purposes.
-									<button class="consent-btn" type="button">Learn More</button>
+									<button class="consent-btn" type="button">Learn more</button>
 								</label>
 							</div>
 
