@@ -52,11 +52,20 @@
 			}
 
 			.flag-wrap {
-				display: flex;
-				gap: 0.8em;
+				display: grid;
+				gap: 1em;
 
-				img {
-					width: 100px;
+				.wrapper {
+					display: flex;
+					gap: 0.8em;
+
+					img {
+						width: 100px;
+					}
+				}
+
+				p {
+					font-size: 0.9rem;
 				}
 			}
 

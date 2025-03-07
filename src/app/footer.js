@@ -24,8 +24,18 @@ export const footerTemplate = `
 			</div>
 
 			<div class="flag-wrap">
-				<img class="flag" src="${indiFlag1}" alt="" />
-				<img class="flag" src="${indiFlag2}" alt="" />
+				<div class="wrapper">
+					<img class="flag" src="${indiFlag1}" alt="" />
+					<img class="flag" src="${indiFlag2}" alt="" />
+				</div>
+
+				<p class="acknowledgement">
+					We respect that we live and work on Aboriginal Country, with the privilege of learning from and appreciating the world's oldest living culture.
+				</p>
+				
+				<p class="acknowledgement">
+					We recognise the traditional custodians of the lands and waters of the Wamba Wamba and Perrepa Perrepa people and honour the wisdom of Elders past and present.
+				</p>
 			</div>
 		</div>
 
