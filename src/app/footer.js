@@ -30,12 +30,12 @@ export const footerTemplate = `
 				</div>
 
 				<p class="acknowledgement">
-					We respect that we live and work on Aboriginal Country, with the privilege of learning from and appreciating the world's oldest living culture.
+					<strong>Acknowledgement of Country:</strong>
+					<br> <br>
+					Doctors@Tocumwal acknowledges the Traditional Custodians of this land. We honor their Elders—past, present, and emerging—and recognize the enduring connection of their people, spirits, and ancestors to our waterways and land.
 				</p>
 				
-				<p class="acknowledgement">
-					We recognise the traditional custodians of the lands and waters of the Wamba Wamba and Perrepa Perrepa people and honour the wisdom of Elders past and present.
-				</p>
+				
 			</div>
 		</div>
 
