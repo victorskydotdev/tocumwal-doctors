@@ -50,17 +50,18 @@
 				.heading {
 					position: absolute;
 					top: -130%;
-					background: $color;
+					background: $dark;
 					padding: 0.6em;
-					left: -15%;
-					// transform: translateX(-50%);
+					left: 50%;
+					transform: translateX(-50%);
 					white-space: nowrap;
 					box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
 					border-radius: 20px;
+					color: $light;
 
 					.highlight {
 						display: inline-block;
-						text-decoration: wavy underline $accent-color;
+						text-decoration: wavy underline $light;
 					}
 				}
 			}
