@@ -1,13 +1,12 @@
 @import '../resets';
 
 .terms-heading-wrap {
-	background: teal;
 	height: 350px;
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 5em;
+	// margin-bottom: 5em;
 
 	.terms-img-wrap {
 		position: absolute;
@@ -43,7 +42,9 @@
 
 .terms-main {
 	min-height: 80vh;
-	// padding-top: 20vh;
+	padding-top: 5em;
+	background: #e7e1e1;
+	padding-bottom: 5em;
 
 	.container {
 		height: 100%;
@@ -60,7 +61,7 @@
 		}
 
 		.textarea {
-			margin-bottom: 4em;
+			// margin-bottom: 4em;
 
 			.main-heading {
 				font-size: 1.4rem;
@@ -92,7 +93,7 @@
 			}
 
 			.list-wrap {
-				margin-bottom: 2em;
+				margin-bottom: 6em;
 				max-width: 700px;
 
 				ul {

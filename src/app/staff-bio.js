@@ -90,7 +90,7 @@ const showStaffBio = () => {
 
             <div class="text-wrap">
               <p class="text">
-                Our practice manager, Chioma Ikeh, ensures the smooth operation of our practice and is dedicated to maintaining the highest standards of patient care and service.
+                Our practice manager, Chioma Ikeh, ensures the smooth operation of our practice and is dedicated to maintaining the highest standards of patient care and service. She is also a registered nurse with many years of experience working in Australia.
               </p>              
             </div>
           </div>
