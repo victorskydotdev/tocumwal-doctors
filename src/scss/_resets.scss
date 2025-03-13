@@ -73,6 +73,18 @@ button {
 	font-style: normal;
 }
 
+.map-embed-section {
+	.container {
+		width: 90%;
+		margin: 0 auto;
+
+		iframe {
+			height: 400px;
+			width: 100%;
+		}
+	}
+}
+
 @mixin width-mixin() {
 	width: $width;
 	margin: 0 auto;
