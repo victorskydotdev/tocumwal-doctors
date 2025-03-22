@@ -90,13 +90,13 @@ export const footerTemplate = `
 				<i class="fa-brands fa-instagram"></i>
 			</a>
 
-			<a href="http://linkedin.com/company/tocumwaldoctors" target="_blank">
+			<!--- <a href="http://linkedin.com/company/tocumwaldoctors" target="_blank">
 				<i class="fa-brands fa-linkedin-in"></i>
 			</a>
 
 			<a href="https://x.com/tocumwaldoctors" target="_blank">
 				<i class="fa-brands fa-x-twitter"></i>
-			</a>
+			</a> -->
 		</div>
 	</div>
 `;
