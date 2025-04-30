@@ -1,7 +1,14 @@
-import heroBg from '../assets/tocumwal-hero-bg.jpg';
+import heroBg from '../assets/hero-slider-images/bg1.jpg';
 import aboutIntroImg from '../assets/toc-about-aside.jpg';
 import docImg1 from '../assets/team-img1.jpg';
 import docImg2 from '../assets/team-img2.jpg';
+import drEmeka from '../assets/team/dr.emeka.jpg';
+import chioma from '../assets/team/chioma.jpg';
+import chole from '../assets/team/chloe.jpg';
+import doris from '../assets/team/doris.jpg';
+import gayle from '../assets/team/gayle.jpg';
+import simone from '../assets/team/simone.jpg';
+import jeanette from '../assets/team/jeanette.jpg';
 
 // about page img imports
 import aboutHeroBg from '../assets/about-bg.jpg';
@@ -54,6 +61,11 @@ const heroImgWrap = document.querySelector('.hero-img-wrap');
 const aboutSectionImgWrap = document.querySelector('.about-section-img');
 const docImg1Wrap = document.querySelector('.doc-img1');
 const docImg2Wrap = document.querySelector('.doc-img2');
+const docImg3Wrap = document.querySelector('.doc-img3');
+const docImg4Wrap = document.querySelector('.doc-img4');
+const docImg5Wrap = document.querySelector('.doc-img5');
+const docImg6Wrap = document.querySelector('.doc-img6');
+const docImg7Wrap = document.querySelector('.doc-img7');
 
 // contact page imgs
 const contactBgWrap = document.querySelector('.bg-img-wrap');
@@ -75,11 +87,26 @@ const loadImgAssets = () => {
   `;
 
 	const doc1ImgTemplate = `
-    <img class="about-section-bg" src="${docImg1}" alt="" />
+    <img class="about-section-bg" src="${drEmeka}" alt="" />
   `;
 
 	const doc2ImgTemplate = `
-    <img class="about-section-bg" src="${docImg2}" alt="" />
+    <img class="about-section-bg" src="${chioma}" alt="" />
+  `;
+	const doc3ImgTemplate = `
+    <img class="about-section-bg" src="${chole}" alt="" />
+  `;
+	const doc4ImgTemplate = `
+    <img class="about-section-bg" src="${doris}" alt="" />
+  `;
+	const doc5ImgTemplate = `
+    <img class="about-section-bg" src="${gayle}" alt="" />
+  `;
+	const doc6ImgTemplate = `
+    <img class="about-section-bg" src="${simone}" alt="" />
+  `;
+	const doc7ImgTemplate = `
+    <img class="about-section-bg" src="${jeanette}" alt="" />
   `;
 
 	const contactBgTemplate = `
@@ -94,9 +121,22 @@ const loadImgAssets = () => {
 		aboutSectionImgWrap.innerHTML += aboutSectionImgTemplate;
 	}
 
-	if (docImg1Wrap && docImg2Wrap) {
+	if (
+		docImg1Wrap &&
+		docImg2Wrap &&
+		docImg3Wrap &&
+		docImg4Wrap &&
+		docImg5Wrap &&
+		docImg6Wrap &&
+		docImg7Wrap
+	) {
 		docImg1Wrap.innerHTML += doc1ImgTemplate;
 		docImg2Wrap.innerHTML += doc2ImgTemplate;
+		docImg3Wrap.innerHTML += doc3ImgTemplate;
+		docImg4Wrap.innerHTML += doc4ImgTemplate;
+		docImg5Wrap.innerHTML += doc5ImgTemplate;
+		docImg6Wrap.innerHTML += doc6ImgTemplate;
+		docImg7Wrap.innerHTML += doc7ImgTemplate;
 	}
 
 	if (contactBgWrap) {

@@ -48,17 +48,22 @@
 						height: 100%;
 						width: 100%;
 						object-fit: cover;
+						object-position: top;
 					}
 				}
 
 				.text-card {
 					// background: teal;
-					display: flex;
+					// display: flex;
 					align-items: center;
 					justify-content: space-between;
 
 					.staff-name {
 						color: $dark;
+					}
+
+					.designation {
+						font-size: 0.9rem;
 					}
 
 					.view-bio-btn {
@@ -90,8 +95,8 @@
 			}
 
 			@media screen and (min-width: 62em) {
-				// grid-template-columns: repeat(4, 1fr);
-				width: 60%;
+				grid-template-columns: repeat(4, 1fr);
+				width: 100%;
 				margin: 0 auto;
 			}
 		}
