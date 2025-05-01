@@ -53,13 +53,13 @@
 				}
 
 				.text-card {
-					// background: teal;
-					// display: flex;
-					align-items: center;
-					justify-content: space-between;
+					.wrap {
+						display: flex;
+						justify-content: space-between;
 
-					.staff-name {
-						color: $dark;
+						.staff-name {
+							color: $dark;
+						}
 					}
 
 					.designation {
