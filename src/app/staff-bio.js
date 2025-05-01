@@ -1,5 +1,6 @@
-import staffOneImg from '../assets/team-img1.jpg';
-import staffTwoImg from '../assets/team-img2.jpg';
+import staffOneImg from '../assets/team/dr.emeka.jpg';
+import staffTwoImg from '../assets/team/chioma.jpg';
+import staffThreeImg from '../assets/team/doris.jpg';
 
 const staffBioBtn = document.querySelectorAll('.view-bio-btn');
 const mainModalContainer = document.querySelector('.bio-modal-container');
@@ -11,6 +12,9 @@ const showStaffBio = () => {
 	staffBioBtn.forEach((btn) => {
 		const btnId = btn.dataset.id;
 		const btnIdTwo = btn.dataset.id;
+		const btnIdThree = btn.dataset.id;
+
+		// console.log(btnId, btnIdTwo, btnIdThree);
 
 		btn.addEventListener('click', (e) => {
 			if (btnId === 'btn-1') {
@@ -92,6 +96,43 @@ const showStaffBio = () => {
               <p class="text">
                 Our practice manager, Chioma Ikeh, ensures the smooth operation of our practice and is dedicated to maintaining the highest standards of patient care and service. She is also a registered nurse with many years of experience working in Australia.
               </p>              
+            </div>
+          </div>
+        `;
+
+				modalContainer.innerHTML += staffTemplate;
+
+				mainModalContainer.classList.add('display');
+				domBody.classList.add('body-overflow');
+
+				closeBtn.addEventListener('click', () => {
+					mainModalContainer.classList.remove('display');
+					modalContainer.innerHTML = '';
+
+					domBody.classList.remove('body-overflow');
+				});
+			} else if (btnIdThree === 'btn-3') {
+				const staffTemplate = `
+
+          <div class="modal-content">
+            <div class="dp-wrap">
+              <img src="${staffThreeImg}" class="img" alt="Dr.Emeka Ike's image" />
+            </div>
+            <h3 class="heading-title">Dr. Doris Azike</h3>
+            <h4 class="subtext">GP</h4>
+
+            <div class="text-wrap">
+              <p class="text">
+                Dr. Doris Azike earned her medical degree from Gullas College of Medicine in Banilad, Cebu, Philippines. After completing her studies, she returned to Nigeria and served at the prestigious 44 Nigerian Army Hospital. Her journey then took her to Australia, where she pursued and completed a Master’s degree in Public Health at Western Sydney University.
+              </p>
+              
+              <p class="text">
+                With a strong background in supporting the elderly as a nursing assistant, and a passion for helping people with both physical and mental disabilities, Dr. Doris has made a meaningful impact in her previous roles. Her diverse experiences have equipped her with a unique perspective and a wide range of skills that she is excited to bring to our practice.
+              </p>
+              
+              <p class="text">
+                Worked in Tumbarumba Medical practice for seven months as a General practitioner alongside Dr Emeka Ike, and has now moved here with her husband and their 15-month-old twin daughters, Dr. Doris is eager to integrate into the community and provide top-notch care. Her arrival marks a new chapter for our practice, and we are confident that her expertise will greatly benefit our patients and the broader community
+              </p>
             </div>
           </div>
         `;
