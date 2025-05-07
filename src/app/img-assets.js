@@ -63,7 +63,7 @@ const docImg1Wrap = document.querySelector('.doc-img1');
 const docImg2Wrap = document.querySelector('.doc-img2');
 const docImg3Wrap = document.querySelector('.doc-img3');
 const docImg4Wrap = document.querySelector('.doc-img4');
-const docImg5Wrap = document.querySelector('.doc-img5');
+// const docImg5Wrap = document.querySelector('.doc-img5');
 const docImg6Wrap = document.querySelector('.doc-img6');
 const docImg7Wrap = document.querySelector('.doc-img7');
 
@@ -99,9 +99,9 @@ const loadImgAssets = () => {
 	const doc4ImgTemplate = `
     <img class="about-section-bg" src="${doris}" alt="" />
   `;
-	const doc5ImgTemplate = `
-    <img class="about-section-bg" src="${gayle}" alt="" />
-  `;
+	// const doc5ImgTemplate = `
+	//   <img class="about-section-bg" src="${gayle}" alt="" />
+	// `;
 	const doc6ImgTemplate = `
     <img class="about-section-bg" src="${simone}" alt="" />
   `;
@@ -126,7 +126,7 @@ const loadImgAssets = () => {
 		docImg2Wrap &&
 		docImg3Wrap &&
 		docImg4Wrap &&
-		docImg5Wrap &&
+		// docImg5Wrap &&
 		docImg6Wrap &&
 		docImg7Wrap
 	) {
@@ -134,7 +134,7 @@ const loadImgAssets = () => {
 		docImg2Wrap.innerHTML += doc2ImgTemplate;
 		docImg3Wrap.innerHTML += doc3ImgTemplate;
 		docImg4Wrap.innerHTML += doc4ImgTemplate;
-		docImg5Wrap.innerHTML += doc5ImgTemplate;
+		// docImg5Wrap.innerHTML += doc5ImgTemplate;
 		docImg6Wrap.innerHTML += doc6ImgTemplate;
 		docImg7Wrap.innerHTML += doc7ImgTemplate;
 	}
