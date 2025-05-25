@@ -1,0 +1,23 @@
+@import 'resets';
+
+.positioned-phone {
+	position: fixed;
+	bottom: -20%;
+	left: 50%;
+	transition: all 1000ms ease-in-out;
+	transform: translateX(-50%);
+	opacity: 0;
+	visibility: hidden;
+
+	.btn {
+		@include btn-mixin();
+		white-space: nowrap;
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.514);
+	}
+}
+
+.show-phone {
+	bottom: 5%;
+	opacity: 1;
+	visibility: visible;
+}

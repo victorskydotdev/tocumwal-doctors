@@ -68,7 +68,7 @@ export const footerTemplate = `
 			<button class="call-btn">
 				<a href="tel:0348115007">
 					<i class="fa-solid fa-phone"></i>
-					<span>0 348 115 007</span>
+					<span>03 4811 5007</span>
 				</a>
 			</button>
 		</div>
@@ -76,7 +76,7 @@ export const footerTemplate = `
 
 	<div class="copyright-wrap">
 		<p class="copyright-text">
-			&copy; copyright 2025, Doctors@Tocumwal. All rights reserved.
+			&copy;Copyright 2025, Doctors@Tocumwal. All rights reserved.
 		</p>
 
 		<div class="social-media-icons">

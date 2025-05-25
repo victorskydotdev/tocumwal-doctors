@@ -1,11 +1,11 @@
 @import 'resets';
 
 .header-nav {
-	background: $dark;
+	// background: $dark;
 	height: 18vh;
 	display: flex;
 	align-items: center;
-	position: sticky;
+	position: fixed;
 	top: 0;
 	width: 100%;
 	z-index: 2;
@@ -220,6 +220,7 @@
 				padding: unset;
 				width: 70%;
 				transform: translateX(0);
+				background: unset;
 
 				.nav-links {
 					display: flex;
@@ -240,4 +241,8 @@
 
 .height {
 	height: 15vh;
+}
+
+.background {
+	background: $dark;
 }

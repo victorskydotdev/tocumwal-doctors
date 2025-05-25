@@ -13,6 +13,11 @@ import { enablePageTransition } from './app/page-transition';
 // import { sendEventToNetFunct } from './app/event';
 // sendEventToNetFunct();
 
+import { initSwiper } from './app/swiper';
+import { loadIcons } from './app/hero-icons';
+import { loadShowCaseImages } from './app/showcase';
+import { showPhoneOnScroll } from './app/handle-phone';
+
 // calling the functions
 loadNavbar();
 loadImgAssets();
@@ -23,3 +28,11 @@ showStaffBio();
 // submitForm();
 enablePageTransition();
 // submitFBackForm(); // not importing this function as it not being used in the project
+
+document.addEventListener('DOMContentLoaded', () => {
+	initSwiper();
+	loadIcons();
+	loadShowCaseImages();
+});
+
+showPhoneOnScroll();

@@ -1,5 +1,9 @@
 @import 'navbar';
 @import 'hero-section';
+@import './custom-swiper-styles';
+
+@import './landing/swiper-styles';
+
 @import 'section-card';
 @import 'about-intro-section';
 @import 'services-section';
@@ -22,6 +26,7 @@
 @import '../scss/patient-info-styles/faq-section';
 @import '../scss/patient-info-styles/transfer-notice';
 @import '../scss/landing/feedback-form-modal';
+@import '../scss/fixed-phone';
 // end of modals
 
 // contact page styles

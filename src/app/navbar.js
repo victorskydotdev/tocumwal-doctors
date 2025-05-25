@@ -151,10 +151,12 @@ export const loadNavbar = () => {
 		window.addEventListener('scroll', () => {
 			if (window.scrollY > 100) {
 				navContainer.classList.add('height');
+				navContainer.classList.add('background');
 				logoElement.classList.add('logo-scroll');
 			} else {
 				logoElement.classList.remove('logo-scroll');
 				navContainer.classList.remove('height');
+				navContainer.classList.remove('background');
 			}
 		});
 	}
