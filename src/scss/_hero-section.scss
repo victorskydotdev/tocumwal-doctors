@@ -20,6 +20,10 @@
 		display: grid;
 		padding-top: 15em;
 
+		@media screen and (min-width: 62em) {
+			padding-top: 12em;
+		}
+
 		.img-wrap {
 			height: 300px;
 			width: 100%;
