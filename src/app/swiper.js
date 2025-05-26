@@ -15,9 +15,13 @@ export const initSwiper = () => {
 		spaceBetween: 30,
 		centeredSlides: true,
 
+		// transition speed
+		speed: 1000, // Transition speed in ms
+		effect: 'coverflow', // Effect to use for transitions (slide, fade, cube, coverflow, flip)
+		grabCursor: true, // Enable grab cursor for better UX
 		// Autoplay
 		autoplay: {
-			delay: 3000, // Delay between transitions in ms
+			delay: 4000, // Delay between transitions in ms
 			disableOnInteraction: false, // Continue autoplay after user interaction
 		},
 
