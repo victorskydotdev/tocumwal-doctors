@@ -17,6 +17,7 @@ import { initSwiper } from './app/swiper';
 import { loadIcons } from './app/hero-icons';
 import { loadShowCaseImages } from './app/showcase';
 import { showPhoneOnScroll } from './app/handle-phone';
+import { triggerExitIntent } from './app/exit-intent';
 
 // calling the functions
 loadNavbar();
@@ -36,3 +37,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 showPhoneOnScroll();
+triggerExitIntent();
