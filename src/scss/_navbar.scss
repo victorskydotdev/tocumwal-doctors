@@ -1,7 +1,6 @@
 @import 'resets';
 
 .header-nav {
-	// background: $dark;
 	height: 18vh;
 	display: flex;
 	align-items: center;
@@ -16,6 +15,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		// background: orangered;
 
 		.brand-logo {
 			.logo {
@@ -50,17 +50,15 @@
 
 			.nav-links {
 				display: grid;
-				gap: 3em;
+				gap: 2em;
 
 				.link {
 					position: relative;
-					// background: red;
 
 					a {
 						color: $light;
 						display: inline-block;
 						position: relative;
-						// background: orange;
 
 						&::before {
 							content: '';
@@ -208,7 +206,7 @@
 		@media screen and (min-width: 62em) {
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
+			justify-content: space-around;
 
 			.wrap {
 				display: flex;
@@ -221,10 +219,11 @@
 				width: 70%;
 				transform: translateX(0);
 				background: unset;
+				// background: teal;
 
 				.nav-links {
 					display: flex;
-					gap: 3em;
+					gap: 2em;
 				}
 
 				.close-btn {
@@ -243,6 +242,7 @@
 	height: 15vh;
 }
 
-.background {
+.background,
+.blog-page {
 	background: $dark;
 }

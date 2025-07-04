@@ -81,6 +81,12 @@ export const footerTemplate = `
 
 		<div class="social-media-icons">
 			<a
+				href="https://www.tiktok.com/@tocumwaldoctors"
+				target="_blank">
+				<i class="fa-brands fa-tiktok"></i>
+			</a>
+
+			<a
 				href="https://www.facebook.com/profile.php?id=61564525070104&sk=about"
 				target="_blank">
 				<i class="fa-brands fa-facebook-f"></i>
@@ -88,6 +94,10 @@ export const footerTemplate = `
 
 			<a href="https://instagram.com/tocumwaldoctors" target="_blank">
 				<i class="fa-brands fa-instagram"></i>
+			</a>
+			
+			<a href="https://youtube.com/@tocumwaldoctors" target="_blank">
+				<i class="fa-brands fa-youtube"></i>
 			</a>
 
 			<!--- <a href="http://linkedin.com/company/tocumwaldoctors" target="_blank">

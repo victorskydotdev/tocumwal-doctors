@@ -22,7 +22,9 @@ export const loadNavbar = () => {
 						<li class="link"><a href="/">Home</a></li>
 						<li class="link"><a href="/about.html">About</a></li>
 						<li class="link"><a href="/#services">Services</a></li>
-						<li class="link"><a href="/contact.html">Contact</a></li>
+					
+						<li class="link"><a href="/#blog-section">Updates</a></li>
+						
 						<li class="link" id="dropdown-btn">
 							<a class="dropdown-link">
 								<span class="link-text">Patient Information</span>
@@ -44,6 +46,10 @@ export const loadNavbar = () => {
 								</li>
 							</ul>
 						</li>
+
+						<!--
+						<li class="link"><a href="/contact.html">Contact</a></li>
+						-->
 						
 					</ul>
 

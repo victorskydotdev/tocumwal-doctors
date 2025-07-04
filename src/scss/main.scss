@@ -9,6 +9,7 @@
 @import 'services-section';
 @import 'appointment-section';
 @import 'our-doctors-section';
+@import './landing/blog-updates-section';
 @import 'accordion-section';
 @import 'patient-feedback';
 // @import '../scss/landing/patient-feedback';
@@ -52,3 +53,6 @@
 // appointments page
 @import '../scss/appointments-page-styles/app-main';
 @import '../scss/appointments-page-styles/article';
+
+// blog styles
+@import '../scss/blog-styles/blog-post-page';

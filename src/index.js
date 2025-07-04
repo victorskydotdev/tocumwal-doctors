@@ -18,6 +18,8 @@ import { loadIcons } from './app/hero-icons';
 import { loadShowCaseImages } from './app/showcase';
 import { showPhoneOnScroll } from './app/handle-phone';
 import { triggerExitIntent } from './app/exit-intent';
+import { modifyBlogPageTitle } from './app/blog/fetch-blog';
+import { renderBlogPost } from './app/blog/render-blog-post';
 
 // calling the functions
 loadNavbar();
@@ -34,7 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	initSwiper();
 	loadIcons();
 	loadShowCaseImages();
+	modifyBlogPageTitle();
 });
 
 showPhoneOnScroll();
 triggerExitIntent();
+renderBlogPost();

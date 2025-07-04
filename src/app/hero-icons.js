@@ -30,8 +30,19 @@ const templateFour = () => {
 };
 
 export const loadIcons = () => {
-	iconOneWrap.innerHTML = templateOne();
-	iconTwoWrap.innerHTML = templateTwo();
-	iconThreeWrap.innerHTML = templateThree();
-	iconFourWrap.innerHTML = templateFour();
+	if (iconOneWrap) {
+		iconOneWrap.innerHTML = templateOne();
+	}
+
+	if (iconTwoWrap) {
+		iconTwoWrap.innerHTML = templateTwo();
+	}
+
+	if (iconThreeWrap) {
+		iconThreeWrap.innerHTML = templateThree();
+	}
+
+	if (iconFourWrap) {
+		iconFourWrap.innerHTML = templateFour();
+	}
 };
