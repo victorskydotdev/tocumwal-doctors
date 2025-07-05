@@ -104,16 +104,29 @@
 
 		.blog-article-content {
 			.blog-article-intro {
+				margin-bottom: 3em;
+				position: relative;
+
+				&::after {
+					content: '';
+					position: absolute;
+					top: 108%;
+					left: 0;
+					background: rgb(190, 190, 190);
+					width: 100%;
+					height: 1px;
+				}
+
 				.intro {
-					margin-bottom: 0.5em;
+					margin-bottom: 1em;
 					color: $dark;
 					font-weight: 600;
+					line-height: 30px;
 				}
 
 				.blog-article-intro-text {
-					line-height: $lineheight;
-					margin-bottom: 1.5em;
-					color: $text-color-primary;
+					line-height: 30px;
+					color: grey;
 					font-size: 14px;
 				}
 			}
