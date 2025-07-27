@@ -1,5 +1,12 @@
 import avatar from '../../assets/favicon.png';
+import { marked } from 'marked';
 const articleElement = document.querySelector('.blog-article');
+
+// marked configuration
+marked.setOptions({
+	breaks: true,
+	gfm: true,
+});
 
 export const renderBlogPost = (post) => {
 	if (articleElement) {
@@ -44,14 +51,15 @@ export const renderBlogPost = (post) => {
         <div class="blog-article-content">
           <div class="blog-article-intro">
             <h3 class="intro">Introduction</h3>
-            <p class="blog-article-intro-text">${intro}</p>
+            <p class="blog-article-intro-text">${marked(intro ? intro : '')}</p>
           </div>
 
           <div class="blog-article-posts">
-            <p class="post">${post1}</p>
-            <p class="post">${post2}</p>
-            <p class="post">${post3}</p>
-            <p class="post">${post4}</p>
+            <p class="post">${marked(post1)}</p>
+            <!-- <p class="post">${marked(post1 ? post1 : '')}</p> -->
+            <p class="post">${post2 ? post2 : ''}</p>
+            <p class="post">${post3 ? post3 : ''}</p>
+            <p class="post">${post4 ? post4 : ''}</p>
           </div>
         </div>
       </div>

@@ -1,3 +1,5 @@
+// import { marked } from 'marked';
+
 const blogBodyClass = document.querySelector('.blog-post');
 
 const pageName = 'Doctors@Tocumwal Blog & Updates';
