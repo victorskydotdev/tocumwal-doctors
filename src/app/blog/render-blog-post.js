@@ -35,7 +35,7 @@ export const renderBlogPost = (post) => {
                 <img src="${avatar}" alt="Tocumwal Doctors Logo" class="author-avatar">
               </div>
 
-              <p class="author-name">Doctors@Tocumwal</p>
+              <p class="author-name">Doctors At Tocumwal</p>
             </div>
           </div>
 
@@ -55,11 +55,7 @@ export const renderBlogPost = (post) => {
           </div>
 
           <div class="blog-article-posts">
-            <p class="post">${marked(post1)}</p>
-            <!-- <p class="post">${marked(post1 ? post1 : '')}</p> -->
-            <p class="post">${post2 ? post2 : ''}</p>
-            <p class="post">${post3 ? post3 : ''}</p>
-            <p class="post">${post4 ? post4 : ''}</p>
+            <p class="post">${marked(post1 ? post1 : '')}</p>
           </div>
         </div>
       </div>
