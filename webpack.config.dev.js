@@ -7,9 +7,22 @@ module.exports = merge(common, {
 	mode: 'development',
 
 	// entry: './src/index.js',
+
 	output: {
-		filename: 'main.js',
+		filename: '[name].js',
 		path: path.resolve(__dirname, 'dist'),
+	},
+
+	devtool: 'inline-source-map',
+
+	devServer: {
+		static: {
+			directory: path.join(__dirname, 'dist'),
+		},
+
+		hot: true,
+		port: 3000,
+		open: true,
 	},
 
 	// module: {

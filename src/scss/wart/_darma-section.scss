@@ -1,0 +1,56 @@
+@import '../resets';
+
+.darma-section {
+	margin-bottom: 8em;
+	.container {
+		// background: orange;
+		@include width-mixin();
+		display: grid;
+		gap: 2em;
+
+		.text-area {
+			width: 100%;
+			padding-right: 2em;
+
+			.heading {
+				font-size: 2.9rem;
+				font-weight: 400;
+				@include outfit-fonts();
+				margin-bottom: 0.3em;
+				color: $dark;
+			}
+
+			.subtext {
+				line-height: 1.9;
+				padding-right: 2em;
+				margin-bottom: 1.2em;
+			}
+
+			.btn-wrap {
+				.btn {
+					@include btn-mixin();
+					border: none;
+					background: $dark;
+					cursor: pointer;
+				}
+			}
+		}
+
+		.img-wrap {
+			height: 400px;
+			width: 100%;
+			@include wart-image-gradient();
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-radius: 30px;
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			display: flex;
+		}
+	}
+}

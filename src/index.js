@@ -21,6 +21,13 @@ import { triggerExitIntent } from './app/exit-intent';
 import { modifyBlogPageTitle } from './app/blog/fetch-blog';
 import { renderBlogPost } from './app/blog/render-blog-post';
 
+// wart page functions imports
+import { renderWartHeroImg } from './app/wart/wart-script';
+import { runIntersectionOb } from './app/wart/intersection';
+
+renderWartHeroImg();
+runIntersectionOb();
+
 // calling the functions
 loadNavbar();
 loadImgAssets();

@@ -9,6 +9,7 @@
 	width: 100%;
 	z-index: 2;
 	transition: 0.5s ease-in-out;
+	// background: teal;
 
 	.nav-container {
 		@include width-mixin();

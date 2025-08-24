@@ -4,6 +4,8 @@
 
 @import './landing/swiper-styles';
 
+@import './landing/wart-ad-section';
+
 @import 'section-card';
 @import 'about-intro-section';
 @import 'services-section';
@@ -29,6 +31,8 @@
 @import '../scss/landing/feedback-form-modal';
 @import '../scss/fixed-phone';
 @import '../scss/exit-intent-modal';
+
+@import '../scss/announcement-styles/modal';
 // end of modals
 
 // contact page styles
@@ -56,3 +60,9 @@
 
 // blog styles
 @import '../scss/blog-styles/blog-post-page';
+
+// wart page styles
+@import '../scss/wart/hero-section';
+@import '../scss/wart/machine-section';
+@import '../scss/wart/darma-section';
+@import '../scss/wart/cta-section';

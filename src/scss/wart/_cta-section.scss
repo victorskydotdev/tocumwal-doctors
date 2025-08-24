@@ -1,0 +1,68 @@
+@import '../resets';
+
+.wart-cta-section {
+	margin-bottom: 7em;
+
+	.container {
+		@include width-mixin();
+		border-radius: 30px;
+
+		// background: linear-gradient(
+		// 	180deg,
+		// 	rgb(26, 45, 65) 0%,
+		// 	rgb(47, 64, 84) 50%,
+		// 	rgb(200, 123, 71) 100%
+		// );
+		// background: #b14b07;
+
+		background: radial-gradient(circle at center, #c87b47 0%, #1a2d41 100%);
+
+		padding: 4em 0;
+
+		.text-area {
+			text-align: center;
+
+			.heading {
+				@include outfit-fonts();
+				font-size: 3rem;
+				color: $light;
+				margin-bottom: 0.3em;
+			}
+
+			.subtext {
+				color: $light;
+				margin-bottom: 1.9em;
+			}
+
+			.btn-wrap {
+				display: flex;
+				justify-content: center;
+
+				.btn {
+					@include btn-mixin();
+					background: $dark;
+					border: none;
+					cursor: pointer;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					gap: 0.5em;
+
+					.calendar {
+						border: $light solid 2px;
+						height: 30px;
+						width: 30px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						border-radius: 50%;
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 70%;
+		}
+	}
+}

@@ -91,6 +91,22 @@ module.exports = {
 			favicon: 'src/assets/favicon.png',
 		}),
 
+		new HtmlWebpackPlugin({
+			template: './src/html/activity-update-template.html',
+			chunks: ['main'],
+			filename: './activity-update/index.html',
+			inject: 'head',
+			favicon: 'src/assets/favicon.png',
+		}),
+
+		new HtmlWebpackPlugin({
+			template: './src/html/wart-treatment-page.html',
+			chunks: ['main'],
+			filename: './wart-treatment/index.html',
+			inject: 'head',
+			favicon: 'src/assets/favicon.png',
+		}),
+
 		new CopyWebpackPlugin({
 			patterns: [
 				{ from: 'src/assets/favicon.png', to: 'favicon.png' }, // Copy the favicon to the output directory
