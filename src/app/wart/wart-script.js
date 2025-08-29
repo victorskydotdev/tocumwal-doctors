@@ -1,7 +1,7 @@
 import wartHeroImg from '../../assets/wart/wart-free skin.jpg';
 
-import img1 from '../../assets/wart/clear-skin-lady.jpg';
-import img2 from '../../assets/wart/clear-skin-lady2.jpg';
+import img1 from '../../assets/wart/wart-feet.jpg';
+import img2 from '../../assets/wart/wart-free-feet.jpg';
 import img3 from '../../assets/wart/clear-skin-lady3.jpg';
 
 import img4 from '../../assets/wart/img1.jpg';
@@ -24,6 +24,21 @@ const doctorsImgWrap = document.querySelector('.darma-img-wrap');
 const benefitsWrap = document.querySelectorAll('.benefit');
 
 const wartAdSection = document.querySelector('.wart-ad-img');
+
+// buttons array
+const wartBtn = document.querySelectorAll('.wart-appoint-btn');
+
+// trigger the appointment booking functionality on the buttons
+if (wartBtn) {
+	wartBtn.forEach((btn) => {
+		btn.addEventListener('click', () => {
+			window.open(
+				'https://onlineappts3.medi2apps.com/Appointments/Doctors%20@%20Tocumwal?app=1',
+				'_blank'
+			);
+		});
+	});
+}
 
 export const renderWartHeroImg = () => {
 	if (faceCard) {

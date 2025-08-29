@@ -2,6 +2,7 @@
 
 .darma-section {
 	margin-bottom: 8em;
+
 	.container {
 		// background: orange;
 		@include width-mixin();
@@ -9,8 +10,9 @@
 		gap: 2em;
 
 		.text-area {
-			width: 100%;
-			padding-right: 2em;
+			// width: 100%;
+			// padding-right: 2em;
+			// background: teal;
 
 			.heading {
 				font-size: 2.9rem;
@@ -49,8 +51,33 @@
 			}
 		}
 
+		@media screen and (min-width: 43em) {
+			// background: teal;
+
+			.text-area {
+				max-width: 600px;
+				text-align: center;
+				margin: 0 auto;
+
+				.subtext {
+					padding-right: unset;
+				}
+			}
+		}
+
 		@media screen and (min-width: 62em) {
 			display: flex;
+
+			.text-area {
+				max-width: unset;
+				text-align: left;
+				padding-right: 3em;
+				width: 100%;
+			}
+
+			.img-wrap {
+				width: 100%;
+			}
 		}
 	}
 }

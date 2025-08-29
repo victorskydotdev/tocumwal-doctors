@@ -4,29 +4,23 @@
 	margin-bottom: 7em;
 
 	.container {
-		@include width-mixin();
-		border-radius: 30px;
-
-		// background: linear-gradient(
-		// 	180deg,
-		// 	rgb(26, 45, 65) 0%,
-		// 	rgb(47, 64, 84) 50%,
-		// 	rgb(200, 123, 71) 100%
-		// );
-		// background: #b14b07;
-
+		// @include width-mixin();
+		// border-radius: 30px;
 		background: radial-gradient(circle at center, #c87b47 0%, #1a2d41 100%);
-
 		padding: 4em 0;
 
 		.text-area {
 			text-align: center;
+			width: 90%;
+			margin: 0 auto;
 
 			.heading {
 				@include outfit-fonts();
 				font-size: 3rem;
 				color: $light;
 				margin-bottom: 0.3em;
+				// background: red;
+				line-height: 1.2;
 			}
 
 			.subtext {
@@ -63,6 +57,8 @@
 
 		@media screen and (min-width: 62em) {
 			width: 70%;
+			margin: 0 auto;
+			border-radius: 30px;
 		}
 	}
 }

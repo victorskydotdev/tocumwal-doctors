@@ -28,15 +28,16 @@
 
 		.heading-wrap {
 			text-align: center;
-			margin-bottom: 3em;
-			padding-top: 3em;
-			font-size: 2.2rem;
+			margin-bottom: 4em;
+			padding-top: 8em;
+			// font-size: 2.2rem;
 
 			.heading {
 				@include outfit-fonts();
 				font-weight: 300;
 				letter-spacing: normal;
-				line-height: 68px;
+				font-size: 4.5rem;
+				line-height: 60px;
 				color: teal;
 				width: 80%;
 				margin: 0 auto;
@@ -68,6 +69,46 @@
 					border: none;
 					cursor: pointer;
 					background: #1a2d41;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 62em) {
+		margin-bottom: 5em;
+
+		.container {
+			.heading-wrap {
+				padding-top: 7em;
+
+				.heading {
+					font-size: 3.5rem;
+				}
+
+				.subtext {
+					width: 70%;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 43em) {
+		// background: red;
+		padding-bottom: 9em;
+
+		.container {
+			.heading-wrap {
+				padding-top: 6em;
+
+				.heading {
+					font-size: 3rem;
+					line-height: 50px;
+				}
+
+				.subtext {
+					width: 100%;
+					font-size: 1rem;
+					line-height: 30px;
 				}
 			}
 		}
@@ -104,13 +145,29 @@
 		width: 100%;
 		height: 400px;
 	}
+
+	@media screen and (max-width: 43em) {
+		// background: red;
+		margin-bottom: 65em;
+	}
+
+	@media screen and (max-width: 62em) {
+		// margin-bottom: 60em;
+
+		.heading {
+			font-size: 2.5rem;
+			width: 80%;
+			left: 10%;
+			// font-weight: 700;
+		}
+	}
 }
 
 .showcase-img {
 	width: 90%;
 	height: 50vh;
 	position: absolute;
-	top: 50%;
+	top: 80%;
 	left: 5%;
 	z-index: 1;
 
@@ -168,6 +225,11 @@
 				font-size: 1.3rem;
 			}
 		}
+	}
+
+	@media screen and (min-width: 43em) {
+		display: flex;
+		top: 50%;
 	}
 
 	@media screen and (min-width: 62em) {
