@@ -4,7 +4,7 @@
 	padding-top: 10vh;
 	min-height: 100vh;
 	background: linear-gradient(180deg, #1a2d41 0%, #2f4054 60%, #c87b47 100%);
-	margin-bottom: 8em;
+	margin-bottom: 5em;
 
 	.container {
 		@include width-mixin();
@@ -38,7 +38,7 @@
 				letter-spacing: normal;
 				font-size: 4.5rem;
 				line-height: 60px;
-				color: teal;
+				color: $light;
 				width: 80%;
 				margin: 0 auto;
 				margin-bottom: 0.4em;
@@ -57,7 +57,7 @@
 
 			.subtext {
 				font-size: 20px;
-				width: 50%;
+				width: 60%;
 				margin: 0 auto;
 				margin-bottom: 1.5em;
 				color: $light;
@@ -118,26 +118,25 @@
 .first-showcase-section {
 	position: relative;
 	margin-bottom: 20em;
-	// background: teal;
+	display: none;
 
 	.heading {
 		position: absolute;
-		z-index: 1;
-		width: 60%;
-		top: 0;
-		left: 20%;
-		@include outfit-fonts();
-		font-weight: 400;
-
-		font-size: 2.9rem;
+		width: 45%;
+		top: 15%;
+		left: 50%;
 		text-align: center;
+		transform: translate(-50%, -50%);
+		font-size: 2.9rem;
+		font-weight: 600;
+		line-height: 60px;
 		color: $dark;
-		line-height: 50px;
+		z-index: 1;
+		background: teal;
 
-		.highlight {
-			@include greatVibes-fonts();
-			color: $wart-accent-color;
-			font-size: 4rem;
+		@media screen and (max-width: 42em) {
+			background: orange;
+			transform: unset;
 		}
 	}
 

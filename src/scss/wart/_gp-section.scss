@@ -1,0 +1,177 @@
+@import '../resets';
+
+.gp-case-section {
+	margin-bottom: 8em;
+
+	.container {
+		background: rgb(230, 230, 230);
+		min-height: 450px;
+		display: grid;
+		gap: 1em;
+		grid-template-columns: repeat(2, 1fr);
+		width: 90%;
+		margin: 0 auto;
+		border-radius: 20px;
+		place-items: center;
+		grid-template-areas: 'text-area shape-wrap' 'card card';
+		padding: 15px;
+
+		.shape-wrap {
+			height: 100%;
+			width: 100%;
+			grid-area: shape-wrap;
+			position: relative;
+
+			.first-img-wrap {
+				height: 100%;
+				position: relative;
+				// display: none;
+				padding: 15px 15px 0 0;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					border-radius: 20px;
+				}
+			}
+
+			.pos-wart-img {
+				height: 200px;
+				width: 200px;
+				position: absolute;
+				top: 70%;
+				left: -15%;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					border-radius: 50%;
+					box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.171);
+					position: relative;
+					z-index: 2;
+					display: none;
+				}
+
+				&::after {
+					content: '';
+					position: absolute;
+					background: $dark;
+					z-index: 1;
+					height: 220px;
+					width: 220px;
+					left: -5%;
+					top: -5%;
+					border-radius: 50%;
+					display: none;
+				}
+			}
+		}
+
+		.text-area {
+			// height: 300px;
+			width: 100%;
+			// background: teal;
+
+			.wrap {
+				width: 75%;
+				margin: 0 auto;
+				padding-right: 2em;
+
+				.heading {
+					font-size: 2.5rem;
+					@include outfit-fonts();
+					margin-bottom: 0.5em;
+					font-weight: 400;
+					color: $dark;
+				}
+
+				.text {
+					margin-bottom: 2em;
+					@include outfit-fonts();
+					line-height: 30px;
+					color: $dark;
+					font-weight: 500;
+				}
+
+				.btn-wrap {
+					display: flex;
+					align-items: center;
+					gap: 1em;
+
+					.btn {
+						@include btn-mixin();
+						border: none;
+						cursor: pointer;
+						background: #1a2d41;
+					}
+
+					.call-btn {
+						color: $accent-color;
+						font-weight: 600;
+						font-size: 1.1rem;
+					}
+				}
+			}
+		}
+
+		.card {
+			grid-area: card;
+			background: linear-gradient(
+				to right,
+				rgb(26, 45, 65) 0%,
+				rgb(47, 64, 84) 50%,
+				rgb(200, 123, 71) 100%
+			);
+			height: 10px;
+			width: 100%;
+			border-radius: 20px;
+		}
+
+		@media screen and (max-width: 43em) {
+			grid-template-columns: 1fr;
+			grid-template-areas: 'text-area' 'shape-wrap' 'card';
+			padding-top: 5em;
+			padding-bottom: 5em;
+			width: 100%;
+			border-radius: 0;
+			gap: 5em;
+
+			.first-img-wrap {
+				padding-right: unset !important;
+			}
+
+			.text-area {
+				.wrap {
+					width: 90%;
+					margin: 0 auto;
+					padding-right: unset;
+
+					.heading {
+						// font-size: 1.8rem;
+						// font-weight: 600;
+						// text-align: center;
+					}
+
+					.btn-wrap {
+						display: grid;
+						gap: 1.5em;
+
+						.btn {
+							display: block !important;
+							width: 100%;
+						}
+
+						.call-btn {
+							display: block;
+							text-align: center;
+							text-decoration: underline;
+							text-underline-offset: 7px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

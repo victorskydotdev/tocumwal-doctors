@@ -1,0 +1,115 @@
+@import '../resets';
+
+.wart-category-section {
+	margin-bottom: 7em;
+
+	.container {
+		.text-area {
+			text-align: center;
+			width: 90%;
+			margin: 0 auto 3em;
+
+			.heading {
+				font-size: 2.9rem;
+				font-weight: 600;
+				margin-bottom: 0.5em;
+				color: $dark;
+				line-height: 60px;
+			}
+
+			.subtext {
+				margin-bottom: 2em;
+				max-width: 600px;
+				margin: 0 auto;
+				line-height: 30px;
+				font-weight: 500;
+				color: $dark;
+			}
+		}
+
+		.card-wrap {
+			display: grid;
+			gap: 0.5em;
+			grid-template-columns: repeat(6, 1fr);
+			width: 90%;
+			margin: 0 auto 2em;
+
+			.wart-cat-card {
+				width: 100%;
+				border-radius: 100px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+				gap: 0.5em;
+				// background: rgb(230, 230, 230);
+				background: $dark;
+				padding: 1em;
+				cursor: pointer;
+				transition: all 500ms ease-in-out;
+
+				&:hover {
+					background: rgba(26, 45, 65, 0.938);
+
+					.text-wrap {
+						.title {
+							color: $light;
+						}
+					}
+				}
+
+				.text-wrap {
+					.title {
+						@include outfit-fonts();
+						font-weight: 600;
+						color: $accent-color;
+						transition: all 500ms ease-in-out;
+					}
+				}
+			}
+
+			@media screen and (max-width: 43em) {
+				display: flex;
+				flex-wrap: wrap;
+			}
+		}
+
+		.slider-card-wrap {
+			overflow: hidden;
+			width: 100%;
+			width: 100%;
+			display: flex;
+			gap: 1em;
+
+			.wrapper {
+				display: flex;
+				gap: 1em;
+				width: max-content;
+				animation: continuousScroll2 15s infinite linear;
+
+				.slide-img {
+					background: teal;
+					width: 300px;
+					height: 350px;
+					border-radius: 20px;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes continuousScroll2 {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-100%);
+	}
+}
