@@ -25,6 +25,8 @@ import { renderBlogPost } from './app/blog/render-blog-post';
 import { renderWartHeroImg } from './app/wart/wart-script';
 import { runIntersectionOb } from './app/wart/intersection';
 
+import { sendEventData } from './app/facebook/facebook-event';
+
 renderWartHeroImg();
 runIntersectionOb();
 
@@ -49,3 +51,5 @@ document.addEventListener('DOMContentLoaded', () => {
 showPhoneOnScroll();
 triggerExitIntent();
 renderBlogPost();
+
+sendEventData();
