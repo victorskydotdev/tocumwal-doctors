@@ -2,125 +2,33 @@
 .main-content-hero {
 	background-image: linear-gradient(to left bottom, #1a2d41, #483d60, #1a2d41);
 	overflow-x: hidden;
-}
-
-.swiper {
-	width: 100%;
 	height: 100vh;
+	width: 100%;
+	overflow: hidden;
 
-	position: relative;
-}
-
-.swiper-slide {
-	position: relative;
-
-	.swiper-wrap {
-		width: 90%;
-		margin: 0 auto;
-		display: grid;
-		padding-top: 15em;
-
-		@media screen and (min-width: 62em) {
-			padding-top: 12em;
-		}
-
-		.img-wrap {
-			height: 300px;
-			width: 100%;
-			display: none;
-		}
-
-		.text-wrap {
-			text-align: center;
-			max-width: 800px;
-			margin: 0 auto;
-			color: $light;
-
-			.masthead {
-				margin-bottom: 0.6em;
-
-				@media screen and (min-width: 62em) {
-					font-size: 50px;
-					line-height: 1.2;
-					margin-bottom: 0.5em;
-				}
-			}
-
-			.subtext {
-				margin-bottom: 2.4em;
-
-				// background: red;
-
-				@media screen and (min-width: 62em) {
-					padding: 0 8em;
-				}
-			}
-
-			.btn {
-				@include btn-mixin();
-			}
-		}
+	video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		// display: none;
 	}
-}
 
-.icons-wrap {
-	div {
-		height: 100px;
-		width: 100px;
+	.six-months-wrap {
 		position: absolute;
-		z-index: 0;
+		top: 15%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+		width: 100%;
 
-		// bottom left
-		&:nth-child(1) {
-			left: 10%;
-			top: 50%;
-			animation: bounce 1.4s infinite ease-in-out;
+		.img {
+			// z-index: 5;
+			mix-blend-mode: overlay;
+			width: 70%;
 
 			@media screen and (min-width: 43em) {
-				left: 30%;
-				top: 40%;
-			}
-
-			@media screen and (min-width: 62em) {
-				left: 30%;
-				top: 40%;
-			}
-		}
-
-		// top left
-		&:nth-child(2) {
-			left: 10%;
-			top: 20%;
-			animation: bounce 1.8s infinite ease-in-out;
-		}
-
-		// top right
-		&:nth-child(3) {
-			right: 25%;
-			top: 20%;
-			animation: bounce 1.3s infinite ease-in-out;
-		}
-
-		// bottom right
-		&:nth-child(4) {
-			right: 30%;
-			top: 50%;
-			animation: bounce 2s infinite ease-in-out;
-			// display: none;
-
-			@media screen and (min-width: 62em) {
-				right: 40%;
-				top: 50%;
-			}
-		}
-
-		img {
-			width: 200px;
-			filter: blur(50px);
-
-			@media screen and (min-width: 62em) {
-				width: 300px;
-				filter: blur(70px);
+				width: 40%;
 			}
 		}
 	}

@@ -1,48 +1,15 @@
-import icon1 from '../assets/icons/blood-test.png';
-import icon2 from '../assets/icons/first-aid-box.png';
-import icon3 from '../assets/icons/health-check.png';
-import icon4 from '../assets/icons/drugs.png';
+import img from '../assets/6-months-bg.png';
 
-const iconOneWrap = document.querySelector('.icon1');
-const iconTwoWrap = document.querySelector('.icon2');
-const iconThreeWrap = document.querySelector('.icon3');
-const iconFourWrap = document.querySelector('.icon4');
-
-const templateOne = () => {
-	return `
-    <img src="${icon1}" alt="" />
-  `;
-};
-const templateTwo = () => {
-	return `
-    <img src="${icon2}" alt="" />
-  `;
-};
-const templateThree = () => {
-	return `
-    <img src="${icon3}" alt="" />
-  `;
-};
-const templateFour = () => {
-	return `
-    <img src="${icon4}" alt="" />
-  `;
-};
+const imgWrap = document.querySelector('.six-months-wrap');
 
 export const loadIcons = () => {
-	if (iconOneWrap) {
-		iconOneWrap.innerHTML = templateOne();
-	}
+	const template = () => {
+		return `
+			<img src="${img}" alt="celebration image" class="img" />
+		`;
+	};
 
-	if (iconTwoWrap) {
-		iconTwoWrap.innerHTML = templateTwo();
-	}
-
-	if (iconThreeWrap) {
-		iconThreeWrap.innerHTML = templateThree();
-	}
-
-	if (iconFourWrap) {
-		iconFourWrap.innerHTML = templateFour();
+	if (imgWrap) {
+		imgWrap.innerHTML = template();
 	}
 };

@@ -27,6 +27,8 @@ import { runIntersectionOb } from './app/wart/intersection';
 
 import { sendEventData } from './app/facebook/facebook-event';
 
+import { animatePopup } from './app/services-popup';
+
 renderWartHeroImg();
 runIntersectionOb();
 
@@ -53,3 +55,5 @@ triggerExitIntent();
 renderBlogPost();
 
 sendEventData();
+
+animatePopup();
