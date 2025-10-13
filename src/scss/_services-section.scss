@@ -75,12 +75,14 @@
 		scroll-snap-type: x mandatory;
 		padding-bottom: 3em;
 		overflow-x: auto;
+		padding-top: 1em;
 
 		.service-card {
 			scroll-snap-align: start;
 			min-height: 300px;
 			background: $light;
-			box-shadow: $shadow;
+			box-shadow: 5px 15px 10px 0px rgba(0, 0, 0, 0.075);
+			// box-shadow: $shadow;
 			padding: 1em;
 			border-radius: 20px;
 
