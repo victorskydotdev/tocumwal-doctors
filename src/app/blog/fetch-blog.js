@@ -1,5 +1,3 @@
-// import { marked } from 'marked';
-
 const blogBodyClass = document.querySelector('.blog-post');
 
 const pageName = 'Doctors@Tocumwal Blog & Updates';
@@ -30,10 +28,32 @@ const fetchBlogPosts = async () => {
 		if (!response.ok) {
 			throw new Error('Network response was not ok');
 		} else {
-			const data = await response.json();
-			const blogPosts = data.blogposts;
+			const fetchedData = await response.json();
 
-			console.log('Data fetched from blogPosts:', blogPosts);
+			// console.log(data);
+
+			const assetMap = new Map();
+			fetchedData?.data?.includes?.Asset?.forEach((asset) => {
+				assetMap.set(asset.sys.id, asset.fields.file.url);
+			});
+
+			const blogPosts = fetchedData?.data?.items?.map((post) => {
+				const fields = post.fields;
+				const imageId = fields.imageMasthead?.sys?.id;
+				const imageUrl = assetMap.get(imageId);
+
+				return {
+					id: post.sys.id,
+					blogTitle: fields.title,
+					article: fields.blogContent,
+					dateTime: fields.dateTime,
+					image: imageUrl ? `https:${imageUrl}` : null,
+				};
+			});
+
+			console.log('Fetched blog posts:', blogPosts);
+
+			// console.log('Data fetched from blogPosts:', blogPosts);
 
 			blogPostCards.forEach((card, index) => {
 				if (!blogPosts[index]) {
@@ -52,6 +72,8 @@ const fetchBlogPosts = async () => {
 						title: post.blogTitle,
 						id: post.id,
 					});
+
+					console.log(post.image);
 
 					const blogBtns = document.querySelectorAll('.blog-btn');
 

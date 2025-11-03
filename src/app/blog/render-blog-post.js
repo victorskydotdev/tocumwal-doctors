@@ -12,14 +12,22 @@ export const renderBlogPost = (post) => {
 	if (articleElement) {
 		const fetchedPost = JSON.parse(sessionStorage.getItem('selectedBlogPost'));
 
+		console.log(fetchedPost);
+
 		const title = fetchedPost ? fetchedPost.blogTitle : post.blogTitle;
-		const dataTime = fetchedPost ? fetchedPost.dateTime : post.dateTime;
+		const dateTime = fetchedPost ? fetchedPost.dateTime : post.dateTime;
 		const image = fetchedPost ? fetchedPost.image : post.image;
-		const intro = fetchedPost ? fetchedPost.intro : post.intro;
-		const post1 = fetchedPost ? fetchedPost.post1 : post.post1;
-		const post2 = fetchedPost ? fetchedPost.post2 : post.post2;
-		const post3 = fetchedPost ? fetchedPost.post3 : post.post3;
-		const post4 = fetchedPost ? fetchedPost.post4 : post.post4;
+		const fetchedArticle = fetchedPost ? fetchedPost.article : post.article;
+
+		// converting the markdown article format into HTML
+		const article = marked(fetchedArticle);
+
+		// formatting the date and time
+		const formattedDate = new Date(dateTime).toLocaleDateString('en-us', {
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric',
+		});
 
 		if (fetchedPost) {
 			articleElement.innerHTML = `
@@ -27,7 +35,7 @@ export const renderBlogPost = (post) => {
       <div class="container">
         <div class="masthead">
           <div class="heading-section">
-            <p class="date-time">${dataTime}</p>
+            <p class="date-time">Published ${formattedDate}</p>
             <h1 class="blog-article-title">${title}</h1>
 
             <div class="author-wrap">
@@ -49,13 +57,10 @@ export const renderBlogPost = (post) => {
         </div>
 
         <div class="blog-article-content">
-          <div class="blog-article-intro">
-            <h3 class="intro">Introduction</h3>
-            <p class="blog-article-intro-text">${marked(intro ? intro : '')}</p>
-          </div>
+         
 
           <div class="blog-article-posts">
-            <p class="post">${marked(post1 ? post1 : '')}</p>
+            <p class="post">${article}</p>
           </div>
         </div>
       </div>

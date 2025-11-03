@@ -17,34 +17,34 @@ exports.handler = async (event, context) => {
 
 		console.log('Fetched data:', data);
 
-		const assetMap = new Map();
-		data.includes?.Asset?.forEach((asset) => {
-			assetMap.set(asset.sys.id, asset.fields.file.url);
-		});
+		// const assetMap = new Map();
+		// data.includes?.Asset?.forEach((asset) => {
+		// 	assetMap.set(asset.sys.id, asset.fields.file.url);
+		// });
 
-		const blogposts = data.items.map((post) => {
-			const fields = post.fields;
-			const imageId = fields.imageMasthead?.sys?.id;
-			const imageUrl = assetMap.get(imageId);
+		// const blogposts = data.items.map((post) => {
+		// 	const fields = post.fields;
+		// 	const imageId = fields.imageMasthead?.sys?.id;
+		// 	const imageUrl = assetMap.get(imageId);
 
-			console.log('Full fields object:', JSON.stringify(fields, null, 2));
+		// 	console.log('Full fields object:', JSON.stringify(fields, null, 2));
 
-			return {
-				id: post.sys.id,
-				blogTitle: fields.title,
-				intro: fields.introParagraph,
-				post1: fields.blogContent,
-				post2: fields.blogContent2,
-				post3: fields.blogContent3,
-				post4: fields.blogContent4,
-				dateTime: fields.dateTime,
-				image: imageUrl ? `https:${imageUrl}` : null,
-			};
-		});
+		// 	return {
+		// 		id: post.sys.id,
+		// 		blogTitle: fields.title,
+		// 		intro: fields.introParagraph,
+		// 		post1: fields.blogContent,
+		// 		post2: fields.blogContent2,
+		// 		post3: fields.blogContent3,
+		// 		post4: fields.blogContent4,
+		// 		dateTime: fields.dateTime,
+		// 		image: imageUrl ? `https:${imageUrl}` : null,
+		// 	};
+		// });
 
 		return {
 			statusCode: 200,
-			body: JSON.stringify({ blogposts }),
+			body: JSON.stringify({ data }),
 		};
 	} catch (error) {
 		return {
