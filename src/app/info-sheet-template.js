@@ -249,8 +249,7 @@ export const infoTemplate = () => {
               possible.
               <br />
 
-              Our full Telephone and Telehealth Communication Policy is available [here
-              or link to policy page].</li>
+              Our full Telephone and Telehealth Communication Policy is available <a href="/terms.html">here</a>.</li>
             </ul>
           </div>
         </v>

@@ -42,6 +42,13 @@
 				color: #fff;
 				display: grid;
 				gap: 1em;
+
+				li {
+					a {
+						color: $accent-color;
+						text-decoration: underline;
+					}
+				}
 			}
 
 			@media screen and (min-width: 62em) {
