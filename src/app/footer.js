@@ -7,7 +7,7 @@ import indiFlag2 from '../assets/indigene-flag2.jpg';
 const footerContainer = document.querySelectorAll('.footer');
 
 export const footerTemplate = `
-<div class="container">
+	<div class="container">
 		<div class="wrap">
 			<div class="footer-brand-logo">
 				<img class="hero-bg" src="${footerLogo}" alt="" />
@@ -59,18 +59,90 @@ export const footerTemplate = `
 		</div>
 
 		<div class="wrap">
-			<h4 class="heading">Book an appointment</h4>
+			<div class="appointment-wrap">
+				<h4 class="heading">Book an appointment</h4>
 
-			<p class="text">
-				Our dedicated and compassionate doctors are here to provide you with the care and support you need.
-			</p>
+				<p class="text">
+					Our dedicated and compassionate doctors are here to provide you with the care and support you need.
+				</p>
 
-			<button class="call-btn">
-				<a href="tel:0348115007">
-					<i class="fa-solid fa-phone"></i>
-					<span>03 4811 5007</span>
-				</a>
-			</button>
+				<button class="call-btn">
+					<a href="tel:0348115007">
+						<i class="fa-solid fa-phone"></i>
+						<span>03 4811 5007</span>
+					</a>
+				</button>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div class="actions">
+		<div class="actions-container">
+			<div class="consult-info">
+				<h3 class="title">Consultation hours</h3>
+
+				<p class="text-content">Doctors@Tocumwal is open for appointments during the following hours:</p>
+				
+				<ul class="openClosedDays">
+					<li><strong>Monday to Friday:</strong> 8:30 AM – 5:00 PM</li>
+					<li><strong>Saturday:</strong> By appointment only</li>
+					<li><strong>Sunday &amp; Public Holidays:</strong> Closed</li>
+				</ul>
+
+				<p class="text-content">Appointments can be made by calling (03 4811 5007) or through our online booking
+				system.</p>
+			</div>
+
+			<!-- <div class="opening-info">
+				<h3 class="title">Opening hours</h3>
+
+				<p class="text-content">We value your feedback to ensure we provide the best possible service. Please send us your feedback below</p>
+				
+			</div> -->
+			
+			<div class="after-hours-info">
+				<h3 class="title">After hour arrangement</h3>
+
+				<p class="text-content">When our practice is closed and you require urgent medical attention:</p>
+				
+				<ul class="openClosedDays">
+					<li>Please call 000 for emergencies</li>
+					<li>For non-urgent medical advice, you can contact HealthDirect on 1800 022
+					222 (24 hours, free call)</li>
+
+					<li>Patients may also attend the nearest emergency department if required</li>
+				</ul>
+
+				<p class="text-content">Our doctors receive urgent pathology or critical results after hours directly from
+				the laboratories.</p>
+			</div>
+
+			<div class="feedback-info">
+				<h3 class="title">Got any feedback?</h3>
+				<p class="text-content">We welcome your feedback as it helps us improve our services.
+				Patients can provide feedback in the following ways:</p>
+
+				<ul class="openClosedDays">
+					<li>Completing a feedback form, available at reception</li>
+
+					<li>
+						<span>Sending an email:</span>
+						<a class="fback-link" href="mailto:feedback@tocumwaldoctors.com">feedback@tocumwaldoctors.com</a>
+					</li>
+
+						<li>Participating in patient satisfaction surveys conducted by CFEP
+						If you have a concern or complaint, please speak to the Practice Manager
+						directly so it can be addressed promptly. 
+						<br />
+
+						If you are unsatisfied with our response, you may contact the Health Care
+						Complaints Commission (HCCC) on 1800 043 159 or visit
+						<a href="https://www.hccc.nsw.gov.au.">www.hccc.nsw.gov.au.</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 

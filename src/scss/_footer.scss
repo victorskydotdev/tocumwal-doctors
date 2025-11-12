@@ -9,7 +9,7 @@
 		padding-top: 4em;
 		display: grid;
 		gap: 3em;
-		margin-bottom: 3em;
+		margin-bottom: 2em;
 
 		.wrap {
 			// display: grid;
@@ -70,7 +70,7 @@
 			}
 
 			.heading {
-				margin-bottom: 1.5em;
+				margin-bottom: 1em;
 			}
 
 			.list-wrap {
@@ -86,24 +86,30 @@
 				}
 			}
 
-			.text {
-				line-height: $lineheight;
-				margin-bottom: 1em;
-			}
+			.appointment-wrap {
+				// background: red;
+				margin-bottom: 2.5em;
 
-			.call-btn {
-				@include btn-mixin();
-				background: transparent;
-				padding: 0;
+				.text {
+					line-height: $lineheight;
+					margin-bottom: 1em;
+				}
 
-				a {
-					font-size: 1rem;
-					color: $light;
-					display: flex;
-					gap: 1em;
-					justify-content: center;
-					align-items: center;
-					padding: 1em;
+				.call-btn {
+					@include btn-mixin();
+					background: transparent;
+					padding: 0;
+					border: 2px solid #fff;
+
+					a {
+						font-size: 1rem;
+						color: $light;
+						display: flex;
+						gap: 1em;
+						justify-content: center;
+						align-items: center;
+						padding: 1em;
+					}
 				}
 			}
 		}
@@ -120,15 +126,92 @@
 		}
 	}
 
+	.actions {
+		margin-bottom: 1em;
+		color: #fff;
+		// background: linear-gradient(90deg, red, blue);
+		background: #00566e;
+
+		.actions-container {
+			width: 90%;
+			margin: 0 auto;
+			padding: 4em 1em;
+			display: grid;
+			gap: 1em;
+
+			.consult-info,
+			.opening-info,
+			.after-hours-info,
+			.feedback-info {
+				.title {
+					font-size: 1.2rem;
+					margin-bottom: 0.7em;
+				}
+
+				.openClosedDays {
+					padding-left: 2em;
+					// margin-top: -1em;
+					display: grid;
+					gap: 0.4em;
+					margin-bottom: 0.6em;
+
+					li {
+						font-size: 0.85rem;
+
+						span {
+							display: inline-block;
+							margin-bottom: 0.5em;
+						}
+
+						.fback-link {
+							background: $dark;
+							color: #fff;
+							padding: 1em;
+							display: block;
+							font-size: 0.8rem;
+							width: fit-content;
+						}
+					}
+				}
+
+				.text-content {
+					font-size: 0.9rem;
+					margin-bottom: 1.5em;
+				}
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+		}
+
+		@media screen and (min-width: 43em) {
+			.actions-container {
+				display: flex;
+				gap: 2em;
+
+				.consult-info,
+				.opening-info,
+				.after-hours-info,
+				.feedback-info {
+					width: 100%;
+				}
+			}
+		}
+	}
+
 	.copyright-wrap {
 		color: $light;
 		@include width-mixin();
 		display: grid;
 		gap: 1em;
 		padding-bottom: 0.5em;
+		grid-template-areas:
+			'social-media-icons'
+			'copyright-text';
 
 		.copyright-text {
 			text-align: center;
+			grid-area: copyright-text;
 		}
 
 		.social-media-icons {
@@ -155,6 +238,7 @@
 				width: 100%;
 				background: $light;
 				bottom: 120%;
+				display: none;
 			}
 		}
 	}
