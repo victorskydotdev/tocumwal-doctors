@@ -216,6 +216,45 @@ export const infoTemplate = () => {
           </div>
         </v>
       </div>
+      
+      <div class="practice-comms-policy">
+        <div class="wrapper">
+          <div class="text-wrap">
+            <h3 class="heading">Practice communication policy</h3>
+
+            <p class="text">
+              Our practice is committed to effective and respectful communication with all patients.
+              We accept communication by:
+            </p>
+
+            <ul>
+              <li><strong>Telephone</strong> – the main contact method for patients and other health services. Calls are prioritised based on urgency.</li>
+              
+              <li><strong>Electronic communication</strong> – such as email, is used only when clinically
+              appropriate and in line with privacy legislation.</li>
+              
+              <li>Interpreter and relay services are available for patients with hearing,
+              speech, or language barriers.</li>
+            </ul>
+
+
+            <p class="text">
+              Patients can request to speak with their doctor.
+            </p>
+
+            <ul>
+              <li>Urgent calls are transferred immediately or attended by a nurse.</li>
+              
+              <li>Non-urgent messages are recorded securely and returned as soon as
+              possible.
+              <br />
+
+              Our full Telephone and Telehealth Communication Policy is available [here
+              or link to policy page].</li>
+            </ul>
+          </div>
+        </v>
+      </div>
 
     </div>
 

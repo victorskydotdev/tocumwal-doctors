@@ -112,7 +112,7 @@ export const footerTemplate = `
 					<li>For non-urgent medical advice, you can contact HealthDirect on 1800 022
 					222 (24 hours, free call)</li>
 
-					<li>Patients may also attend the nearest emergency department if required</li>
+					<li>Patients may also attend Tocumwal Hospital: 03 5874 9600</li>
 				</ul>
 
 				<p class="text-content">Our doctors receive urgent pathology or critical results after hours directly from

@@ -1,48 +1,52 @@
 @import '../resets';
 
-.transfer-notice {
+.practice-comms-policy {
 	// margin-bottom: 6em;
 	overflow: hidden;
-	padding-bottom: 6em;
+	padding-bottom: 2em;
+	margin-top: 10em;
 
-	.transfer-wrap {
+	.wrapper {
 		width: 90%;
 		margin: 0 auto;
+		// background: linear-gradient(90deg, #00566e, $dark);
 		background: #00566e;
 		position: relative;
 		border-radius: 20px;
 
-		.transfer-text-wrap {
-			padding: 4em 3em;
-			text-align: center;
+		.text-wrap {
+			padding: 4em 0;
 
+			// text-align: center;
 			.heading {
 				font-size: 2rem;
 				color: $light;
-				margin-bottom: 0.8em;
+				margin-bottom: 1.4em;
+				text-align: left;
 			}
 
 			.text {
-				max-width: 500px;
-				margin: 0 auto;
 				margin-bottom: 1.5em;
 				color: $light;
+				text-align: left;
+				font-weight: 600;
+				text-decoration: underline;
+				text-underline-offset: 6px;
+				text-decoration-color: $accent-color;
+				text-decoration-thickness: 2px;
 			}
 
-			.btn-wrap {
-				a {
-					@include btn-mixin();
-					background: $accent-color;
-					color: $light;
-					// padding: 0.8em 1.5em;
-
-					margin-top: 1em;
-				}
+			ul {
+				margin-bottom: 2em;
+				padding-left: 2em;
+				color: #fff;
+				display: grid;
+				gap: 1em;
 			}
 
 			@media screen and (min-width: 62em) {
 				text-align: left;
-				width: 60%;
+				// width: 60%;
 
 				.heading {
 					line-height: 1.2;
@@ -55,31 +59,12 @@
 			}
 		}
 
-		.img-wrap {
-			width: 100%;
-
-			img {
-				width: 100%;
-				height: 300px;
-				object-fit: cover;
-				border-radius: 20px;
-			}
-
-			@media screen and (min-width: 62em) {
-				position: absolute;
-				top: 15%;
-				left: 65%;
-				// width: 100%;
-
-				img {
-					width: 40%;
-					border-radius: 20px;
-				}
-			}
-		}
-
 		@media screen and (min-width: 62em) {
 			width: 70%;
+
+			.text-wrap {
+				width: 60%;
+			}
 		}
 	}
 }

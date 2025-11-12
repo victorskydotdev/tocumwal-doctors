@@ -157,6 +157,7 @@
 
 					li {
 						font-size: 0.85rem;
+						// text-decoration: underline;
 
 						span {
 							display: inline-block;
@@ -168,7 +169,7 @@
 							color: #fff;
 							padding: 1em;
 							display: block;
-							font-size: 0.8rem;
+							font-size: 0.8rem !important;
 							width: fit-content;
 						}
 					}

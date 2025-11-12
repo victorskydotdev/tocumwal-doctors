@@ -91,9 +91,9 @@ const loadImgAssets = () => {
 	const doc2ImgTemplate = `
     <img class="about-section-bg" src="${chioma}" alt="" />
   `;
-	const doc3ImgTemplate = `
-    <img class="about-section-bg" src="${chole}" alt="" />
-  `;
+	// const doc3ImgTemplate = `
+	//   <img class="about-section-bg" src="${chole}" alt="" />
+	// `;
 	const doc4ImgTemplate = `
     <img class="about-section-bg" src="${doris}" alt="" />
   `;
@@ -103,9 +103,9 @@ const loadImgAssets = () => {
 	const doc6ImgTemplate = `
     <img class="about-section-bg" src="${simone}" alt="" />
   `;
-	const doc7ImgTemplate = `
-    <img class="about-section-bg" src="${jeanette}" alt="" />
-  `;
+	// const doc7ImgTemplate = `
+	//   <img class="about-section-bg" src="${jeanette}" alt="" />
+	// `;
 
 	const contactBgTemplate = `
     <img class="contact-bg" src="${feedbackImg}" alt="" />
@@ -119,22 +119,12 @@ const loadImgAssets = () => {
 		aboutSectionImgWrap.innerHTML += aboutSectionImgTemplate;
 	}
 
-	if (
-		docImg1Wrap &&
-		docImg2Wrap &&
-		docImg3Wrap &&
-		docImg4Wrap &&
-		docImg5Wrap &&
-		docImg6Wrap &&
-		docImg7Wrap
-	) {
+	if (docImg1Wrap && docImg2Wrap && docImg4Wrap && docImg5Wrap && docImg6Wrap) {
 		docImg1Wrap.innerHTML += doc1ImgTemplate;
 		docImg2Wrap.innerHTML += doc2ImgTemplate;
-		docImg3Wrap.innerHTML += doc3ImgTemplate;
 		docImg4Wrap.innerHTML += doc4ImgTemplate;
 		docImg5Wrap.innerHTML += doc5ImgTemplate;
 		docImg6Wrap.innerHTML += doc6ImgTemplate;
-		docImg7Wrap.innerHTML += doc7ImgTemplate;
 	}
 
 	if (contactBgWrap) {
