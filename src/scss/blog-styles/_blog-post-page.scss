@@ -33,7 +33,8 @@
 			grid-template-areas:
 				'img-wrap'
 				'heading-wrap';
-			margin-bottom: 5em;
+			// margin-bottom: 5em;
+			// background: red;
 
 			.heading-section {
 				grid-area: heading-wrap;
@@ -118,7 +119,8 @@
 				}
 
 				p {
-					margin-bottom: 1.2em;
+					line-height: 30px;
+					// margin-bottom: 0.8em;
 					font-size: 14px;
 				}
 
@@ -127,7 +129,7 @@
 				h3,
 				h4,
 				h5 {
-					margin-top: 1.5em;
+					margin-top: 1em;
 					font-weight: 600;
 					color: #111;
 				}
@@ -146,11 +148,12 @@
 
 				blockquote {
 					border-left: 4px solid #ccc;
-					padding-left: 1em;
+					padding: 1em 1em 1em 1.5em;
 					color: #555;
 					font-style: italic;
 					margin: 1.5em 0;
 					font-size: 14px;
+					background: #e2e2e2;
 				}
 
 				img {
