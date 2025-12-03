@@ -1,8 +1,11 @@
 @import '../resets';
 
 .main-section {
-	height: 100vh;
+	height: 80vh;
 	background: $dark;
+	width: 90%;
+	margin: 0 auto;
+	border-radius: 10px;
 }
 
 /* Define the keyframes for the continuous scroll */
