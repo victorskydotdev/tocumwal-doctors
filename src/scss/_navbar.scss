@@ -4,12 +4,17 @@
 	height: 18vh;
 	display: flex;
 	align-items: center;
-	position: sticky;
-	top: 0;
-	width: 100%;
+	position: fixed;
+	top: 2%;
+	left: 5%;
+	width: 90%;
+	border-radius: 10px;
+
 	z-index: 2;
 	transition: 0.5s ease-in-out;
-	background: $dark;
+
+	background-color: rgb(26, 45, 65, 0.5);
+	backdrop-filter: blur(10px);
 
 	.nav-container {
 		@include width-mixin();
@@ -246,5 +251,5 @@
 
 .background,
 .blog-page {
-	background: $dark;
+	// background: $dark;
 }
