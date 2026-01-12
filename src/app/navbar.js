@@ -2,6 +2,11 @@
 import logo from '../assets/updated-logo.png';
 import { infoTemplate } from '../app/info-sheet-template';
 
+import web from '../assets/nav-icons/web.svg';
+import burgerIcon from '../assets/nav-icons/burger.svg';
+import callIcon from '../assets/nav-icons/call.svg';
+import mail from '../assets/nav-icons/mail.svg';
+
 // end of img asset import
 
 // dom variables
@@ -11,8 +16,53 @@ const domBody = document.querySelector('body');
 export const loadNavbar = () => {
 	const navTemplate = `
 		<nav class="nav-container">
+
+			<div class="top-nav">
+				<div class="button-wrap">
+					<button class="pop-menu-btn">
+						<img src="${burgerIcon}" alt="" />
+					</button>
+				</div>
+
+				<ul class="top-links">
+					<li>
+						<span>
+							<img src="${callIcon}" alt="" />
+						</span>
+
+						<div class="link-text">
+							<p>Call your GP</p>
+							<a class="top-nav-link" href="tel+0348115007">(03)-4811-5007</a>
+						</div>
+					</li>
+
+					<li>
+						<span>
+							<img src="${web}" alt="" />
+						</span>
+
+						<div class="link-text">
+							<p>Online appointments</p>
+							<a class="top-nav-link" href="tel+0348115007">Book now</a>
+						</div>
+					</li>
+
+					<li>
+						<span>
+							<img src="${mail}" alt="" />
+						</span>
+
+						<div class="link-text">
+							<p>Give us a feedback</p>
+							<a class="top-nav-link" href="tel+0348115007">feedback@tocumwaldoctor.com</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="wrapper main-nav">
 				<div class="brand-logo">
-					<a href="/">
+					<a class="logo-wrap" href="/">
 						<img class="logo logo-element" src="${logo}" alt="Tocumwal doctors brand logo" />
 					</a>
 				</div>
@@ -60,20 +110,35 @@ export const loadNavbar = () => {
 					<div class="close-btn">
 						<i class="fa-solid fa-xmark"></i>
 					</div>
-				</div>
 
-				<div class="hamburger">
-					<span></span>
+					<div class="hamburger">
+						<span>
+							<i class="fa-solid fa-bars"></i>
+						</span>
+					</div>
 				</div>
-			</nav>
+			</div>
+
+			
+		</nav>
 	`;
 
 	if (navContainer) {
 		navContainer.innerHTML += navTemplate;
 
 		const hamburgerBtn = document.querySelector('.hamburger');
-		const mobileMenu = document.getElementById('mobile-menu');
+		const mobileMenu = document.querySelector('.nav-links');
 		const closeBtn = document.querySelector('.close-btn');
+
+		// main navbar
+		const mainNav = document.querySelector('.main-nav');
+
+		window.addEventListener('scroll', (e) => {
+			if (window.scrollY >= 300) {
+				mainNav.classList.add('fixed-navbar');
+				hamburgerBtn.classList.add('show-navbar-btn');
+			} else mainNav.classList.remove('fixed-navbar');
+		});
 
 		const dropdownBtn = document.getElementById('dropdown-btn');
 		const dropDownCard = document.querySelector('.patient-info-dropdown');
@@ -139,9 +204,7 @@ export const loadNavbar = () => {
 
 		if (hamburgerBtn) {
 			hamburgerBtn.addEventListener('click', () => {
-				// console.log(hamburgerBtn, mobileMenu);
-
-				mobileMenu.classList.add('show-mobile-menu');
+				mobileMenu.classList.toggle('show-mobile-menu');
 			});
 		} else console.log('no such element exists in the DOM');
 
@@ -154,16 +217,16 @@ export const loadNavbar = () => {
 		const logoElement = document.querySelector('.logo-element');
 		// console.log(logoElement);
 
-		window.addEventListener('scroll', () => {
-			if (window.scrollY > 100) {
-				navContainer.classList.add('height');
-				navContainer.classList.add('background');
-				logoElement.classList.add('logo-scroll');
-			} else {
-				logoElement.classList.remove('logo-scroll');
-				navContainer.classList.remove('height');
-				navContainer.classList.remove('background');
-			}
-		});
+		// window.addEventListener('scroll', () => {
+		// 	if (window.scrollY > 100) {
+		// 		navContainer.classList.add('height');
+		// 		navContainer.classList.add('background');
+		// 		logoElement.classList.add('logo-scroll');
+		// 	} else {
+		// 		logoElement.classList.remove('logo-scroll');
+		// 		navContainer.classList.remove('height');
+		// 		navContainer.classList.remove('background');
+		// 	}
+		// });
 	}
 };

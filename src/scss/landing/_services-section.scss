@@ -1,49 +1,35 @@
-@import 'resets';
+@use '../base/variables' as *;
+@use '../base/breakpoints' as *;
+@use '../base/utils' as *;
 
 .services-section {
 	position: relative;
-	margin-bottom: 5em;
+	margin-bottom: 2em;
 	overflow-x: hidden;
 	padding-top: 6em;
-
-	@media screen and (min-width: 62em) {
-		margin-bottom: 7em;
-	}
-
-	.positioned-svg {
-		border: solid 30px $color;
-		position: absolute;
-		height: 300px;
-		width: 300px;
-		border-radius: 100%;
-		right: -30%;
-		z-index: -1;
-		top: 10%;
-
-		@media screen and (min-width: 62em) {
-			height: 400px;
-			width: 400px;
-			border: solid 50px $color;
-			right: -15%;
-			top: 5%;
-		}
-	}
 
 	.container {
 		@include width-mixin();
 
 		.text-area {
 			margin-bottom: 3em;
-			padding-top: 1em;
+			text-align: center;
+
 			.eyebrow {
 				text-transform: uppercase;
 				color: $accent-color;
 				margin-bottom: 0.7em;
+				display: none;
 			}
 
 			.heading {
-				@include heading-mixin();
-				font-size: clamp(2rem, 3.5vw, 4rem);
+				@include font-component();
+				// font-size: clamp(2rem, 3.5vw, 4rem);
+
+				@media screen and (max-width: 43em) {
+					font-size: 2rem;
+					font-weight: 700;
+				}
 			}
 
 			.buttons-wrap {

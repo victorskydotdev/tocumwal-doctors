@@ -1,10 +1,15 @@
-@import 'resets';
+@use '../base/breakpoints' as *;
+@use '../base/fonts' as *;
+@use '../base/variables' as *;
+@use '../components/buttons' as *;
+@use '../base/utils' as *;
 
 .footer {
 	background: $dark;
 
 	.container {
-		@include width-mixin();
+		@include breakpoints();
+		width: 90%;
 		color: $light;
 		padding-top: 4em;
 		display: grid;

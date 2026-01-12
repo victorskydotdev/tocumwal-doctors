@@ -1,4 +1,7 @@
-@use '../resets';
+@use '../base/breakpoints' as *;
+@use '../base/fonts' as *;
+@use '../base/variables' as *;
+@use '../components/buttons' as *;
 
 .services-popup-wrap {
 	position: fixed;

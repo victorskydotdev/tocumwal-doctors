@@ -1,0 +1,135 @@
+@use '../base/breakpoints' as *;
+@use '../base/fonts' as *;
+@use '../base/variables' as *;
+@use '../components/buttons' as *;
+@use '../base/utils' as *;
+
+.showcase-slider-section {
+	overflow: hidden;
+	width: 100%;
+	margin-top: 1em;
+	margin-bottom: 7em;
+	// display: none;
+	display: grid;
+	gap: 1em;
+
+	.showcase-track {
+		display: flex;
+		gap: 1em;
+		width: max-content;
+		animation: continuousScroll 30s infinite linear;
+
+		.showcase-section {
+			display: flex;
+			flex-shrink: 0;
+			gap: 1em;
+			// padding: 0 1em;
+			margin-bottom: 0;
+			margin-top: 0;
+
+			.showcase-item {
+				height: 200px;
+				background: teal;
+				width: 200px;
+				border-radius: 8px;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					border-radius: 8px;
+				}
+			}
+		}
+
+		.showcase-track2 {
+			display: flex;
+			gap: 1em;
+			width: max-content;
+			// animation: continuousScroll 30s infinite linear;
+
+			.showcase-section {
+				display: flex;
+				flex-shrink: 0;
+				gap: 1em;
+				// padding: 0 1em;
+				margin-bottom: 0;
+				margin-top: 0;
+
+				.showcase-item {
+					height: 200px;
+					background: teal;
+					width: 200px;
+					border-radius: 8px;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						border-radius: 8px;
+					}
+				}
+			}
+		}
+	}
+
+	.showcase-track2 {
+		display: flex;
+		gap: 1em;
+		width: max-content;
+		animation: continuousScroll 30s infinite linear reverse;
+
+		.showcase-section {
+			display: flex;
+			flex-shrink: 0;
+			gap: 1em;
+			// padding: 0 1em;
+			margin-bottom: 0;
+			margin-top: 0;
+
+			.showcase-item {
+				height: 200px;
+				background: teal;
+				width: 200px;
+				border-radius: 8px;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					border-radius: 8px;
+				}
+			}
+		}
+
+		.showcase-track2 {
+			display: flex;
+			gap: 1em;
+			width: max-content;
+			// animation: continuousScroll 30s infinite linear;
+
+			.showcase-section {
+				display: flex;
+				flex-shrink: 0;
+				gap: 1em;
+				// padding: 0 1em;
+				margin-bottom: 0;
+				margin-top: 0;
+
+				.showcase-item {
+					height: 200px;
+					background: teal;
+					width: 200px;
+					border-radius: 8px;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						border-radius: 8px;
+					}
+				}
+			}
+		}
+	}
+}

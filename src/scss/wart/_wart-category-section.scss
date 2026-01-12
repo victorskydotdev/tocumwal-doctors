@@ -1,4 +1,5 @@
-@import '../resets';
+@use '../base/variables' as *;
+@use '../base/fonts' as *;
 
 .wart-category-section {
 	margin-bottom: 7em;

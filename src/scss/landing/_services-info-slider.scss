@@ -1,0 +1,73 @@
+@use '../base/breakpoints' as *;
+@use '../base/utils' as *;
+@use '../base/variables' as *;
+
+.services-info-slider {
+	margin-bottom: 10em;
+	overflow: hidden;
+	position: relative;
+
+	.container {
+		height: 400px;
+		@include breakpoints();
+
+		border-radius: 30px;
+		position: relative;
+		background: $grey;
+
+		.slide {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity 800ms ease;
+
+			.heading {
+				@include font-component();
+				color: $light;
+				font-size: 2rem;
+				max-width: 600px;
+				text-align: center;
+				// background: teal;
+
+				@media screen and (max-width: 43em) {
+					font-size: 1.8rem;
+					font-weight: 700;
+					max-width: unset;
+					// background: red;
+				}
+			}
+
+			@media screen and (max-width: 43em) {
+				width: 80%;
+			}
+		}
+	}
+
+	.services-nav-wrap {
+		position: absolute;
+		bottom: 5%;
+		left: 50%;
+		transform: translateX(-50%);
+
+		.service-nav-btn {
+			height: 10px;
+			width: 10px;
+			background: $accent-color;
+			border: none;
+			border-radius: 50%;
+			transition: all 500ms ease-in-out;
+		}
+	}
+}
+
+.show-slide {
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+
+.animate-nav-btns {
+	background: $bg-color !important;
+}

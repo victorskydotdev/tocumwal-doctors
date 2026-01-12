@@ -1,4 +1,5 @@
-@import '../resets';
+@use '../base/variables' as *;
+@use '../components/buttons' as *;
 
 .feedback-section {
 	height: 100vh;

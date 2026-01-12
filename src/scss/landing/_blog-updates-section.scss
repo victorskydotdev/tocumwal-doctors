@@ -1,4 +1,7 @@
-@use '../resets';
+@use '../base//utils' as *;
+@use '../base/breakpoints' as *;
+@use '../base/variables' as *;
+@use '../components/buttons' as *;
 
 .blog-updates-section {
 	// height: 500px;
@@ -7,12 +10,53 @@
 	padding: 6em 0 6em 0;
 
 	.container {
-		.heading {
-			@include heading-mixin();
-			font-size: clamp(2rem, 3.5vw, 4rem);
-			margin: 0 auto 1em;
-			text-align: center;
-			color: $dark;
+		.wrap {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 90%;
+			margin: 0 auto;
+			// background: red;
+			margin-bottom: 6em;
+
+			.text-area {
+				max-width: 500px;
+
+				.heading {
+					@include font-component();
+				}
+
+				.subtext {
+					color: $grey;
+				}
+			}
+
+			.btn-wrap {
+				.btn {
+					@include btn-mixin();
+					border: none;
+					background: $dark;
+				}
+			}
+
+			@media screen and (max-width: 43em) {
+				display: grid;
+				gap: 1.5em;
+
+				text-align: center;
+
+				.text-area {
+					.heading {
+						font-size: 2rem;
+						font-weight: 700;
+						margin-bottom: 0.3em;
+					}
+				}
+
+				.btn-wrap {
+					text-align: center;
+				}
+			}
 		}
 	}
 

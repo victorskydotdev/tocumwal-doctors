@@ -1,4 +1,6 @@
-@import './resets';
+@use './base/variables' as *;
+@use './base/fonts' as *;
+@use './components/buttons' as *;
 
 .exit-intent-modal {
 	position: fixed;

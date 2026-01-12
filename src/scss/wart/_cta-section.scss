@@ -1,4 +1,6 @@
-@import '../resets';
+@use '../components/buttons' as *;
+@use '../base/variables' as *;
+@use '../base/fonts' as *;
 
 .wart-cta-section {
 	margin-bottom: 7em;

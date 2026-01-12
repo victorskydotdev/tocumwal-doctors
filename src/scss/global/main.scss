@@ -1,0 +1,82 @@
+@import '../global/resets';
+
+@import '../landing/site-intro-modal';
+
+@import '../global/navbar';
+@import '../landing/hero-section';
+@import '../landing/services-info-slider';
+@import '../landing/health-solutions-section';
+@import '../landing/about-intro-section';
+@import '../landing/services-info-slider';
+@import '../landing/services-section';
+@import '../landing/services-slider-section';
+
+@import '../landing/services-popup';
+@import '../custom-swiper-styles';
+@import '../landing/swiper-styles';
+@import '../landing/wart-ad-section';
+@import '../landing/appointment-section';
+
+@import '../landing/our-doctors-section';
+@import '../landing/blog-updates-section';
+@import '../landing/news-updates-section';
+
+@import '../about-page-styles/accordion-section';
+// @import 'patient-feedback';
+// @import '../scss/landing/patient-feedback';
+// @import '../scss/landing/indi-flags-section';
+@import 'footer';
+
+// page transition and animation styles
+@import '../page-transition';
+
+// modals
+@import '../bio-modal';
+@import '../patient-info';
+@import '../patient-info-styles/section-wrap';
+@import '../patient-info-styles/section3';
+@import '../patient-info-styles/faq-section';
+@import '../patient-info-styles/transfer-notice';
+@import '../patient-info-styles/practice-comms-pol';
+@import '../landing/feedback-form-modal';
+@import '../fixed-phone';
+@import '../exit-intent-modal';
+@import '../modals/navbar-menu-popout';
+
+@import '../announcement-styles/modal';
+// end of modals
+
+// contact page styles
+@import '../contact-page-styles/contact-form';
+@import '../contact-page-styles/contact-form-area';
+// end of contact page styles
+
+// about page styles
+@import '../about-page-styles/about-hero';
+@import '../about-page-styles/section2';
+@import '../about-page-styles/section3';
+@import '../about-page-styles/section4';
+
+@import '../terms-page-styles/terms';
+
+@import '..//pricing-page-styles/pricing';
+
+// fees and billings styles
+@import '../fees-biling/fb-main';
+@import '../fees-biling/article';
+
+// appointments page
+@import '../appointments-page-styles/app-main';
+@import '../appointments-page-styles/article';
+
+// blog styles
+@import '../blog-styles/blog-post-page';
+
+// wart page styles
+@import '../wart/hero-section';
+@import '../wart/gp-section';
+@import '../wart/wart-category-section';
+@import '../wart/child-adult-section';
+@import '../wart/machine-section';
+@import '../wart/darma-section';
+@import '../wart/cta-section';

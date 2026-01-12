@@ -1,4 +1,7 @@
-@import '../resets';
+@use '../base/breakpoints' as *;
+@use '../base/variables' as *;
+@use '../base/fonts' as *;
+@use '../components/buttons' as *;
 
 .wart-hero-section {
 	padding-top: 10vh;

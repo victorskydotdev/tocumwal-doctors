@@ -1,4 +1,6 @@
-@import '../resets';
+@use '../base/utils' as *;
+@use '../base/breakpoints' as *;
+@use '../base/utils' as *;
 
 .section3 {
 	padding-top: 5em;
@@ -13,9 +15,10 @@
 
 		.text-area {
 			.heading-title {
-				@include heading-mixin();
+				// @include heading-mixin();
 				text-align: center;
-				font-size: clamp(2rem, 3.5vw, 4rem);
+				// font-size: clamp(2rem, 3.5vw, 4rem);
+				@include font-component();
 				margin: 0 auto 0.4em auto;
 			}
 

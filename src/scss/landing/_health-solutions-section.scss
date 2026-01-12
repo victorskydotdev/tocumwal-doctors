@@ -1,0 +1,47 @@
+@use '../base/breakpoints' as *;
+@use '../base/variables' as *;
+
+.health-solutions-area {
+	margin-bottom: 7em;
+
+	.container {
+		display: flex;
+		gap: 0.5em;
+		@include width-mixin();
+		width: 90%;
+
+		@media screen and (min-width: 43em) {
+			width: 60%;
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 80%;
+		}
+
+		.card {
+			padding: 1.5em 1.5em 2em;
+			background: #969ca2;
+			width: 100%;
+			border-radius: 20px;
+
+			.wrap {
+				.icon {
+					height: 50px;
+					width: 50px;
+					border-radius: 50%;
+					background: $grey;
+					margin-bottom: 1em;
+					display: inline-block;
+				}
+
+				.heading {
+					margin-bottom: 0.5em;
+				}
+			}
+		}
+
+		@media screen and (max-width: 62em) {
+			display: grid;
+		}
+	}
+}

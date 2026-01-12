@@ -1,4 +1,6 @@
-@import 'resets';
+@use '../base/breakpoints' as *;
+@use '../base/variables' as *;
+@use '../base/utils' as *;
 
 .our-doctors-section {
 	padding: 6em 0;
@@ -9,16 +11,11 @@
 		@include width-mixin();
 
 		.text-area {
-			.eyebrow {
-				text-transform: uppercase;
-				margin-bottom: 0.8em;
-				color: $accent-color;
-			}
-
 			.heading {
-				@include heading-mixin();
-				font-size: clamp(2rem, 3.5vw, 4rem);
-				margin-bottom: 1em;
+				// @include heading-mixin();
+				// font-size: clamp(2rem, 3.5vw, 4rem);
+				// margin-bottom: 1em;
+				@include font-component();
 			}
 
 			@media screen and (min-width: 43em) {
@@ -58,7 +55,8 @@
 						justify-content: space-between;
 
 						.staff-name {
-							color: $dark;
+							color: $grey;
+							font-weight: 600;
 						}
 					}
 
@@ -68,7 +66,7 @@
 
 					.view-bio-btn {
 						border: none;
-						@include btn-mixin();
+						// @include btn-mixin();
 						display: flex;
 						gap: 1em;
 						align-items: center;

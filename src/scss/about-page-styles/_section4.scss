@@ -1,4 +1,6 @@
-@import '../resets';
+@use '../base/breakpoints' as *;
+@use '../base/utils' as *;
+@use '../base/variables' as *;
 
 .section4 {
 	position: relative;
