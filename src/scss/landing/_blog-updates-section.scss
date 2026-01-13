@@ -32,6 +32,9 @@
 			}
 
 			.btn-wrap {
+				opacity: 0;
+				visibility: hidden;
+
 				.btn {
 					@include btn-mixin();
 					border: none;

@@ -43,7 +43,7 @@ export const loadNavbar = () => {
 
 						<div class="link-text">
 							<p>Online appointments</p>
-							<a class="top-nav-link" href="tel+0348115007">Book now</a>
+							<a class="top-nav-link" href="https://onlineappts3.medi2apps.com/Appointments/Doctors%20@%20Tocumwal?app=1">Book now</a>
 						</div>
 					</li>
 
@@ -54,7 +54,7 @@ export const loadNavbar = () => {
 
 						<div class="link-text">
 							<p>Give us a feedback</p>
-							<a class="top-nav-link" href="tel+0348115007">feedback@tocumwaldoctor.com</a>
+							<a class="top-nav-link" href="mailto:feedback@tocumwaldoctors.com">feedback@tocumwaldoctors.com</a>
 						</div>
 					</li>
 				</ul>

@@ -9,7 +9,7 @@ const modalPopup = () => {
         <div class="wrap">
           <h3 class="text">
             <span>Hey</span>
-            <span>there,</span>
+            <span>there!</span>
             <span>We</span>
             <span>are</span>
             <span>wishing</span>
@@ -18,7 +18,7 @@ const modalPopup = () => {
             <span>heartfelt</span>
             <span>Happy</span>
             <span>and</span>
-            <span>Healthy</span>
+            <span>a Healthy</span>
             <span>New</span>
             <span>Year 🎉</span>
           </h3>

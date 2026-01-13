@@ -1,7 +1,7 @@
 import '../src/scss/global/main.scss';
 
 import { modalPopup } from './app/landing/site-intro';
-// modalPopup();
+modalPopup();
 
 import { triggerAnimation } from './app/landing/hero-img-animation';
 triggerAnimation();
@@ -11,6 +11,9 @@ import { aboutIntroSection } from './app/landing/about-intro';
 aboutIntroSection();
 import { showPopoutModal } from './app/navbar-popout-modal';
 showPopoutModal();
+
+import { displayIcon } from './app/landing/health-solutions-section';
+displayIcon();
 
 import { runAlert } from './app/alert';
 import { loadNavbar } from './app/navbar';

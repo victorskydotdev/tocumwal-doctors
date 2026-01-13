@@ -8,6 +8,7 @@
 	transform: translateX(-50%);
 	opacity: 0;
 	visibility: hidden;
+	z-index: 4;
 
 	.btn {
 		@include btn-mixin();
