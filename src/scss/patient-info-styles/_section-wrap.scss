@@ -1,4 +1,6 @@
-@import '../resets';
+@use '../base/variables' as *;
+@use '../base/breakpoints' as *;
+@use '../base/utils' as *;
 
 .section-wrap {
 	display: flex;

@@ -1,0 +1,79 @@
+@use '../base/variables' as *;
+
+.menu-popout-modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+	// opacity: 0;
+	// visibility: hidden;
+
+	padding: 1em;
+	background: rgba(0, 0, 0, 0.514);
+	// opacity: 0;
+	transition: transform 1000ms ease;
+	transform: translateX(-100%);
+
+	.container {
+		background: $light;
+		width: 500px;
+		height: 400px;
+		border-radius: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transform: translateX(-110%);
+		transition: transform 1500ms cubic-bezier(0.19, 1, 0.22, 1),
+			opacity 1500ms cubic-bezier(0.19, 1, 0.22, 1);
+		box-shadow: $shadow;
+
+		.info-heading {
+			.will-animate {
+				opacity: 0;
+				transition: 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+				visibility: hidden;
+			}
+		}
+	}
+
+	.btn-wrap {
+		position: absolute;
+		top: 1em;
+		left: 530px;
+
+		.btn {
+			background: transparent;
+			height: 30px;
+			width: 30px;
+			border: solid $light 2px;
+			border-radius: 50%;
+			color: $light;
+			cursor: pointer;
+			opacity: 0;
+			visibility: hidden;
+			transition: 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+		}
+	}
+}
+
+.is-open {
+	transform: translateX(0);
+}
+
+.open-container {
+	transform: translateX(0) !important;
+	opacity: 1 !important;
+}
+
+.show-element {
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+
+.show-btn {
+	opacity: 1 !important;
+	visibility: visible !important
+	;
+}

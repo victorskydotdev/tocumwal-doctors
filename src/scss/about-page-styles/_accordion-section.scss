@@ -1,4 +1,7 @@
-@import 'resets';
+@use '../base/breakpoints' as *;
+@use '../base/fonts' as *;
+@use '../base/utils' as *;
+@use '../base/variables' as *;
 
 .accordion-section {
 	padding-bottom: 3em;
@@ -18,15 +21,10 @@
 				text-align: center;
 				margin-bottom: 3em;
 
-				.eyebrow {
-					text-transform: uppercase;
-					color: $accent-color;
-					margin-bottom: 0.7em;
-				}
-
 				.heading {
-					@include heading-mixin();
-					font-size: clamp(2rem, 3.5vw, 4rem);
+					// @include heading-mixin();
+					// font-size: clamp(2rem, 3.5vw, 4rem);
+					@include font-component();
 				}
 			}
 
@@ -43,7 +41,7 @@
 						cursor: pointer;
 
 						.accordion-header {
-							color: $dark;
+							color: $grey;
 							// @include poppins-semibold();
 							margin-bottom: 0.7em;
 						}

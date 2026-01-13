@@ -1,4 +1,7 @@
-@import '../resets';
+@use '../base/breakpoints' as *;
+@use '../base/utils' as *;
+@use '../base/variables' as *;
+@use '../components/buttons' as *;
 
 .pricing-section {
 	padding-top: 5em;

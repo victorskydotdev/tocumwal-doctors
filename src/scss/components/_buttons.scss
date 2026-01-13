@@ -1,0 +1,11 @@
+@use '../base/variables' as *;
+
+@mixin btn-mixin() {
+	background: $accent-color;
+	padding: 1em 1em;
+	border-radius: 10px;
+	color: $light;
+	display: inline-block;
+	text-transform: capitalize;
+	font-weight: 500;
+}

@@ -1,4 +1,8 @@
-@import '../resets';
+@use '../base/breakpoints' as *;
+@use '../base/variables' as *;
+@use '../base/fonts' as *;
+@use '../components/buttons' as *;
+@use '../base/utils' as *;
 
 .darma-section {
 	margin-bottom: 12em;

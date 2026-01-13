@@ -1,4 +1,6 @@
-@import 'resets';
+@use './base/breakpoints' as *;
+@use './base/variables' as *;
+// @use './base/' as *;
 
 .bio-modal-container {
 	position: fixed;

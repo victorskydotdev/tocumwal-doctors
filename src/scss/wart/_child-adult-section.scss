@@ -1,4 +1,7 @@
-@import '../resets';
+@use '../base/breakpoints' as *;
+@use '../base/variables' as *;
+@use '../base/fonts' as *;
+@use '../components/buttons' as *;
 
 $gradient: radial-gradient(180deg, #1a2d41 -0.1%, #2f4054 60%, #c87b47 100%);
 

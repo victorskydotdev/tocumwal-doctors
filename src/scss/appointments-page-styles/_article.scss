@@ -1,4 +1,4 @@
-@import '../resets';
+@use '../base/breakpoints' as *;
 
 .app-article {
 	margin-bottom: 8em;

@@ -1,7 +1,9 @@
-@use '../resets';
-
 .announcement-modal {
 	position: fixed;
 	bottom: 10%;
 	left: 5%;
+	background: teal;
+	height: 200px;
+	width: 200px;
+	display: none;
 }

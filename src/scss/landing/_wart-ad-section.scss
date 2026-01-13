@@ -1,4 +1,7 @@
-@use '../resets';
+@use '../base/fonts' as *;
+@use '../base/breakpoints' as *;
+@use '../base/variables' as *;
+@use '../components/buttons' as *;
 
 .wart-ad-section {
 	width: 100%;
@@ -7,7 +10,7 @@
 	transition: all 700ms ease-in-out;
 	transform: scale(0, 0);
 	position: relative;
-	// display: none;
+	display: none;
 
 	&::after {
 		content: '';
@@ -44,7 +47,7 @@
 		margin-bottom: 3em;
 
 		min-height: 450px;
-		@include width-mixin();
+		@include breakpoints();
 		position: relative;
 
 		.ad-content {

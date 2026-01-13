@@ -1,4 +1,6 @@
-@import '../resets';
+@use '../components/buttons' as *;
+@use '../base/variables' as *;
+@use '../base/fonts' as *;
 
 .gp-case-section {
 	margin-bottom: 8em;

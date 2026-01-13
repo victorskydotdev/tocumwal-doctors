@@ -6,7 +6,7 @@ import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 
-import '../scss/main.scss';
+import '../scss/global/main.scss';
 
 export const initSwiper = () => {
 	const swiper = new Swiper('.swiper', {

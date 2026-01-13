@@ -1,4 +1,6 @@
-@import '../resets';
+@use '../base/variables' as *;
+@use '../base/breakpoints' as *;
+@use '../components/buttons' as *;
 
 .practice-comms-policy {
 	// margin-bottom: 6em;

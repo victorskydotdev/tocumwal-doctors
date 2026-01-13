@@ -1,0 +1,11 @@
+@use '../base/variables' as *;
+
+@mixin breakpoints() {
+	width: 98%;
+	margin: 0 auto;
+}
+
+@mixin width-mixin() {
+	width: $width;
+	margin: 0 auto;
+}

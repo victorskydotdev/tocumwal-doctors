@@ -1,4 +1,6 @@
-@import '../resets';
+@use '../base/breakpoints' as *;
+@use '../base/utils' as *;
+@use '../base/variables' as *;
 
 .terms-heading-wrap {
 	height: 350px;
