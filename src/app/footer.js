@@ -148,7 +148,7 @@ export const footerTemplate = `
 
 	<div class="copyright-wrap">
 		<p class="copyright-text">
-			&copy;Copyright 2025, Doctors@Tocumwal. All rights reserved.
+			&copy;Copyright 2026, Doctors@Tocumwal. All rights reserved.
 		</p>
 
 		<div class="social-media-icons">

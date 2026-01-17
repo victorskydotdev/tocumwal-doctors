@@ -1,4 +1,5 @@
-import introImg from '../../assets/website-intro-post.jpg';
+// import introImg from '../../assets/website-intro-post.jpg';
+import introImg from '../../assets/workout4women/workout4women-1.jpg';
 
 const welcomeModal = document.querySelector('.site-welcome-modal');
 
@@ -8,19 +9,19 @@ const modalPopup = () => {
       <div class="container">
         <div class="wrap">
           <h3 class="text">
-            <span>Hey</span>
+            <span>Hello</span>
             <span>there!</span>
-            <span>We</span>
+            <span>Our</span>
+            <span>staff</span>
             <span>are</span>
-            <span>wishing</span>
-            <span>you</span>
-            <span>a</span>
-            <span>heartfelt</span>
-            <span>Happy</span>
-            <span>and</span>
-            <span>a Healthy</span>
-            <span>New</span>
-            <span>Year 🎉</span>
+            <span>embarking</span>
+            <span>on an 80km</span>
+            <span>walk</span>
+            <span>for Ovarian Cancer.</span>
+            <span>We'll love to</span>
+            <span>have you</span>
+            <span>support</span>
+            <span>us</span>
           </h3>
 
           <img class="img site-intro-img" src="${params}" alt="Welcome image" />
@@ -34,33 +35,46 @@ const modalPopup = () => {
     `;
 	};
 
+	let siteIntro = false;
+	let hasShownSiteIntro =
+		sessionStorage.getItem('hasShownSiteIntro') === 'true';
+
 	function loadSiteIntro() {
-		welcomeModal.classList.add('display-welcome-modal');
-		welcomeModal.innerHTML = template(introImg);
+		if (!welcomeModal) return;
 
-		const spans = document.querySelectorAll('span');
-		const siteIntroImg = document.querySelector('.site-intro-img');
-		const toSiteBtn = document.querySelector('.to-site-btn');
+		if (!siteIntro && !hasShownSiteIntro) {
+			welcomeModal.classList.add('display-welcome-modal');
+			welcomeModal.innerHTML = template(introImg);
 
-		setTimeout(() => {
-			spans.forEach((span, index) => {
-				setTimeout(() => {
-					span.classList.add('animate-text');
+			const spans = document.querySelectorAll('span');
+			const siteIntroImg = document.querySelector('.site-intro-img');
+			const toSiteBtn = document.querySelector('.to-site-btn');
 
-					setTimeout(() => {
-						span.classList.remove('animate-text');
-					}, 6000);
-				}, index * 200);
-			});
-		}, 800);
-
-		setTimeout(() => {
-			siteIntroImg.classList.add('scale-img');
+			hasShownSiteIntro = sessionStorage.setItem('hasShownSiteIntro', 'true');
+			hasShownSiteIntro = true;
 
 			setTimeout(() => {
-				toSiteBtn.classList.add('btn-slide-up');
-			}, 300);
-		}, 9000);
+				spans.forEach((span, index) => {
+					setTimeout(() => {
+						span.classList.add('animate-text');
+
+						setTimeout(() => {
+							span.classList.remove('animate-text');
+						}, 6000);
+					}, index * 200);
+				});
+			}, 800);
+
+			setTimeout(() => {
+				siteIntroImg.classList.add('scale-img');
+
+				setTimeout(() => {
+					toSiteBtn.classList.add('btn-slide-up');
+				}, 300);
+			}, 9000);
+
+			siteIntro = true;
+		}
 	}
 
 	setTimeout(() => {
