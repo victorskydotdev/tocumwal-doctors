@@ -140,37 +140,36 @@ export const loadNavbar = () => {
 			} else mainNav.classList.remove('fixed-navbar');
 		});
 
-		const dropdownBtn = document.getElementById('dropdown-btn');
+		// const dropdownBtn = document.getElementById('dropdown-btn');
+		const dropdownLinkBtn = document.querySelector('.dropdown-link');
 		const dropDownCard = document.querySelector('.patient-info-dropdown');
 		const icon = document.querySelector('.dropDicon');
 
 		const triggerDropDown = () => {
-			dropdownBtn.addEventListener('click', () => {
-				const isActive = dropdownBtn.classList.contains('isActive');
-
-				if (isActive) {
-					// Remove classes if dropdown is already active (closing)
-
-					dropdownBtn.classList.remove('isActive');
-					mobileMenu.classList.remove('show-mobile-menu');
-
-					// delay the opacity
-					setTimeout(() => {
-						dropDownCard.classList.remove('opacity');
-						dropDownCard.classList.remove('dropdown');
-						icon.classList.remove('icon-rotate');
-					}, 300);
-				} else {
-					// Add classes if dropdown is not active (opening)
-					dropdownBtn.classList.add('isActive');
-					icon.classList.add('icon-rotate');
-					dropDownCard.classList.add('dropdown');
-
-					// delay the opacity
-					setTimeout(() => {
-						dropDownCard.classList.add('opacity');
-					}, 300);
-				}
+			dropdownLinkBtn.addEventListener('click', () => {
+				// alert('hello world');
+				// const isActive = dropdownBtn.classList.contains('isActive');
+				// dropDownCard.classList.toggle('isActive');
+				// if (isActive) {
+				// Remove classes if dropdown is already active (closing)
+				// 	dropdownBtn.classList.remove('isActive');
+				// 	mobileMenu.classList.remove('show-mobile-menu');
+				// delay the opacity
+				// 	setTimeout(() => {
+				// 		dropDownCard.classList.remove('opacity');
+				// 		dropDownCard.classList.remove('dropdown');
+				// 		icon.classList.remove('icon-rotate');
+				// 	}, 300);
+				// } else {
+				// Add classes if dropdown is not active (opening)
+				// 	dropdownBtn.classList.add('isActive');
+				// 	icon.classList.add('icon-rotate');
+				// 	dropDownCard.classList.add('dropdown');
+				// delay the opacity
+				// 	setTimeout(() => {
+				// 		dropDownCard.classList.add('opacity');
+				// 	}, 300);
+				// }
 			});
 		};
 		triggerDropDown();
@@ -180,7 +179,7 @@ export const loadNavbar = () => {
 			const patientInfoBtn = document.querySelector('.patient-info-btn');
 
 			const patientInfoModal = document.querySelector(
-				'.patient-info-sheet-modal'
+				'.patient-info-sheet-modal',
 			);
 
 			if (!patientInfoBtn && patientInfoModal) {

@@ -12,6 +12,14 @@ aboutIntroSection();
 import { showPopoutModal } from './app/navbar-popout-modal';
 showPopoutModal();
 
+// breast cancer awareness section images functions
+import { displayBreastCancerAwareImgs } from './app/landing/breast-cancer-awareness';
+displayBreastCancerAwareImgs();
+
+// display of social media posts on the landing page
+import { displaySocialMediaPosts } from './app/landing/social-display-imgs';
+displaySocialMediaPosts();
+
 import { displayIcon } from './app/landing/health-solutions-section';
 displayIcon();
 
@@ -43,6 +51,7 @@ import { runIntersectionOb } from './app/wart/intersection';
 import { sendEventData } from './app/facebook/facebook-event';
 
 import { animatePopup } from './app/services-popup';
+import { displayAwarenessImgs } from './app/landing/breast-cancer-awareness';
 
 renderWartHeroImg();
 runIntersectionOb();

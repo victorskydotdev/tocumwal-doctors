@@ -1,3 +1,8 @@
+import img1 from '../assets/workout4women/workout4women-1.jpg';
+import img2 from '../assets/workout4women/workout4women-2.jpg';
+import img3 from '../assets/workout4women/workout4women-3.jpg';
+import img4 from '../assets/workout4women/workout4women-4.jpg';
+
 const body = document.querySelector('.dom-body');
 
 const showPopoutModal = () => {
@@ -24,14 +29,21 @@ const showPopoutModal = () => {
 
 	const addTextTemplate = () => {
 		return `
-			<h3 class="info-heading">
-				<span class="will-animate">No</span>
-				<span class="will-animate">information</span>
-				<span class="will-animate">here</span>
-				<span class="will-animate">yet!</span>
-			</h3>
 
+			<div class="text-area">
+				<h3 class="info-heading will-animate">
+					Hooray!!🥳 It's Ovarian Cancer Awareness 80km Walk
+				</h3>
 
+				<p class="text">At Doctors@Tocumwal, our staff are embarking on an exciting 80km walk in support for Ovarian Cancer awareness initiatives</p>
+
+				<div class="button-wrap">
+					<button class="btn" id="oca-learn-more-btn">Learn more</button>
+
+					<a href="https://workout.ovariancancer.net.au/d-tocumwal?utm_medium=email&utm_source=raisely&utm_content=%5Bfinal%5D%20Fundraiser%20Welcome&utm_term=7a6b0972-dc35-4cc0-b893-462182e5fcbb" target="_blank" class="btn">Support and Donate</a>
+				</div>
+				
+			</div>
 		`;
 	};
 
@@ -47,6 +59,7 @@ const showPopoutModal = () => {
 				containerDiv.innerHTML = addTextTemplate();
 				// const closeBtn = document.querySelector('.btn');
 				const infoTexts = document.querySelectorAll('.will-animate');
+				const learnMoreBtn = document.getElementById('oca-learn-more-btn');
 
 				setTimeout(() => {
 					containerDiv.classList.add('open-container');
@@ -86,6 +99,14 @@ const showPopoutModal = () => {
 							}, 200);
 						}, 300);
 					}
+				});
+
+				if (!learnMoreBtn) return;
+
+				learnMoreBtn.addEventListener('click', () => {
+					// alert('Button clicked');
+
+					window.location.href = '/#ovarian-cancer-section';
 				});
 			}, 0);
 		}
