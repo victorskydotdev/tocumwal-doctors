@@ -24,15 +24,18 @@ exports.handler = async (event, context) => {
 					},
 				},
 			],
+			test_event_code: 'TEST12345',
 		};
 
 		const accessToken = process.env.OVARIAN_EVENT_ACCESS_TOKEN;
 		const pixelId = process.env.META_PIXEL_ID;
 
+		console.log('Access token: ', accessToken, 'and PixelID: ', pixelId);
+
 		// console.log('Payload Data: ', payload.data);
 
 		const response = await fetch(
-			`https://graph.facebook.com/v16.0/${pixelId}/events?access_token=${accessToken}`,
+			`https://graph.facebook.com/v19.0/${pixelId}/events?access_token=${accessToken}`,
 			{
 				method: 'POST',
 				headers: {
@@ -46,15 +49,19 @@ exports.handler = async (event, context) => {
 		// 	console.log(data);
 		// });
 
-		if (!response.ok) {
-			console.log(response.message);
-		}
+		// TEST38839
+
+		// if (!response.ok) {
+		// 	console.log('Error Message:', response);
+		// }
 
 		const data = response.json();
 
+		console.log(data);
+
 		return {
 			statusCode: 200,
-			body: JSON.stringify({ message: 'success', data: data }),
+			body: JSON.stringify({ success: true, data: data }),
 		};
 	} catch (error) {
 		console.error('Meta Conversion API error:', error);
