@@ -19,8 +19,8 @@ exports.handler = async (event, context) => {
 					action_source,
 					event_time: Math.floor(Date.now() / 1000),
 					user_data: {
-						client_ip: event.headers['x-forwarded-for'],
-						user_agent: event.headers['user-agent'],
+						client_ip_address: event.headers['x-forwarded-for'],
+						client_user_agent: event.headers['user-agent'],
 					},
 				},
 			],
@@ -33,6 +33,9 @@ exports.handler = async (event, context) => {
 		console.log('Access token: ', accessToken, 'and PixelID: ', pixelId);
 
 		// console.log('Payload Data: ', payload.data);
+		// console.log(
+		// 	`URL: https://graph.facebook.com/v25.0/${pixelId}/events?access_token=${accessToken}`,
+		// );
 
 		const response = await fetch(
 			`https://graph.facebook.com/v19.0/${pixelId}/events?access_token=${accessToken}`,
@@ -55,13 +58,13 @@ exports.handler = async (event, context) => {
 		// 	console.log('Error Message:', response);
 		// }
 
-		const data = response.json();
+		const data = await response.json();
 
 		console.log(data);
 
 		return {
 			statusCode: 200,
-			body: JSON.stringify({ success: true, data: data }),
+			body: JSON.stringify({ data: data }),
 		};
 	} catch (error) {
 		console.error('Meta Conversion API error:', error);

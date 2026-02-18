@@ -10,7 +10,7 @@ const sendOvarianEvent = () => {
 			const eventLink = '/.netlify/functions/ovarian-facebook-event';
 
 			try {
-				await fetch(eventLink, {
+				const response = await fetch(eventLink, {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -24,9 +24,12 @@ const sendOvarianEvent = () => {
 						// 	ph: '08100784622',
 						// },
 					}),
-				})
-					.then((res) => res.json)
-					.then((data) => console.log(data));
+				});
+				// .then((res) => res.json)
+				// .then((data) => console.log(data));
+
+				const data = await response.json();
+				console.log('Data from Netlify serverless functions:', data);
 			} catch (error) {
 				console.error('Error:', error);
 			}
