@@ -5,11 +5,14 @@ exports.handler = async (event, context) => {
 	try {
 		const body = JSON.parse(event.body);
 
-		// console.log(event.headers['user-agent']);
+		console.log(event);
 
 		const { event_name, event_source_url, action_source } = JSON.parse(
 			event.body,
 		);
+
+		const clientIP = event.headers['client-ip'];
+		console.log(clientIP);
 
 		const payload = {
 			data: [
@@ -19,7 +22,7 @@ exports.handler = async (event, context) => {
 					action_source,
 					event_time: Math.floor(Date.now() / 1000),
 					user_data: {
-						client_ip_address: event.headers['x-forwarded-for'],
+						client_ip_address: clientIP,
 						client_user_agent: event.headers['user-agent'],
 					},
 				},

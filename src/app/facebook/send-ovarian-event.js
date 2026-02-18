@@ -19,10 +19,11 @@ const sendOvarianEvent = () => {
 						event_name: 'ovarianButtonClick',
 						event_source_url: window.location.href,
 						action_source: 'website',
-						// user_data: {
-						// 	em: null,
-						// 	ph: '08100784622',
-						// },
+						user_data: {
+							em: null,
+							// ph: '08100784622',
+							client_user_agent: navigator.userAgent,
+						},
 					}),
 				});
 				// .then((res) => res.json)
