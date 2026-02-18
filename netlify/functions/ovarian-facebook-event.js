@@ -49,7 +49,7 @@ exports.handler = async (event, context) => {
 
 		return {
 			statusCode: 200,
-			body: JSON.stringify({ data: data }),
+			body: JSON.stringify({ data: data, key: accessToken.length }),
 		};
 	} catch (error) {
 		console.error('Meta Conversion API error:', error);
