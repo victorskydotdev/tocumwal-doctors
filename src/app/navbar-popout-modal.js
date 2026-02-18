@@ -35,12 +35,12 @@ const showPopoutModal = () => {
 					Hooray!!🥳 It's Ovarian Cancer Awareness 80km Walk
 				</h3>
 
-				<p class="text">At Doctors@Tocumwal, our staff are embarking on an exciting 80km walk in support for Ovarian Cancer awareness initiatives</p>
+			<p class="text">At Doctors@Tocumwal, our staff are embarking on an exciting 80km walk in support for Ovarian Cancer awareness initiatives</p>
 
 				<div class="button-wrap">
 					<button class="btn" id="oca-learn-more-btn">Learn more</button>
 
-					<a href="https://workout.ovariancancer.net.au/d-tocumwal?utm_medium=email&utm_source=raisely&utm_content=%5Bfinal%5D%20Fundraiser%20Welcome&utm_term=7a6b0972-dc35-4cc0-b893-462182e5fcbb" target="_blank" class="btn">Support and Donate</a>
+					<a href="https://workout.ovariancancer.net.au/d-tocumwal?utm_medium=email&utm_source=raisely&utm_content=%5Bfinal%5D%20Fundraiser%20Welcome&utm_term=7a6b0972-dc35-4cc0-b893-462182e5fcbb" target="_blank" class="btn ovarian-btn">Support and Donate</a>
 				</div>
 				
 			</div>

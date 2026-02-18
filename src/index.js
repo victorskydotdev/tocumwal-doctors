@@ -48,7 +48,9 @@ import { renderBlogPost } from './app/blog/render-blog-post';
 import { renderWartHeroImg } from './app/wart/wart-script';
 import { runIntersectionOb } from './app/wart/intersection';
 
+// facebook as events
 import { sendEventData } from './app/facebook/facebook-event';
+import { sendOvarianEvent } from './app/facebook/send-ovarian-event';
 
 import { animatePopup } from './app/services-popup';
 import { displayAwarenessImgs } from './app/landing/breast-cancer-awareness';
@@ -79,5 +81,6 @@ triggerExitIntent();
 renderBlogPost();
 
 sendEventData();
+sendOvarianEvent();
 
 animatePopup();
