@@ -44,7 +44,7 @@ exports.handler = async (event, context) => {
 		};
 
 		const accessToken = process.env.OVARIAN_EVENT_ACCESS_TOKEN;
-		const pixelId = process.env.META_PIXEL_ID;
+		const pixelId = process.env.META_PIXEL_ID_OVARIAN;
 
 		// console.log('Access token: ', accessToken, 'and PixelID: ', pixelId);
 
