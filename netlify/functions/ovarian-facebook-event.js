@@ -5,14 +5,11 @@ exports.handler = async (event, context) => {
 	try {
 		const body = JSON.parse(event.body);
 
-		console.log(event);
-
 		const { event_name, event_source_url, action_source } = JSON.parse(
 			event.body,
 		);
 
 		const clientIP = event.headers['client-ip'];
-		console.log(clientIP);
 
 		const payload = {
 			data: [
@@ -24,8 +21,8 @@ exports.handler = async (event, context) => {
 					user_data: {
 						client_ip_address: clientIP,
 						client_user_agent: event.headers['user-agent'],
-						em: 'victorsky90@gmail.com',
-						ph: '08100784622',
+						em: null,
+						ph: null,
 					},
 				},
 			],
@@ -65,3 +62,5 @@ exports.handler = async (event, context) => {
 		};
 	}
 };
+
+// const movieLinks = 'moviebox.id, moviebox.ph, moviebox.pk, movieboxapp.in';
