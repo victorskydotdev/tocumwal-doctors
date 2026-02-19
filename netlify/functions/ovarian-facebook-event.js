@@ -1,5 +1,4 @@
 const crypto = require('crypto');
-const { json } = require('stream/consumers');
 
 exports.handler = async (event, context) => {
 	try {
@@ -8,6 +7,21 @@ exports.handler = async (event, context) => {
 		const { event_name, event_source_url, action_source } = JSON.parse(
 			event.body,
 		);
+
+		const userPhone = '08100784622';
+
+		const phone = userPhone.replace(/\D/g, '');
+		const normalizedPhone = phone.startsWith('0')
+			? `234${phone.slice(1)}`
+			: phone;
+		const hashedPhone = crypto
+			.createHash('sha256')
+			.update(normalizedPhone)
+			.digest('hex');
+
+		const userEmail = 'victorsky90@gmail.com';
+		const email = userEmail.toLocaleLowerCase().trim();
+		const hashedEmail = crypto.createHash('sha256').update(email).digest('hex');
 
 		const clientIP = event.headers['client-ip'];
 
@@ -21,8 +35,8 @@ exports.handler = async (event, context) => {
 					user_data: {
 						client_ip_address: clientIP,
 						client_user_agent: event.headers['user-agent'],
-						em: null,
-						ph: null,
+						em: hashedEmail,
+						ph: hashedPhone,
 					},
 				},
 			],
