@@ -2,8 +2,6 @@ const crypto = require('crypto');
 
 exports.handler = async (event, context) => {
 	try {
-		const body = JSON.parse(event.body);
-
 		const { event_name, event_source_url, action_source } = JSON.parse(
 			event.body,
 		);
@@ -14,6 +12,7 @@ exports.handler = async (event, context) => {
 		const normalizedPhone = phone.startsWith('0')
 			? `234${phone.slice(1)}`
 			: phone;
+
 		const hashedPhone = crypto
 			.createHash('sha256')
 			.update(normalizedPhone)
@@ -40,43 +39,43 @@ exports.handler = async (event, context) => {
 					},
 				},
 			],
+
 			test_event_code: 'TEST12345',
 		};
+
+		console.log('Payload on Serverless:', payload);
 
 		const accessToken = process.env.OVARIAN_EVENT_ACCESS_TOKEN;
 		const pixelId = process.env.META_PIXEL_ID_OVARIAN;
 
-		// console.log('Access token: ', accessToken, 'and PixelID: ', pixelId);
+		console.log('Access Token:', accessToken, 'and Pixel ID:', pixelId);
 
-		// console.log('hashedEmail: ', hashedEmail, 'and HashedPhone:', hashedPhone);
+		const fbEndPoint = `https://graph.facebook.com/v19.0/${pixelId}/events?access_token=${accessToken}`;
 
-		const response = await fetch(
-			`https://graph.facebook.com/v19.0/${pixelId}/events?access_token=${accessToken}`,
-			{
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify(payload),
+		const response = await fetch(fbEndPoint, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
 			},
-		);
+			body: JSON.stringify(payload),
+		});
+
+		if (!response.ok) console.log('Response not ok');
 
 		const data = await response.json();
 
-		console.log('Data:', data);
+		console.log('Data: ', data);
 
 		return {
 			statusCode: 200,
-			body: JSON.stringify({ data: data, key: accessToken.length }),
+			body: JSON.stringify({ success: true, data: data }),
 		};
 	} catch (error) {
-		console.error('Meta Conversion API error:', error);
+		console.error('Error: ', error);
 
 		return {
 			statusCode: 500,
-			body: JSON.stringify({ error: error.message }),
+			body: JSON.stringify({ success: false, error: error.message }),
 		};
 	}
 };
-
-// const movieLinks = 'moviebox.id, moviebox.ph, moviebox.pk, movieboxapp.in';

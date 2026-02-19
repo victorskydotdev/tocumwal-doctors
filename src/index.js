@@ -51,6 +51,7 @@ import { runIntersectionOb } from './app/wart/intersection';
 // facebook as events
 import { sendEventData } from './app/facebook/facebook-event';
 import { sendOvarianEvent } from './app/facebook/send-ovarian-event';
+import { sendSiteIntroEvent } from './app/facebook/site-intro-event';
 
 import { animatePopup } from './app/services-popup';
 import { displayAwarenessImgs } from './app/landing/breast-cancer-awareness';
@@ -82,5 +83,6 @@ renderBlogPost();
 
 sendEventData();
 sendOvarianEvent();
+sendSiteIntroEvent();
 
 animatePopup();
