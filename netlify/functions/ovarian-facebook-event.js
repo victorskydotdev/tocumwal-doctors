@@ -46,7 +46,9 @@ exports.handler = async (event, context) => {
 		const accessToken = process.env.OVARIAN_EVENT_ACCESS_TOKEN;
 		const pixelId = process.env.META_PIXEL_ID;
 
-		console.log('Access token: ', accessToken, 'and PixelID: ', pixelId);
+		// console.log('Access token: ', accessToken, 'and PixelID: ', pixelId);
+
+		console.log('hashedEmail: ', hashedEmail, 'and HashedPhone:', hashedPhone);
 
 		const response = await fetch(
 			`https://graph.facebook.com/v19.0/${pixelId}/events?access_token=${accessToken}`,
