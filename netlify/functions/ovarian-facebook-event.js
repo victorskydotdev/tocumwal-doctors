@@ -24,6 +24,8 @@ exports.handler = async (event, context) => {
 					user_data: {
 						client_ip_address: clientIP,
 						client_user_agent: event.headers['user-agent'],
+						em: 'victorsky90@gmail.com',
+						ph: '08100784622',
 					},
 				},
 			],
