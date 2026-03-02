@@ -77,9 +77,9 @@ const modalPopup = () => {
 		}
 	}
 
-	setTimeout(() => {
-		loadSiteIntro();
-	}, 50);
+	// setTimeout(() => {
+	// 	loadSiteIntro();
+	// }, 50);
 };
 
 const continueToSite = () => {
