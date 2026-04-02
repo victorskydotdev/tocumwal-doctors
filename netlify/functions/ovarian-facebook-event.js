@@ -78,5 +78,3 @@ exports.handler = async (event, context) => {
 		};
 	}
 };
-
-// const movieLinks = 'moviebox.id, moviebox.ph, moviebox.pk, movieboxapp.in';

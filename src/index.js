@@ -31,6 +31,8 @@ import { accordionFunct } from './app/accordion';
 import { showStaffBio } from './app/staff-bio';
 import { submitForm } from './app/form-interaction';
 
+import { loadAnniversaryAsset } from './app/landing/news-update-section';
+
 import { enablePageTransition } from './app/page-transition';
 // import { submitFBackForm } from './app/feedback-form'; // not importing this function as it not being used in the project
 // import { sendEventToNetFunct } from './app/event';
@@ -69,6 +71,7 @@ showStaffBio();
 // submitForm();
 enablePageTransition();
 // submitFBackForm(); // not importing this function as it not being used in the project
+loadAnniversaryAsset();
 
 document.addEventListener('DOMContentLoaded', () => {
 	initSwiper();

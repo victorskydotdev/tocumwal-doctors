@@ -1,5 +1,5 @@
 // import introImg from '../../assets/website-intro-post.jpg';
-import introImg from '../../assets/workout4women/workout4women-1.jpg';
+import introImg from '../../assets/site-intro-media/one-anniversary-img.png';
 
 const welcomeModal = document.querySelector('.site-welcome-modal');
 
@@ -9,20 +9,20 @@ const modalPopup = () => {
       <div class="container">
         <div class="wrap">
           <h3 class="text">
-            <span>Hello</span>
-            <span>there!</span>
-            <span>Our</span>
-            <span>staff</span>
+            <span>We</span>
             <span>are</span>
-            <span>embarking</span>
-            <span>on an 80km</span>
-            <span>walk</span>
-            <span>for Ovarian Cancer.</span>
-            <span>We'll love to</span>
+            <span>celebrating</span>
+            <span>One</span>
+            <span>Year</span>
+            <span>of Health</span>
+            <span>Happiness</span>
+            <span>and</span>
+            <span>Community</span>
+            <!-- <span>We'll love to</span>
             <span>have you</span>
             <span>support</span>
-            <span>us</span>
-          </h3>
+            <span>us</span> -->
+          </h3> 
 
           <img class="img site-intro-img" src="${params}" alt="Welcome image" />
 
@@ -60,7 +60,7 @@ const modalPopup = () => {
 
 						setTimeout(() => {
 							span.classList.remove('animate-text');
-						}, 6000);
+						}, 4000);
 					}, index * 200);
 				});
 			}, 800);
@@ -71,15 +71,15 @@ const modalPopup = () => {
 				setTimeout(() => {
 					toSiteBtn.classList.add('btn-slide-up');
 				}, 300);
-			}, 9000);
+			}, 6000);
 
 			siteIntro = true;
 		}
 	}
 
-	// setTimeout(() => {
-	// 	loadSiteIntro();
-	// }, 50);
+	setTimeout(() => {
+		loadSiteIntro();
+	}, 50);
 };
 
 const continueToSite = () => {

@@ -102,6 +102,9 @@
 			cursor: pointer;
 			gap: 0.2em;
 
+			// turning off the pulsating "click me" button
+			display: none;
+
 			span {
 				@include outfit-fonts();
 				font-weight: 600;
