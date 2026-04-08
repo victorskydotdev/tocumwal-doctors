@@ -9,5 +9,7 @@ export const loadAnniversaryAsset = () => {
     `;
 	};
 
-	anniversaryImgWrap.innerHTML = assetTemp(anniversaryImg);
+	if (anniversaryImgWrap) {
+		anniversaryImgWrap.innerHTML = assetTemp(anniversaryImg);
+	}
 };
