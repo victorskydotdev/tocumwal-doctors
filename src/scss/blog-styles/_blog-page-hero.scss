@@ -1,0 +1,47 @@
+@use '../base/variables' as *;
+@use '../base/breakpoints' as *;
+
+.blog-hero-section {
+	height: 90vh;
+	background: $dark;
+	@include breakpoints();
+	border-radius: 10px;
+	margin-bottom: 5em;
+	position: relative;
+
+	.container {
+		display: flex;
+		gap: 3em;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+		width: 90%;
+		margin: 0 auto;
+		position: relative;
+		color: $bg-color;
+
+		.text-wrap {
+			text-align: center;
+			max-width: 700px;
+			margin: 0 auto;
+
+			.heading {
+				margin-bottom: 0.4em;
+			}
+
+			.subtext {
+				padding: 0 6em;
+				line-height: 1.9;
+			}
+		}
+	}
+	@media screen and (max-width: 43em) {
+		.container {
+			.text-wrap {
+				.subtext {
+					padding: 0 0;
+				}
+			}
+		}
+	}
+}

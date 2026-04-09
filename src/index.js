@@ -45,6 +45,7 @@ import { showPhoneOnScroll } from './app/handle-phone';
 import { triggerExitIntent } from './app/exit-intent';
 import { modifyBlogPageTitle } from './app/blog/fetch-blog';
 import { renderBlogPost } from './app/blog/render-blog-post';
+import { renderBlogArticlesOnBlogPage } from './app/blog/blog-page.articles';
 
 // wart page functions imports
 import { renderWartHeroImg } from './app/wart/wart-script';
@@ -83,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 showPhoneOnScroll();
 triggerExitIntent();
 renderBlogPost();
+renderBlogArticlesOnBlogPage();
 
 sendEventData();
 sendOvarianEvent();

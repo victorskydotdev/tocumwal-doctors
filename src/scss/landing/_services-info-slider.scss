@@ -25,7 +25,7 @@
 			transition: opacity 800ms ease;
 
 			.heading {
-				@include font-component();
+				@include font-component(700);
 				color: $light;
 				font-size: 2rem;
 				max-width: 600px;

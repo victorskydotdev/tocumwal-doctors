@@ -23,7 +23,7 @@
 			}
 
 			.heading {
-				@include font-component();
+				@include font-component(700);
 				// font-size: clamp(2rem, 3.5vw, 4rem);
 
 				@media screen and (max-width: 43em) {

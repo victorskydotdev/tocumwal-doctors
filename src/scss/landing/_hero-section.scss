@@ -27,7 +27,7 @@
 
 			.heading {
 				color: #393930;
-				@include font-component();
+				@include font-component(700);
 				margin-bottom: 1em;
 				padding-right: 1em;
 			}

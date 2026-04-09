@@ -24,7 +24,7 @@
 				.heading {
 					// @include heading-mixin();
 					// font-size: clamp(2rem, 3.5vw, 4rem);
-					@include font-component();
+					@include font-component(700);
 				}
 			}
 

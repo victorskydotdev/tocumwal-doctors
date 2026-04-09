@@ -9,7 +9,7 @@ console.log(contentfulEnvironment);
 // console.log(accessToken, spaceId, contentfulEnvironment);
 
 exports.handler = async (event, context) => {
-	const url = `https://cdn.contentful.com/spaces/${spaceId}/environments/${contentfulEnvironment}/entries?access_token=${accessToken}&content_type=blogPosts&include=1`;
+	const url = `https://cdn.contentful.com/spaces/${spaceId}/environments/${contentfulEnvironment}/entries?access_token=${accessToken}&content_type=blogPosts&include=2`;
 
 	try {
 		const response = await fetch(url);

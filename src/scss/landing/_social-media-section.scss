@@ -10,7 +10,7 @@
 	.text-section {
 		margin-bottom: 4em;
 		.heading {
-			@include font-component();
+			@include font-component(700);
 			max-width: 500px;
 			text-align: center;
 			line-height: 1.3;

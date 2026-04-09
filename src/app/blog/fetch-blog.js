@@ -21,7 +21,9 @@ const blogPostTemplate = (post) => {
 };
 
 const fetchBlogPosts = async () => {
+	// fetching the endpoint for the blog fetched by the backend API endpoint
 	const url = '/.netlify/functions/fetchBlogPosts';
+
 	try {
 		const response = await fetch(url);
 
@@ -37,6 +39,11 @@ const fetchBlogPosts = async () => {
 				assetMap.set(asset.sys.id, asset.fields.file.url);
 			});
 
+			// console.log(
+			// 	'Blog post from the landing page:',
+			// 	fetchedData?.data?.includes,
+			// );
+
 			const blogPosts = fetchedData?.data?.items?.map((post) => {
 				const fields = post.fields;
 				const imageId = fields.imageMasthead?.sys?.id;
@@ -51,7 +58,7 @@ const fetchBlogPosts = async () => {
 				};
 			});
 
-			console.log('Fetched blog posts:', blogPosts);
+			// console.log('Fetched blog posts:', blogPosts);
 
 			// console.log('Data fetched from blogPosts:', blogPosts);
 
@@ -73,7 +80,7 @@ const fetchBlogPosts = async () => {
 						id: post.id,
 					});
 
-					console.log(post.image);
+					// console.log(post.image);
 
 					const blogBtns = document.querySelectorAll('.blog-btn');
 
@@ -86,14 +93,14 @@ const fetchBlogPosts = async () => {
 								// console.log('Blog post ID:', blogPostId);
 
 								const blogPost = blogPosts.find(
-									(post) => post.id === blogPostId
+									(post) => post.id === blogPostId,
 								);
 
 								// console.log('Selected blog post:', blogPost);
 								if (blogPost) {
 									sessionStorage.setItem(
 										'selectedBlogPost',
-										JSON.stringify(blogPost)
+										JSON.stringify(blogPost),
 									);
 								}
 

@@ -73,7 +73,7 @@ export const loadNavbar = () => {
 						<li class="link"><a href="/about.html">About</a></li>
 						<li class="link"><a href="/#services">Services</a></li>
 					
-						<li class="link"><a href="/#blog-section">Updates</a></li>
+						<li class="link"><a href="/blog">Blog</a></li>
 						
 						<li class="link" id="dropdown-btn">
 							<a class="dropdown-link">

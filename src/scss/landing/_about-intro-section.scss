@@ -48,7 +48,7 @@
 			}
 
 			.heading {
-				@include font-component();
+				@include font-component(700);
 				color: $light;
 				// font-size: clamp(2rem, 3.5vw, 4rem);
 				// // line-height: 1.3;

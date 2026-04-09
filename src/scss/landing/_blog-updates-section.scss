@@ -23,7 +23,7 @@
 				max-width: 500px;
 
 				.heading {
-					@include font-component();
+					@include font-component(700);
 				}
 
 				.subtext {

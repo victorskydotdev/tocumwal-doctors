@@ -67,7 +67,7 @@
 					// @include heading-mixin();
 					// font-size: clamp(2rem, 3.5vw, 4rem);
 					// text-align: center;
-					@include font-component();
+					@include font-component(700);
 				}
 			}
 
