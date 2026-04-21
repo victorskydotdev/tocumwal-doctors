@@ -6,8 +6,12 @@ import web from '../assets/nav-icons/web.svg';
 import burgerIcon from '../assets/nav-icons/burger.svg';
 import callIcon from '../assets/nav-icons/call.svg';
 import mail from '../assets/nav-icons/mail.svg';
-
 // end of img asset import
+
+// selectors shortcut helper
+const $ = (id) => document.getElementById(id); // id
+const $$ = (className) => document.querySelector(className); // class names
+const $$$ = (classNames) => document.querySelectorAll(classNames);
 
 // dom variables
 const navContainer = document.querySelector('.header-nav');
@@ -60,6 +64,8 @@ export const loadNavbar = () => {
 				</ul>
 			</div>
 
+
+			<!-- main navbar -->
 			<div class="wrapper main-nav">
 				<div class="brand-logo">
 					<a class="logo-wrap" href="/">
@@ -75,27 +81,27 @@ export const loadNavbar = () => {
 					
 						<li class="link"><a href="/blog">Blog</a></li>
 						
-						<li class="link" id="dropdown-btn">
-							<a class="dropdown-link">
+						<div class="link" id="dropdown-wrap">
+							<a class="dropdown-link" id="dropdown-link-btn">
 								<span class="link-text">Patient Information</span>
 								<i class="dropDicon fi fi-rr-angle-small-down"></i>
 							</a>
 
-							<ul class="patient-info-dropdown">
-								<li class="dd-link1">
+							<ul class="patient-info-dropdown" id="patient-info-dropdown-wrap">
+								<li class="dd-link">
 									<a href="/fees-billing.html">Fees & Billing</a>
 								</li>
-								<li class="dd-link2">
+								<li class="dd-link">
 									<button class="patient-info-btn">Patient Info Sheet</button>
 								</li>
-								<li class="dd-link3">
+								<li class="dd-link">
 									<a href="/appointments.html">Appointments</a>
 								</li>
-								<li class="dd-link4">
+								<li class="dd-link">
 									<a href="/privacy-policy.html">Privacy Policy</a>
 								</li>
 							</ul>
-						</li>
+						</div>
 
 						<!--
 						<li class="link"><a href="/contact.html">Contact</a></li>
@@ -108,71 +114,83 @@ export const loadNavbar = () => {
 					</div>
 
 					<div class="close-btn">
-						<i class="fa-solid fa-xmark"></i>
+						<!-- <i class="fa-solid fa-xmark"></i> -->
 					</div>
 
-					<div class="hamburger">
-						<span>
+					<button class="hamburger" id="hamburger">
+				
 							<i class="fa-solid fa-bars"></i>
-						</span>
-					</div>
+				
+					</button>
 				</div>
 			</div>
-
-			
 		</nav>
 	`;
 
 	if (navContainer) {
 		navContainer.innerHTML += navTemplate;
-
-		const hamburgerBtn = document.querySelector('.hamburger');
 		const mobileMenu = document.querySelector('.nav-links');
 		const closeBtn = document.querySelector('.close-btn');
 
 		// main navbar
 		const mainNav = document.querySelector('.main-nav');
 
+		// mobile menu interaction
+		document.addEventListener('click', (e) => {
+			const isHamburger = e.target.closest('#hamburger');
+
+			if (isHamburger) {
+				console.log(mobileMenu);
+				mobileMenu.classList.toggle('show-mobile-menu');
+			}
+		});
+
 		window.addEventListener('scroll', (e) => {
 			if (window.scrollY >= 300) {
 				mainNav.classList.add('fixed-navbar');
-				hamburgerBtn.classList.add('show-navbar-btn');
+				$$('.hamburger').classList.add('show-navbar-btn');
 			} else mainNav.classList.remove('fixed-navbar');
 		});
 
-		// const dropdownBtn = document.getElementById('dropdown-btn');
-		const dropdownLinkBtn = document.querySelector('.dropdown-link');
-		const dropDownCard = document.querySelector('.patient-info-dropdown');
-		const icon = document.querySelector('.dropDicon');
+		document.addEventListener('click', (e) => {
+			const btn = e.target.closest('#dropdown-link-btn');
+			const wrap = $('patient-info-dropdown-wrap');
+			const links = $$$('.dd-link');
+			const total = links.length;
 
-		const triggerDropDown = () => {
-			dropdownLinkBtn.addEventListener('click', () => {
-				// alert('hello world');
-				// const isActive = dropdownBtn.classList.contains('isActive');
-				// dropDownCard.classList.toggle('isActive');
-				// if (isActive) {
-				// Remove classes if dropdown is already active (closing)
-				// 	dropdownBtn.classList.remove('isActive');
-				// 	mobileMenu.classList.remove('show-mobile-menu');
-				// delay the opacity
-				// 	setTimeout(() => {
-				// 		dropDownCard.classList.remove('opacity');
-				// 		dropDownCard.classList.remove('dropdown');
-				// 		icon.classList.remove('icon-rotate');
-				// 	}, 300);
-				// } else {
-				// Add classes if dropdown is not active (opening)
-				// 	dropdownBtn.classList.add('isActive');
-				// 	icon.classList.add('icon-rotate');
-				// 	dropDownCard.classList.add('dropdown');
-				// delay the opacity
-				// 	setTimeout(() => {
-				// 		dropDownCard.classList.add('opacity');
-				// 	}, 300);
-				// }
-			});
-		};
-		triggerDropDown();
+			// closeMenu
+			const closeMenu = (e) => {
+				wrap.classList.remove('isActive');
+
+				links.forEach((link) => {
+					link.classList.remove('show-dd-links');
+				});
+			};
+
+			if (btn) {
+				wrap.classList.toggle('isActive');
+
+				const isOpening = wrap.classList.contains('isActive');
+
+				links.forEach((link, i) => {
+					const delay = isOpening ? i * 300 : (total - i - 1) * 100;
+
+					link.addEventListener('click', () => {
+						if (i === 1) {
+							navContainer.classList.add('z-index');
+						}
+					});
+
+					setTimeout(() => {
+						link.classList.toggle('show-dd-links');
+					}, delay);
+				});
+			}
+
+			if (e.target.closest('.show-dd-links')) {
+				closeMenu();
+			}
+		});
 
 		// display the patient info modal
 		const displayPatientInfoModal = () => {
@@ -200,32 +218,5 @@ export const loadNavbar = () => {
 		};
 
 		displayPatientInfoModal(); // call the patientInfoModal function
-
-		if (hamburgerBtn) {
-			hamburgerBtn.addEventListener('click', () => {
-				mobileMenu.classList.toggle('show-mobile-menu');
-			});
-		} else console.log('no such element exists in the DOM');
-
-		if (closeBtn) {
-			closeBtn.addEventListener('click', () => {
-				mobileMenu.classList.remove('show-mobile-menu');
-			});
-		}
-
-		const logoElement = document.querySelector('.logo-element');
-		// console.log(logoElement);
-
-		// window.addEventListener('scroll', () => {
-		// 	if (window.scrollY > 100) {
-		// 		navContainer.classList.add('height');
-		// 		navContainer.classList.add('background');
-		// 		logoElement.classList.add('logo-scroll');
-		// 	} else {
-		// 		logoElement.classList.remove('logo-scroll');
-		// 		navContainer.classList.remove('height');
-		// 		navContainer.classList.remove('background');
-		// 	}
-		// });
 	}
 };

@@ -11,10 +11,6 @@ li {
 	margin-bottom: 1em;
 
 	.nav-container {
-		// background: teal;
-		// position: relative;
-		// height: 300px;
-
 		// top nav styles property/values
 		.top-nav {
 			display: flex;
@@ -114,6 +110,7 @@ li {
 		}
 		// end of top nav styles
 
+		// main navbar
 		.wrapper {
 			background: $dark;
 			width: 98%;
@@ -154,26 +151,23 @@ li {
 						}
 					}
 
-					#dropdown-btn {
+					#dropdown-wrap {
 						position: relative;
-						cursor: pointer;
+
+						#dropdown-link-btn {
+							cursor: pointer;
+						}
 
 						.patient-info-dropdown {
-							position: fixed;
-							// top: 250%;
-							// display: none;
-							// background: red;
+							position: absolute;
+
 							padding: 2em;
 							z-index: 4;
 							display: grid;
 							gap: 1em;
 							border-radius: 1em;
-							width: 100%;
 							left: 0;
-
-							opacity: 0;
-							// transform: translateY(-150%);
-							visibility: hidden;
+							margin-top: 1em;
 
 							li {
 								position: relative;
@@ -183,6 +177,11 @@ li {
 
 								.patient-info-btn {
 									white-space: nowrap;
+									background: transparent;
+									border: none;
+									color: $light;
+									font-weight: 500;
+									cursor: pointer;
 								}
 							}
 
@@ -190,7 +189,7 @@ li {
 								content: '';
 								position: absolute;
 								inset: 0;
-								background: teal;
+								background: $dark;
 								transform: scale(1, 0);
 								transition: all 700ms ease-in;
 								transform-origin: top;
@@ -228,6 +227,7 @@ li {
 					display: flex;
 					align-items: center;
 					justify-content: center;
+					background: orange;
 
 					.nav-links {
 						display: grid;
@@ -245,6 +245,20 @@ li {
 						width: 40%;
 						padding: 3em 2em;
 						z-index: 10;
+
+						#dropdown-wrap {
+							// background: red;
+
+							.patient-info-dropdown {
+								// background: red !important;
+								position: fixed;
+								width: 100%;
+
+								&::after {
+									// background: $dark;
+								}
+							}
+						}
 					}
 				}
 
@@ -259,12 +273,16 @@ li {
 					transform: translateY(-60%);
 					cursor: pointer;
 					display: block !important;
+					background: $dark;
+					height: 40px;
+					width: 40px;
+					z-index: 11;
+					border-radius: 10px;
+					border: 2px solid $light;
 
-					span {
-						.fa-solid {
-							font-size: 1.4rem;
-							color: $light;
-						}
+					.fa-solid {
+						color: $light;
+						font-size: 1.5rem;
 					}
 				}
 			}
@@ -313,13 +331,22 @@ li {
 }
 
 .isActive {
-	// transform: translateY(5%) !important;
-	opacity: 1 !important;
-	visibility: visible !important;
-
 	&::after {
 		content: '';
 		transform: scale(1, 1) !important;
 		transition: all 700ms ease-in !important;
 	}
 }
+
+.show-dd-links {
+	opacity: 1 !important;
+	visibility: visible !important;
+	transition: all 700ms ease-in !important;
+}
+
+.z-index {
+	position: relative;
+	z-index: 2 !important;
+}
+
+// https://share.google/aimode/iTlu9OPxNgZr2340A

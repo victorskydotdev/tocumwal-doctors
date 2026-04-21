@@ -55,7 +55,7 @@ const animateImg = () => {
 		currentIndex = (currentIndex + 1) % imgContainers.length;
 
 		imgContainers[currentIndex].classList.add('show-img');
-		console.log('animation');
+		// console.log('animation');
 	}, 4000);
 };
 
